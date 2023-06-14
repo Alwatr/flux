@@ -1,9 +1,10 @@
 {
-  "name": "@alwatr/context",
+  "name": "@alwatr/server-context",
   "version": "0.32.0",
   "description": "Elegant powerful context manager base on alwatr signal, written in tiny TypeScript, ES module.",
   "keywords": [
     "context",
+    "server-context",
     "signal",
     "typescript",
     "esm",
@@ -23,9 +24,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/AliMD/alwatr",
-    "directory": "core/context"
+    "directory": "core/server-context"
   },
-  "homepage": "https://github.com/AliMD/alwatr/tree/main/core/context#readme",
+  "homepage": "https://github.com/AliMD/alwatr/tree/main/core/server-context#readme",
   "bugs": {
     "url": "https://github.com/AliMD/alwatr/issues"
   },
@@ -35,7 +36,7 @@
     "@alwatr/logger": "^0.32.0",
     "@alwatr/signal": "^0.32.0",
     "@alwatr/util": "^0.32.0",
-    "tslib": "^2.5.3"
+    "tslib": "^2.5.2"
   },
   "devDependencies": {
     "@alwatr/type": "^0.32.0"

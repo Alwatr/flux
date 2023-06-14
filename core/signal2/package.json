@@ -1,9 +1,8 @@
 {
-  "name": "@alwatr/context",
+  "name": "@alwatr/signal2",
   "version": "0.32.0",
-  "description": "Elegant powerful context manager base on alwatr signal, written in tiny TypeScript, ES module.",
+  "description": "Elegant powerful event system for handle global signals and states written in tiny TypeScript module.",
   "keywords": [
-    "context",
     "signal",
     "typescript",
     "esm",
@@ -14,6 +13,7 @@
   "types": "index.d.ts",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "license": "MIT",
+  "private": true,
   "files": [
     "**/*.{d.ts.map,d.ts,js.map,js,html,md}"
   ],
@@ -23,21 +23,16 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/AliMD/alwatr",
-    "directory": "core/context"
+    "directory": "core/signal2"
   },
-  "homepage": "https://github.com/AliMD/alwatr/tree/main/core/context#readme",
+  "homepage": "https://github.com/AliMD/alwatr/tree/main/core/signal2#readme",
   "bugs": {
     "url": "https://github.com/AliMD/alwatr/issues"
   },
   "dependencies": {
-    "@alwatr/fetch": "^0.32.0",
-    "@alwatr/fsm": "^0.32.0",
     "@alwatr/logger": "^0.32.0",
-    "@alwatr/signal": "^0.32.0",
+    "@alwatr/type": "^0.32.0",
     "@alwatr/util": "^0.32.0",
     "tslib": "^2.5.3"
-  },
-  "devDependencies": {
-    "@alwatr/type": "^0.32.0"
   }
 }

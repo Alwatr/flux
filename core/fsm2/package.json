@@ -1,9 +1,14 @@
 {
-  "name": "@alwatr/signal",
-  "version": "0.32.0",
-  "description": "Elegant powerful event system for handle global signals and states written in tiny TypeScript module.",
+  "name": "@alwatr/fsm2",
+  "version": "0.31.0",
+  "description": "Managing invocations finite-state machines for lit-element written in tiny TypeScript module.",
   "keywords": [
-    "signal",
+    "state",
+    "finite",
+    "machine",
+    "lit",
+    "lit-element",
+    "lit-html",
     "typescript",
     "esm",
     "alwatr"
@@ -11,8 +16,9 @@
   "main": "index.js",
   "type": "module",
   "types": "index.d.ts",
-  "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
+  "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "license": "MIT",
+  "private": true,
   "files": [
     "**/*.{d.ts.map,d.ts,js.map,js,html,md}"
   ],
@@ -22,16 +28,16 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/AliMD/alwatr",
-    "directory": "core/signal"
+    "directory": "core/fsm"
   },
-  "homepage": "https://github.com/AliMD/alwatr/tree/main/core/signal#readme",
+  "homepage": "https://github.com/AliMD/alwatr/tree/main/core/fsm#readme",
   "bugs": {
     "url": "https://github.com/AliMD/alwatr/issues"
   },
   "dependencies": {
     "@alwatr/logger": "^0.32.0",
+    "@alwatr/signal": "^0.32.0",
     "@alwatr/type": "^0.32.0",
-    "@alwatr/util": "^0.32.0",
     "tslib": "^2.5.3"
   }
 }

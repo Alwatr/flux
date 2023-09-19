@@ -27,7 +27,7 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
 
   protected _initialState: S;
 
-  constructor(config: {name: string, loggerPrefix?: string, initialState: S}) {
+  constructor(config: {name: string; loggerPrefix?: string; initialState: S}) {
     config.loggerPrefix ??= 'fsm';
     super(config);
     this._initialState = config.initialState;
@@ -53,20 +53,20 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
 
     if (toState == null) {
       this._logger.incident?.(
-          'transition',
-          'invalid_target_state',
-          'Defined target state for this event not found in state config',
-          {
-            fromState,
-            event,
-          },
+        'transition',
+        'invalid_target_state',
+        'Defined target state for this event not found in state config',
+        {
+          fromState,
+          event,
+        },
       );
       return;
     }
 
     const eventDetail: StateEventDetail<S, E> = {from: fromState, event, to: toState};
 
-    if (await this._shouldTransition(eventDetail) !== true) return;
+    if ((await this._shouldTransition(eventDetail)) !== true) return;
 
     this._notify(toState);
 
@@ -91,7 +91,7 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
     if (`_on_${eventDetail.from}_${eventDetail.event}` in this) {
       this._$execAction(`_on_${eventDetail.from}_${eventDetail.event}`, eventDetail);
     }
-    else {
+ else {
       this._$execAction(`_on_all_${eventDetail.event}`, eventDetail);
     }
   }

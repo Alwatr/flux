@@ -11,7 +11,7 @@ type ExtraEvent = 'cacheNotFound';
 export type ServerContextEvent = ServerRequestEvent | ExtraEvent;
 
 export abstract class AlwatrServerContextBase<
-  T extends AlwatrServiceResponse = AlwatrServiceResponse
+  T extends AlwatrServiceResponse = AlwatrServiceResponse,
 > extends AlwatrApiRequestBase<T, ExtraState, ExtraEvent> {
   protected _context?: T;
   constructor(protected override _config: ServerRequestConfig) {
@@ -126,7 +126,7 @@ export abstract class AlwatrServerContextBase<
 }
 
 export class AlwatrServerContext<
-  T extends AlwatrServiceResponse = AlwatrServiceResponse
+  T extends AlwatrServiceResponse = AlwatrServiceResponse,
 > extends AlwatrServerContextBase<T> {
   /**
    * Current state.

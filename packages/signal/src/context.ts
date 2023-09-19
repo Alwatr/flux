@@ -4,7 +4,7 @@ import {AlwatrObservable} from './observable.js';
  * Alwatr context signal.
  */
 export class AlwatrContextSignal<T> extends AlwatrObservable<T> {
-  constructor(config: {name: string, loggerPrefix?: string}) {
+  constructor(config: {name: string; loggerPrefix?: string}) {
     config.loggerPrefix ??= 'context-signal';
     super(config);
   }

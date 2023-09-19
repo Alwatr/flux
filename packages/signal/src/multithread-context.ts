@@ -44,7 +44,7 @@ export class AlwatrMultithreadContextSignal<TValue> extends AlwatrContextSignal<
     } as AlwatrContextChangedMessage);
   }
 
-  constructor(config: {name: string, loggerPrefix?: string}) {
+  constructor(config: {name: string; loggerPrefix?: string}) {
     super(config);
 
     if (AlwatrMultithreadContextSignal._registry[this._name] !== undefined) {

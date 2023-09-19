@@ -4,7 +4,7 @@ import {AlwatrObservable} from './observable.js';
  * Alwatr event signal.
  */
 export class AlwatrSignal<T> extends AlwatrObservable<T> {
-  constructor(config: {name: string, loggerPrefix?: string}) {
+  constructor(config: {name: string; loggerPrefix?: string}) {
     config.loggerPrefix ??= 'signal';
     super(config);
   }

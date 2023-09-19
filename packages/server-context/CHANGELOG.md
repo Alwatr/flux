@@ -15,13 +15,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **server-context:** convert some `super` to `this` ([3a79736](https://github.com/AliMD/alwatr-signal/commit/3a7973658daf2ee364aced0c7c4880041dfc9a1a))
-* **server-context:** export `server-context` to use ([b71c9a5](https://github.com/AliMD/alwatr-signal/commit/b71c9a5efa35ac4b5e53fd5cd966277abd7ff592))
+- **server-context:** convert some `super` to `this` ([3a79736](https://github.com/AliMD/alwatr-signal/commit/3a7973658daf2ee364aced0c7c4880041dfc9a1a))
+- **server-context:** export `server-context` to use ([b71c9a5](https://github.com/AliMD/alwatr-signal/commit/b71c9a5efa35ac4b5e53fd5cd966277abd7ff592))
 
 ### Features
 
-* **server-context:** AlwatrServerContext ([2ca976a](https://github.com/AliMD/alwatr-signal/commit/2ca976afd50b3022a264eef880274a9e1496056a))
-* **server-context:** dynamic extra state/event type ([1cb6db1](https://github.com/AliMD/alwatr-signal/commit/1cb6db1573f9349edecdc7d73e66243cadea40d4))
+- **server-context:** AlwatrServerContext ([2ca976a](https://github.com/AliMD/alwatr-signal/commit/2ca976afd50b3022a264eef880274a9e1496056a))
+- **server-context:** dynamic extra state/event type ([1cb6db1](https://github.com/AliMD/alwatr-signal/commit/1cb6db1573f9349edecdc7d73e66243cadea40d4))
 
 # 1.0.0 (2023-06-14)
 
@@ -43,23 +43,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **context:** compatible with new storage api ([5251ff0](https://github.com/AliMD/alwatr-signal/commit/5251ff005624720e091cdbc40e6b0142743428cb))
+- **context:** compatible with new storage api ([5251ff0](https://github.com/AliMD/alwatr-signal/commit/5251ff005624720e091cdbc40e6b0142743428cb))
 
 # 0.31.0 (2023-05-08)
 
 ### Bug Fixes
 
-* build issues ([e1060bc](https://github.com/AliMD/alwatr-signal/commit/e1060bccbfe3c775c32b85e9b8eb601e48b2998c))
-* **context:** merge request option issue ([e24e695](https://github.com/AliMD/alwatr-signal/commit/e24e695a8c25ab1dcb1c351a3ae0434e921610d0))
-* new logger api ([9d83a7d](https://github.com/AliMD/alwatr-signal/commit/9d83a7dc5c103bc3bb4282dacfd85fa998915300))
-* packages and refs ([eea2382](https://github.com/AliMD/alwatr-signal/commit/eea2382e459ccaa3e7b4b329d9c196eda146a08e))
+- build issues ([e1060bc](https://github.com/AliMD/alwatr-signal/commit/e1060bccbfe3c775c32b85e9b8eb601e48b2998c))
+- **context:** merge request option issue ([e24e695](https://github.com/AliMD/alwatr-signal/commit/e24e695a8c25ab1dcb1c351a3ae0434e921610d0))
+- new logger api ([9d83a7d](https://github.com/AliMD/alwatr-signal/commit/9d83a7dc5c103bc3bb4282dacfd85fa998915300))
+- packages and refs ([eea2382](https://github.com/AliMD/alwatr-signal/commit/eea2382e459ccaa3e7b4b329d9c196eda146a08e))
 
 ### Features
 
-* **context:** add `requestIfNotComplete` ([580d5c9](https://github.com/AliMD/alwatr-signal/commit/580d5c9c74f1c8921b45d402641df9444f438547))
-* **context:** awesome server context ([c001c58](https://github.com/AliMD/alwatr-signal/commit/c001c58a2b1b4e13fd1c34b5128031fd640a98e1))
-* **context:** new package ([98ee43d](https://github.com/AliMD/alwatr-signal/commit/98ee43d83b1ad5b3806ec6053c5cac70912000b3))
-* **context:** simple context api ([2a1b152](https://github.com/AliMD/alwatr-signal/commit/2a1b152380f267a6b173f08bbbe10295325b1fd8))
+- **context:** add `requestIfNotComplete` ([580d5c9](https://github.com/AliMD/alwatr-signal/commit/580d5c9c74f1c8921b45d402641df9444f438547))
+- **context:** awesome server context ([c001c58](https://github.com/AliMD/alwatr-signal/commit/c001c58a2b1b4e13fd1c34b5128031fd640a98e1))
+- **context:** new package ([98ee43d](https://github.com/AliMD/alwatr-signal/commit/98ee43d83b1ad5b3806ec6053c5cac70912000b3))
+- **context:** simple context api ([2a1b152](https://github.com/AliMD/alwatr-signal/commit/2a1b152380f267a6b173f08bbbe10295325b1fd8))
 
 # [1.0.0](https://github.com/AliMD/alwatr-signal/compare/v0.32.0...v1.0.0) (2023-06-14)
 

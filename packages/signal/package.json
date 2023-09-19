@@ -1,5 +1,5 @@
 {
-  "name": "@alwatr/signal2",
+  "name": "@alwatr/signal",
   "version": "2.0.0-prv",
   "description": "Elegant powerful event system for handle global signals and states written in tiny TypeScript module.",
   "keywords": [

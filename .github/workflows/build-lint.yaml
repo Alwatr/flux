@@ -39,10 +39,5 @@ jobs:
       - name: 🚀 Build Typescript
         run: yarn build
 
-      - name: 🚀 Extra Packages Build
-        run: yarn build:r
-
       - name: 🚀 Run ESLint
-        run: yarn lint:ts
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096 --max-semi-space-size=64"
+        run: yarn lint

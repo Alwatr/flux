@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2023-09-19)
+
+### Bug Fixes
+
+* all new repo path and packages dependencies ([21a6afa](https://github.com/AliMD/alwatr-signal/commit/21a6afa0badafe4051617d9a9e3bbfbaabd0c4ad)) by @AliMD
+* **server-context:** import issue ([aa76ffe](https://github.com/AliMD/alwatr-signal/commit/aa76ffe2f55e5a8dfe2b93ce756caa3311022f7e)) by @AliMD
+* ts refrence path ([c2baa44](https://github.com/AliMD/alwatr-signal/commit/c2baa44999c72a0015481fc8fea25439329c3f37)) by @AliMD
+
 ## [1.1.2](https://github.com/AliMD/alwatr-signal/compare/@alwatr/context@1.1.1...@alwatr/context@1.1.2) (2023-09-12)
 
 **Note:** Version bump only for package @alwatr/context

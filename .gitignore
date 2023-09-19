@@ -14,14 +14,14 @@ Desktop.ini
 *.log*
 
 # Build
+dist
+build
 .tsbuildinfo
 *.map
 *.d.ts
 *.js
 !*.config.js
 !**/res/*.js
-dist
-build
 
 # Dependencies
 node_modules
@@ -35,10 +35,3 @@ package-lock.json
 
 # dotenv environment variables file
 .env
-# *.env
-# !example.env
-
-temp
-_data
-db
-chrome-profile

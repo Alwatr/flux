@@ -1,6 +1,6 @@
 {
-  "name": "@alwatr/fsm2",
-  "version": "1.0.0",
+  "name": "@alwatr/fsm",
+  "version": "2.0.0-prv",
   "description": "Managing invocations finite-state machines for lit-element written in tiny TypeScript module.",
   "keywords": [
     "state",
@@ -18,7 +18,6 @@
   "types": "index.d.ts",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "license": "MIT",
-  "private": true,
   "files": [
     "**/*.{d.ts.map,d.ts,js.map,js,html,md}"
   ],
@@ -27,17 +26,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AliMD/alwatr",
-    "directory": "core/fsm"
+    "url": "https://github.com/AliMD/alwatr-signal",
+    "directory": "packages/fsm"
   },
-  "homepage": "https://github.com/AliMD/alwatr/tree/main/core/fsm#readme",
+  "homepage": "https://github.com/AliMD/alwatr-signal/tree/next/packages/fsm#readme",
   "bugs": {
-    "url": "https://github.com/AliMD/alwatr/issues"
+    "url": "https://github.com/AliMD/alwatr-signal/issues"
   },
   "dependencies": {
-    "@alwatr/logger": "^1.0.0",
-    "@alwatr/signal": "^1.0.0",
-    "@alwatr/type": "^1.0.0",
+    "@alwatr/signal": "^2.0.0-prv",
+    "@alwatr/logger": "^1.1.5",
+    "@alwatr/type": "^1.1.4",
     "tslib": "^2.6.2"
   }
 }

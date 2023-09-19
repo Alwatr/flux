@@ -23,19 +23,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AliMD/alwatr",
-    "directory": "core/server-context"
+    "url": "https://github.com/AliMD/alwatr-signal",
+    "directory": "packages/server-context"
   },
-  "homepage": "https://github.com/AliMD/alwatr/tree/main/core/server-context#readme",
+  "homepage": "https://github.com/AliMD/alwatr-signal/tree/next/packages/server-context#readme",
   "bugs": {
-    "url": "https://github.com/AliMD/alwatr/issues"
+    "url": "https://github.com/AliMD/alwatr-signal/issues"
   },
   "dependencies": {
-    "@alwatr/fetch": "^1.1.2",
-    "@alwatr/fsm": "^1.1.2",
-    "@alwatr/logger": "^1.1.2",
-    "@alwatr/signal": "^1.1.2",
-    "@alwatr/util": "^1.2.0",
+    "@alwatr/fetch": "^2.0.1",
+    "@alwatr/fsm": "^2.0.0-prv",
+    "@alwatr/signal": "^2.0.0-prv",
+    "@alwatr/logger": "^1.1.5",
+    "@alwatr/util": "^1.2.3",
+    "@alwatr/type": "^1.1.4",
     "tslib": "^2.6.2"
   }
 }

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import {AlwatrObservable} from '@alwatr/signal2/observable.js';
+import {AlwatrObservable} from '@alwatr/signal/observable.js';
 
 import type {ActionName, ActionRecord, StateEventDetail, StateRecord} from './type.js';
 import type {MaybePromise} from '@alwatr/type';

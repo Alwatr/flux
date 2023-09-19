@@ -1,4 +1,4 @@
-import {AlwatrContextSignal} from '@alwatr/signal2';
+import {AlwatrContextSignal} from '@alwatr/signal';
 
 const context = new AlwatrContextSignal<{name: string; age: number}>({name: 'user-info-context'});
 

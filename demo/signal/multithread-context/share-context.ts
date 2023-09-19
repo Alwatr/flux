@@ -1,4 +1,4 @@
-import {AlwatrMultithreadContextSignal} from '@alwatr/signal2';
+import {AlwatrMultithreadContextSignal} from '@alwatr/signal';
 
 import type {Stringifyable} from '@alwatr/type';
 

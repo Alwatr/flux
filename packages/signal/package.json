@@ -1,5 +1,5 @@
 {
-  "name": "@alwatr/signal2",
+  "name": "@alwatr/signal",
   "version": "2.0.0-prv",
   "description": "Elegant powerful event system for handle global signals and states written in tiny TypeScript module.",
   "keywords": [
@@ -22,9 +22,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/AliMD/alwatr-signal",
-    "directory": "packages/signal2"
+    "directory": "packages/signal"
   },
-  "homepage": "https://github.com/AliMD/alwatr-signal/tree/next/packages/signal2#readme",
+  "homepage": "https://github.com/AliMD/alwatr-signal/tree/next/packages/signal#readme",
   "bugs": {
     "url": "https://github.com/AliMD/alwatr-signal/issues"
   },

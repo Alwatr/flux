@@ -1,5 +1,5 @@
 import {fetch} from '@alwatr/fetch';
-import {ActionRecord, FiniteStateMachineBase, StateRecord} from '@alwatr/fsm2';
+import {ActionRecord, FiniteStateMachineBase, StateRecord} from '@alwatr/fsm';
 
 import type {FetchOptions} from '@alwatr/fetch/type.js';
 

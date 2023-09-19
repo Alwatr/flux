@@ -2,7 +2,7 @@ import {createLogger} from '@alwatr/logger';
 
 import {messageContext} from './share-context.js';
 
-const logger = createLogger('demo/signal2', true);
+const logger = createLogger('demo/signal', true);
 
 let i = 0;
 

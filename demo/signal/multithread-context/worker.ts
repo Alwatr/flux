@@ -1,11 +1,11 @@
 import {createLogger} from '@alwatr/logger';
-import {AlwatrMultithreadContextSignal} from '@alwatr/signal2';
+import {AlwatrMultithreadContextSignal} from '@alwatr/signal';
 
 AlwatrMultithreadContextSignal.setupChannel();
 
 import {messageContext} from './share-context.js';
 
-const logger = createLogger('demo/signal2', true);
+const logger = createLogger('demo/signal', true);
 
 let i = 0;
 

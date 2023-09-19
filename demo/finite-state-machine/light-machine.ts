@@ -1,4 +1,4 @@
-import {FiniteStateMachine} from '@alwatr/fsm2';
+import {FiniteStateMachine} from '@alwatr/fsm';
 import {delay} from '@alwatr/util';
 
 type State = 'green' | 'yellow' | 'red' | 'flashingRed';

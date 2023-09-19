@@ -7,6 +7,6 @@ export * from './multithread-context.js';
 export * from './type.js';
 
 globalAlwatr.registeredList.push({
-  name: '@alwatr/signal2',
+  name: '@alwatr/signal',
   version: _ALWATR_VERSION_,
 });

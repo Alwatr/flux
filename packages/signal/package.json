@@ -22,9 +22,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/AliMD/alwatr-signal",
-    "directory": "packages/signal2"
+    "directory": "packages/signal"
   },
-  "homepage": "https://github.com/AliMD/alwatr-signal/tree/next/packages/signal2#readme",
+  "homepage": "https://github.com/AliMD/alwatr-signal/tree/next/packages/signal#readme",
   "bugs": {
     "url": "https://github.com/AliMD/alwatr-signal/issues"
   },

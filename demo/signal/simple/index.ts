@@ -1,4 +1,4 @@
-import {AlwatrSignal, AlwatrSimpleSignal} from '@alwatr/signal2';
+import {AlwatrSignal, AlwatrSimpleSignal} from '@alwatr/signal';
 
 // button 1
 const clickEvent = new AlwatrSimpleSignal({name: 'button-1-click-event'});

@@ -8,7 +8,6 @@ function clickEventSubscribeHandler(): void {
 }
 clickEvent.subscribe(clickEventSubscribeHandler);
 
-
 // button 2
 const clickEvent2 = new AlwatrSignal({name: 'button-2-click-event'});
 document.getElementById('myButton2')?.addEventListener('click', () => clickEvent2.notify({clickedBy: 'BTN_2'}));
@@ -17,13 +16,11 @@ function clickEvent2SubscribeHandler(detail: unknown): void {
 }
 clickEvent2.subscribe(clickEvent2SubscribeHandler);
 
-
 // button 3
 document.getElementById('myButton3')?.addEventListener('click', () => {
   clickEvent.subscribe(clickEventSubscribeHandler);
   clickEvent2.subscribe(clickEvent2SubscribeHandler);
 });
-
 
 // button 4
 document.getElementById('myButton4')?.addEventListener('click', () => {

@@ -10,7 +10,7 @@ import type {AlwatrServiceResponse} from '@alwatr/type';
 export abstract class AlwatrApiRequestBase<
   T extends AlwatrServiceResponse = AlwatrServiceResponse,
   ExtraState extends string = never,
-  ExtraEvent extends string = never
+  ExtraEvent extends string = never,
 > extends AlwatrServerRequestBase<ExtraState, ExtraEvent> {
   protected _responseJson?: T;
 

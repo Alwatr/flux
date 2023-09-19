@@ -12,7 +12,7 @@ export type ServerRequestEvent = 'request' | 'requestFailed' | 'requestSuccess';
 
 export abstract class AlwatrServerRequestBase<
   ExtraState extends string = never,
-  ExtraEvent extends string = never
+  ExtraEvent extends string = never,
 > extends FiniteStateMachineBase<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent> {
   protected _$fetchOptions?: FetchOptions;
   protected _response?: Response;

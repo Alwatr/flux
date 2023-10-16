@@ -67,13 +67,13 @@ export abstract class AlwatrServerContextBase<
 
   protected _$offlineRequestAction(): void {
     this._logger.logMethod?.('_$offlineRequestAction');
-    this._setOptions({cacheStrategy: 'cache_only'});
+    this._$fetchOptions!.cacheStrategy === 'cache_only';
     this._$requestAction();
   }
 
   protected _$onlineRequestAction(): void {
     this._logger.logMethod?.('_$onlineRequestAction');
-    this._setOptions({cacheStrategy: 'update_cache'});
+    this._$fetchOptions!.cacheStrategy === 'update_cache';
     this._$requestAction();
   }
 

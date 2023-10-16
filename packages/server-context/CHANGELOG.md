@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/AliMD/alwatr-signal/compare/@alwatr/server-context@1.2.0...@alwatr/server-context@1.2.1) (2023-10-16)
+
+### Bug Fixes
+
+* **server-context:** request options gone in offline requests ([a80b79e](https://github.com/AliMD/alwatr-signal/commit/a80b79e3a5969d4bca42a2720a1194bad984599f)) by @AliMD
+
 # 1.2.0 (2023-09-19)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@alwatr/server-context",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Elegant powerful context manager base on alwatr signal, written in tiny TypeScript, ES module.",
   "keywords": [
     "context",

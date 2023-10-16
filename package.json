@@ -48,7 +48,7 @@
     "@lerna-lite/exec": "^2.5.1",
     "@lerna-lite/publish": "^2.5.1",
     "@lerna-lite/run": "^2.5.1",
-    "@lerna-lite/version": "^2.5.1",
+    "@lerna-lite/version": "^2.6.0",
     "@types/node": "^20.6.1",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",

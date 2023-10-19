@@ -853,10 +853,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.2.tgz#ee771e2ba4b3dc5b372935d549fd9617bf345b8c"
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
-"@types/node@*", "@types/node@^20.8.6":
-  version "20.8.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.8.6.tgz#0dbd4ebcc82ad0128df05d0e6f57e05359ee47fa"
-  integrity sha512-eWO4K2Ji70QzKUqRy6oyJWUeB7+g2cRagT3T/nxYibYcT4y2BDL8lqolRXjTHmkZCdJfIPaY73KbJAZmcryxTQ==
+"@types/node@*", "@types/node@^20.8.7":
+  version "20.8.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.8.7.tgz#ad23827850843de973096edfc5abc9e922492a25"
+  integrity sha512-21TKHHh3eUHIi2MloeptJWALuCu5H7HQTdTrWIFReA8ad+aggoX+lRes3ex7/FtpC+sVUpFMQ+QTfYr74mruiQ==
   dependencies:
     undici-types "~5.25.1"
 
@@ -1006,10 +1006,10 @@
   dependencies:
     semver "^7.3.4"
 
-"@web/dev-server-core@^0.5.0", "@web/dev-server-core@^0.5.1":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@web/dev-server-core/-/dev-server-core-0.5.2.tgz#27fe5448e587a87272b556b44ce84c6453655cdb"
-  integrity sha512-7YjWmwzM+K5fPvBCXldUIMTK4EnEufi1aWQWinQE81oW1CqzEwmyUNCtnWV9fcPA4kJC4qrpcjWNGF4YDWxuSg==
+"@web/dev-server-core@^0.6.0":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@web/dev-server-core/-/dev-server-core-0.6.1.tgz#11c1f4bf23580441d7b27dfd412810b806ecf85b"
+  integrity sha512-djZD4yjKbcZxSHO16FIJrxDyAiGMdF6nVxLqSNlfl+M4nDzRmvLVzumK9rfKCUDs7ZwAwRgd1+dzOFaWYnXqPA==
   dependencies:
     "@types/koa" "^2.11.6"
     "@types/ws" "^7.4.0"
@@ -1030,28 +1030,28 @@
     picomatch "^2.2.2"
     ws "^7.4.2"
 
-"@web/dev-server-rollup@^0.5.1":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@web/dev-server-rollup/-/dev-server-rollup-0.5.2.tgz#5a6a9138cd57f32f7ae0e5caab69099c1428bd15"
-  integrity sha512-R1heFIOmbExKJn2auDcOcF0EPoLQotZF1HE8Bpqq4TfLRkc7w+JClLdwkOMr/+Ip608cRw8VMkc7teYDFkvSXw==
+"@web/dev-server-rollup@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@web/dev-server-rollup/-/dev-server-rollup-0.5.3.tgz#1291745b93bf05f17d3f4ebbf8fe864db44aa45c"
+  integrity sha512-Wk+yO9iajmw3Prxr61pI5PUVH0h+rXxfUhaoi0Ax5cylpMvtgwVhBavqXad3trfZgIWm2HdFQVlIhqDmvGclmQ==
   dependencies:
     "@rollup/plugin-node-resolve" "^15.0.1"
-    "@web/dev-server-core" "^0.5.0"
+    "@web/dev-server-core" "^0.6.0"
     nanocolors "^0.2.1"
     parse5 "^6.0.1"
     rollup "^3.15.0"
     whatwg-url "^11.0.0"
 
-"@web/dev-server@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@web/dev-server/-/dev-server-0.3.3.tgz#0724683aa2ed5eee325aa602423fdf8d704548b0"
-  integrity sha512-dILoqPa4hHh/p2jK702fDHPSRv5JSjDiDaXKE+IfCX/hNEuX7SQ65Z5JPB7T+5qbtsOxbG/KOQpo2q8ZGm7hOQ==
+"@web/dev-server@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@web/dev-server/-/dev-server-0.3.4.tgz#06fe2c347d2b76519786e6c5eb34732c91530474"
+  integrity sha512-y4e+BIW6SA+AwHT9j3m/rK/NLGRhakAMlefy8z0SAfEicwyV1fEKsNRhpUrRFuWbm5FLnH6G6O9Rj1mwIGwvdg==
   dependencies:
     "@babel/code-frame" "^7.12.11"
     "@types/command-line-args" "^5.0.0"
     "@web/config-loader" "^0.2.1"
-    "@web/dev-server-core" "^0.5.1"
-    "@web/dev-server-rollup" "^0.5.1"
+    "@web/dev-server-core" "^0.6.0"
+    "@web/dev-server-rollup" "^0.5.3"
     camelcase "^6.2.0"
     command-line-args "^5.1.1"
     command-line-usage "^7.0.1"

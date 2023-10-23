@@ -24,7 +24,7 @@
     "f": "yarn format",
     "fl": "yarn format:eslint",
     "fp": "yarn format:prettier",
-    "rl": "run-s pull release",
+    "rl": "run-s pull clean build release",
     "lint": "run-s lint:*",
     "lint:ts": "eslint . --config .eslintrc.json --ext .ts",
     "build": "run-s build:ts build:r",

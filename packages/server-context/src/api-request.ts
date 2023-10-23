@@ -44,7 +44,7 @@ export abstract class AlwatrApiRequestBase<
     const responseJson = this._responseJson!;
     if (responseJson.ok !== true) {
       if (typeof responseJson.errorCode === 'string') {
-        this._logger.accident('_$fetch', responseJson.errorCode, 'fetch response not ok', {responseJson});
+        this._logger.accident('_$fetch', responseJson.errorCode, {responseJson});
         throw new Error(responseJson.errorCode);
       }
       else {

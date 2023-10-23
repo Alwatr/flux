@@ -79,7 +79,7 @@ export abstract class AlwatrServerContextBase<
 
   protected _$updateContextAction(): void {
     if (this._responseJson === undefined) {
-      this._logger.accident('_$updateContextAction', 'no_response_json', 'this._responseJson undefined');
+      this._logger.accident('_$updateContextAction', 'no_response_json');
       return;
     }
 

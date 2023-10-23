@@ -1,7 +1,10 @@
 import {fetch} from '@alwatr/fetch';
 import {ActionRecord, FiniteStateMachineBase, StateRecord} from '@alwatr/fsm';
+import {definePackage} from '@alwatr/logger';
 
 import type {FetchOptions} from '@alwatr/fetch/type.js';
+
+definePackage('server-context', '2.x');
 
 export interface ServerRequestConfig extends Partial<FetchOptions> {
   name: string;

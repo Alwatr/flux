@@ -853,10 +853,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.2.tgz#ee771e2ba4b3dc5b372935d549fd9617bf345b8c"
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
-"@types/node@*", "@types/node@^20.8.6":
-  version "20.8.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.8.6.tgz#0dbd4ebcc82ad0128df05d0e6f57e05359ee47fa"
-  integrity sha512-eWO4K2Ji70QzKUqRy6oyJWUeB7+g2cRagT3T/nxYibYcT4y2BDL8lqolRXjTHmkZCdJfIPaY73KbJAZmcryxTQ==
+"@types/node@*", "@types/node@^20.8.7":
+  version "20.8.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.8.7.tgz#ad23827850843de973096edfc5abc9e922492a25"
+  integrity sha512-21TKHHh3eUHIi2MloeptJWALuCu5H7HQTdTrWIFReA8ad+aggoX+lRes3ex7/FtpC+sVUpFMQ+QTfYr74mruiQ==
   dependencies:
     undici-types "~5.25.1"
 
@@ -1004,21 +1004,21 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@web/config-loader@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@web/config-loader/-/config-loader-0.2.1.tgz#a5ff416922994d698e1df8c3613715bde47ecf79"
-  integrity sha512-cQvTYA5lWLyyO8/R2aOReiudLa8r0LFHvMNYCwSAjzvrghb+AHxaW3BJWP9ORx6OaDcI7g5X8OATA81LSJce4A==
+"@web/config-loader@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@web/config-loader/-/config-loader-0.2.2.tgz#e920d273473c39aad2ea93a4bd0a08bbf3471de2"
+  integrity sha512-HhoXMGivHbQ880MKQ1JChYCjWsMS4MUNOF35ktLV/0pZiX+J7oobybsPuyhS+gTnZsU7Duqnk3+HQYB7cNS4fA==
   dependencies:
     semver "^7.3.4"
 
-"@web/dev-server-core@^0.5.0", "@web/dev-server-core@^0.5.1":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@web/dev-server-core/-/dev-server-core-0.5.2.tgz#27fe5448e587a87272b556b44ce84c6453655cdb"
-  integrity sha512-7YjWmwzM+K5fPvBCXldUIMTK4EnEufi1aWQWinQE81oW1CqzEwmyUNCtnWV9fcPA4kJC4qrpcjWNGF4YDWxuSg==
+"@web/dev-server-core@^0.6.2", "@web/dev-server-core@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@web/dev-server-core/-/dev-server-core-0.6.3.tgz#069bd1259500fce5ce2ee29ccbcf5ba3fe71aaeb"
+  integrity sha512-BWlgxIXQbg3RqUdz9Cfeh3XqFv0KcjQi4DLaZy9s63IlXgNZTzesTfDzliP/mIdWd5r8KZYh/P3n6LMi7CLPjQ==
   dependencies:
     "@types/koa" "^2.11.6"
     "@types/ws" "^7.4.0"
-    "@web/parse5-utils" "^2.0.0"
+    "@web/parse5-utils" "^2.0.2"
     chokidar "^3.4.3"
     clone "^2.1.2"
     es-module-lexer "^1.0.0"
@@ -1035,28 +1035,28 @@
     picomatch "^2.2.2"
     ws "^7.4.2"
 
-"@web/dev-server-rollup@^0.5.1":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@web/dev-server-rollup/-/dev-server-rollup-0.5.2.tgz#5a6a9138cd57f32f7ae0e5caab69099c1428bd15"
-  integrity sha512-R1heFIOmbExKJn2auDcOcF0EPoLQotZF1HE8Bpqq4TfLRkc7w+JClLdwkOMr/+Ip608cRw8VMkc7teYDFkvSXw==
+"@web/dev-server-rollup@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@web/dev-server-rollup/-/dev-server-rollup-0.5.4.tgz#c8a55280d48a5675122f780df9448fdd4f66ac64"
+  integrity sha512-lIN+lwj84Oh8Whe4vHijjMVe7NLJUzLxiiUsOleUtrBp1b7Us9QyUNCJK/iYitHJJDhCw6JcLJbCJ5H+vW969Q==
   dependencies:
     "@rollup/plugin-node-resolve" "^15.0.1"
-    "@web/dev-server-core" "^0.5.0"
+    "@web/dev-server-core" "^0.6.2"
     nanocolors "^0.2.1"
     parse5 "^6.0.1"
     rollup "^3.15.0"
     whatwg-url "^11.0.0"
 
-"@web/dev-server@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@web/dev-server/-/dev-server-0.3.3.tgz#0724683aa2ed5eee325aa602423fdf8d704548b0"
-  integrity sha512-dILoqPa4hHh/p2jK702fDHPSRv5JSjDiDaXKE+IfCX/hNEuX7SQ65Z5JPB7T+5qbtsOxbG/KOQpo2q8ZGm7hOQ==
+"@web/dev-server@^0.3.6":
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/@web/dev-server/-/dev-server-0.3.6.tgz#3b01e14831029c772cb76242ec24458e071c4a59"
+  integrity sha512-hOHEP0PapJv0YiyFcvO0ruILJ35gZOd7gDivGwhi9MbeA5P+0b1eQv8tj/YXnAKmSD7lW+QjRTV0KWP8EzRoCQ==
   dependencies:
     "@babel/code-frame" "^7.12.11"
     "@types/command-line-args" "^5.0.0"
-    "@web/config-loader" "^0.2.1"
-    "@web/dev-server-core" "^0.5.1"
-    "@web/dev-server-rollup" "^0.5.1"
+    "@web/config-loader" "^0.2.2"
+    "@web/dev-server-core" "^0.6.3"
+    "@web/dev-server-rollup" "^0.5.4"
     camelcase "^6.2.0"
     command-line-args "^5.1.1"
     command-line-usage "^7.0.1"
@@ -1067,10 +1067,10 @@
     open "^8.0.2"
     portfinder "^1.0.32"
 
-"@web/parse5-utils@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@web/parse5-utils/-/parse5-utils-2.0.1.tgz#11b91417165a838954dcf228383cfd8e1bdaf914"
-  integrity sha512-FQI72BU5CXhpp7gLRskOQGGCcwvagLZnMnDwAfjrxo3pm1KOQzr8Vl+438IGpHV62xvjNdF1pjXwXcf7eekWGw==
+"@web/parse5-utils@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@web/parse5-utils/-/parse5-utils-2.0.2.tgz#263df67fb4262738c891314199b666f5bd96781b"
+  integrity sha512-TogrPNt36zOSjbEd8zoDmUGsN2dqMbk4U+2DrxsnbVxtUIBRCNPIuZ+XeoGF8gpxe2/Yf0dIVz+HW5+wEnqkCg==
   dependencies:
     "@types/parse5" "^6.0.1"
     parse5 "^6.0.1"

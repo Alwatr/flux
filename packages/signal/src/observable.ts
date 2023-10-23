@@ -1,4 +1,4 @@
-import {createLogger} from '@alwatr/logger';
+import {createLogger, definePackage} from '@alwatr/logger';
 
 import type {
   SubscribeOptions,
@@ -7,6 +7,8 @@ import type {
   SubscribeResult,
   AlwatrObservableInterface,
 } from './type.js';
+
+definePackage('signal', '2.x');
 
 /**
  * Alwatr base signal.

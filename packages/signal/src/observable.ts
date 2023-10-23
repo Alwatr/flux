@@ -1,12 +1,6 @@
 import {createLogger, definePackage} from '@alwatr/logger';
 
-import type {
-  SubscribeOptions,
-  ListenerCallback,
-  Observer,
-  SubscribeResult,
-  AlwatrObservableInterface,
-} from './type.js';
+import type {SubscribeOptions, ListenerCallback, Observer, SubscribeResult, AlwatrObservableInterface} from './type.js';
 
 definePackage('signal', '2.x');
 

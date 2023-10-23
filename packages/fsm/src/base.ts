@@ -55,14 +55,10 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
     this._logger.logMethodArgs?.('_transition', {fromState, event, toState});
 
     if (toState == null) {
-      this._logger.incident?.(
-        'transition',
-        'invalid_target_state',
-        {
-          fromState,
-          event,
-        },
-      );
+      this._logger.incident?.('transition', 'invalid_target_state', {
+        fromState,
+        event,
+      });
       return;
     }
 

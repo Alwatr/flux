@@ -7,11 +7,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* all new repo path and packages dependencies ([21a6afa](https://github.com/AliMD/alwatr-signal/commit/21a6afa0badafe4051617d9a9e3bbfbaabd0c4ad)) by @AliMD
-* cleanup old signal and fsm v1 ([bde0bea](https://github.com/AliMD/alwatr-signal/commit/bde0bea06a6750bebad49a127b75b57fd5e55ddd)) by @AliMD
-* **signal:** package name ([4791b54](https://github.com/AliMD/alwatr-signal/commit/4791b54c8da75cf43eb9c86180f1ed94b0e28c4e)) by @AliMD
-* **signal:** signal2 name ([70b71e3](https://github.com/AliMD/alwatr-signal/commit/70b71e312cb5e5d4c54c37c5c327712200f90be5)) by @AliMD
-* ts refrence path ([c2baa44](https://github.com/AliMD/alwatr-signal/commit/c2baa44999c72a0015481fc8fea25439329c3f37)) by @AliMD
+- all new repo path and packages dependencies ([21a6afa](https://github.com/AliMD/alwatr-signal/commit/21a6afa0badafe4051617d9a9e3bbfbaabd0c4ad)) by @AliMD
+- cleanup old signal and fsm v1 ([bde0bea](https://github.com/AliMD/alwatr-signal/commit/bde0bea06a6750bebad49a127b75b57fd5e55ddd)) by @AliMD
+- **signal:** package name ([4791b54](https://github.com/AliMD/alwatr-signal/commit/4791b54c8da75cf43eb9c86180f1ed94b0e28c4e)) by @AliMD
+- **signal:** signal2 name ([70b71e3](https://github.com/AliMD/alwatr-signal/commit/70b71e312cb5e5d4c54c37c5c327712200f90be5)) by @AliMD
+- ts refrence path ([c2baa44](https://github.com/AliMD/alwatr-signal/commit/c2baa44999c72a0015481fc8fea25439329c3f37)) by @AliMD
 
 ## [1.1.2](https://github.com/AliMD/alwatr-signal/compare/@alwatr/signal@1.1.1...@alwatr/signal@1.1.2) (2023-09-12)
 

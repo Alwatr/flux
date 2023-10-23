@@ -1,8 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import {AlwatrObservable} from '@alwatr/signal/observable.js';
+import {definePackage} from '@alwatr/logger';
+import {AlwatrObservable} from '@alwatr/signal';
 
 import type {ActionName, ActionRecord, StateEventDetail, StateRecord} from './type.js';
 import type {MaybePromise} from '@alwatr/type';
+
+definePackage('fsm', '2.x');
 
 /**
  * Finite State Machine Base Class
@@ -55,7 +58,6 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
       this._logger.incident?.(
         'transition',
         'invalid_target_state',
-        'Defined target state for this event not found in state config',
         {
           fromState,
           event,
@@ -91,7 +93,7 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
     if (`_on_${eventDetail.from}_${eventDetail.event}` in this) {
       this._$execAction(`_on_${eventDetail.from}_${eventDetail.event}`, eventDetail);
     }
- else {
+    else {
       this._$execAction(`_on_all_${eventDetail.event}`, eventDetail);
     }
   }

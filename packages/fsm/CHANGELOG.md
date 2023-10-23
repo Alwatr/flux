@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/AliMD/alwatr-signal/compare/@alwatr/fsm@2.0.0...@alwatr/fsm@2.0.1) (2023-10-23)
+
+### Bug Fixes
+
+* **fsm:** compatible with new logger api ([77db656](https://github.com/AliMD/alwatr-signal/commit/77db656d8b261da29376cf6dba7b9d4c35deeae8)) by @
+
 # 2.0.0 (2023-09-19)
 
 ### Bug Fixes

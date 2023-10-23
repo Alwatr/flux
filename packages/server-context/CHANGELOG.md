@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/AliMD/alwatr-signal/compare/@alwatr/server-context@1.2.1...@alwatr/server-context@1.2.2) (2023-10-23)
+
+### Bug Fixes
+
+* **server-context:** compatible with new logger api ([916db77](https://github.com/AliMD/alwatr-signal/commit/916db775c4e352d7ca663507f80539eef38b4738)) by @
+
 ## [1.2.1](https://github.com/AliMD/alwatr-signal/compare/@alwatr/server-context@1.2.0...@alwatr/server-context@1.2.1) (2023-10-16)
 
 ### Bug Fixes

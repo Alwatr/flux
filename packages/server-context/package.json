@@ -1,6 +1,6 @@
 {
   "name": "@alwatr/server-context",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Elegant powerful context manager base on alwatr signal, written in tiny TypeScript, ES module.",
   "keywords": [
     "context",
@@ -32,9 +32,9 @@
   },
   "dependencies": {
     "@alwatr/fetch": "^2.0.7",
-    "@alwatr/fsm": "^2.0.1",
+    "@alwatr/fsm": "^2.0.2",
     "@alwatr/logger": "^2.1.2",
-    "@alwatr/signal": "^2.0.1",
+    "@alwatr/signal": "^2.0.2",
     "@alwatr/type": "^1.1.4",
     "@alwatr/util": "^1.2.9",
     "tslib": "^2.6.2"

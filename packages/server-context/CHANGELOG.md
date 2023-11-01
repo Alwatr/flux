@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/AliMD/alwatr-signal/compare/@alwatr/server-context@1.2.2...@alwatr/server-context@1.2.3) (2023-11-01)
+
+**Note:** Version bump only for package @alwatr/server-context
+
 ## [1.2.2](https://github.com/AliMD/alwatr-signal/compare/@alwatr/server-context@1.2.1...@alwatr/server-context@1.2.2) (2023-10-23)
 
 ### Bug Fixes

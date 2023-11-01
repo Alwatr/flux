@@ -1049,10 +1049,10 @@
     rollup "^3.15.0"
     whatwg-url "^11.0.0"
 
-"@web/dev-server@^0.3.6":
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/@web/dev-server/-/dev-server-0.3.6.tgz#3b01e14831029c772cb76242ec24458e071c4a59"
-  integrity sha512-hOHEP0PapJv0YiyFcvO0ruILJ35gZOd7gDivGwhi9MbeA5P+0b1eQv8tj/YXnAKmSD7lW+QjRTV0KWP8EzRoCQ==
+"@web/dev-server@^0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@web/dev-server/-/dev-server-0.3.7.tgz#9c849781fa7307021d93c833da8c4967876c118e"
+  integrity sha512-He/QTO1C+zWJesgOmGbuBX5p5OEbH9hxgELDVIscQAdOq91PpQN/4s8PJ3LIRpkbXAZBxdwCoRUZHENxHgOtjg==
   dependencies:
     "@babel/code-frame" "^7.12.11"
     "@types/command-line-args" "^5.0.0"

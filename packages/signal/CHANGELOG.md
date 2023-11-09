@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **signal:** compatible with new logger api ([0a3b1c0](https://github.com/AliMD/alwatr-signal/commit/0a3b1c02b285daa66491104a14596e6a19895e11)) by @
+- **signal:** compatible with new logger api ([0a3b1c0](https://github.com/AliMD/alwatr-signal/commit/0a3b1c02b285daa66491104a14596e6a19895e11)) by @
 
 # 2.0.0 (2023-09-19)
 

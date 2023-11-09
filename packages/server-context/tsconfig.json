@@ -9,8 +9,5 @@
 
   "include": ["src/**/*.ts"],
   "exclude": [],
-  "references": [
-    {"path": "../signal"},
-    {"path": "../fsm"},
-  ]
+  "references": [{"path": "../signal"}, {"path": "../fsm"}]
 }

@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **fsm:** compatible with new logger api ([77db656](https://github.com/AliMD/alwatr-signal/commit/77db656d8b261da29376cf6dba7b9d4c35deeae8)) by @
+- **fsm:** compatible with new logger api ([77db656](https://github.com/AliMD/alwatr-signal/commit/77db656d8b261da29376cf6dba7b9d4c35deeae8)) by @
 
 # 2.0.0 (2023-09-19)
 

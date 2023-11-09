@@ -21,17 +21,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AliMD/alwatr-signal",
+    "url": "https://github.com/Alwatr/signal",
     "directory": "packages/signal"
   },
-  "homepage": "https://github.com/AliMD/alwatr-signal/tree/next/packages/signal#readme",
+  "homepage": "https://github.com/Alwatr/signal/tree/next/packages/signal#readme",
   "bugs": {
-    "url": "https://github.com/AliMD/alwatr-signal/issues"
+    "url": "https://github.com/Alwatr/signal/issues"
   },
   "dependencies": {
-    "@alwatr/logger": "^2.1.2",
-    "@alwatr/type": "^1.1.4",
-    "@alwatr/util": "^1.2.9",
+    "@alwatr/logger": "^2.1.3",
+    "@alwatr/type": "^1.1.5",
+    "@alwatr/util": "^1.2.10",
     "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0"
   }
 }

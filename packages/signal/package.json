@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AliMD/alwatr-signal",
+    "url": "https://github.com/Alwatr/signal",
     "directory": "packages/signal"
   },
-  "homepage": "https://github.com/AliMD/alwatr-signal/tree/next/packages/signal#readme",
+  "homepage": "https://github.com/Alwatr/signal/tree/next/packages/signal#readme",
   "bugs": {
-    "url": "https://github.com/AliMD/alwatr-signal/issues"
+    "url": "https://github.com/Alwatr/signal/issues"
   },
   "dependencies": {
     "@alwatr/logger": "^2.1.3",

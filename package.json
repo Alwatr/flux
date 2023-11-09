@@ -1,7 +1,7 @@
 {
   "name": "alwatr-signal",
   "description": "Elegant powerful event system for handle global signals and states base on observable design pattern, written in tiny TypeScript module.",
-  "repository": "https://github.com/AliMD/alwatr-signal",
+  "repository": "https://github.com/Alwatr/signal",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "license": "MIT",
   "type": "module",

@@ -9,9 +9,5 @@
 
   "include": ["**/*.ts"],
   "exclude": ["*.d.ts", "node_modules"],
-  "references": [
-    {"path": "../packages/signal"},
-    {"path": "../packages/fsm"},
-    {"path": "../packages/server-context"}
-  ]
+  "references": [{"path": "../packages/signal"}, {"path": "../packages/fsm"}, {"path": "../packages/server-context"}]
 }

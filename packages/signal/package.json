@@ -29,9 +29,12 @@
     "url": "https://github.com/AliMD/alwatr-signal/issues"
   },
   "dependencies": {
-    "@alwatr/logger": "^2.1.2",
-    "@alwatr/type": "^1.1.4",
-    "@alwatr/util": "^1.2.9",
+    "@alwatr/logger": "^2.1.3",
+    "@alwatr/type": "^1.1.5",
+    "@alwatr/util": "^1.2.10",
     "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0"
   }
 }

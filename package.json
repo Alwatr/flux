@@ -37,6 +37,7 @@
     "serve": "wds",
     "watch": "run-p 'watch:*' serve",
     "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
+    "upd": "yarn set version latest; yarn up '*'; yarn up '*' -R; yarn dlx @yarnpkg/sdks vscode;",
     "pull": "git pull",
     "release": "lerna version",
     "publish": "lerna publish from-package"

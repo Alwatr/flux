@@ -29,9 +29,9 @@
     "url": "https://github.com/Alwatr/signal/issues"
   },
   "dependencies": {
-    "@alwatr/logger": "^2.3.3",
-    "@alwatr/type": "^1.2.3",
-    "@alwatr/util": "^1.3.5",
+    "@alwatr/logger": "^2.4.0",
+    "@alwatr/type": "^1.2.4",
+    "@alwatr/util": "^1.4.0",
     "tslib": "^2.6.2"
   },
   "devDependencies": {

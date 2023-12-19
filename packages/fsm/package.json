@@ -34,9 +34,9 @@
     "url": "https://github.com/Alwatr/signal/issues"
   },
   "dependencies": {
-    "@alwatr/logger": "^2.3.3",
+    "@alwatr/logger": "^2.4.0",
     "@alwatr/signal": "workspace:^",
-    "@alwatr/type": "^1.2.3",
+    "@alwatr/type": "^1.2.4",
     "tslib": "^2.6.2"
   },
   "devDependencies": {

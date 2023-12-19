@@ -31,12 +31,12 @@
     "url": "https://github.com/Alwatr/signal/issues"
   },
   "dependencies": {
-    "@alwatr/fetch": "^2.1.5",
+    "@alwatr/fetch": "^2.2.0",
     "@alwatr/fsm": "workspace:^",
-    "@alwatr/logger": "^2.3.3",
+    "@alwatr/logger": "^2.4.0",
     "@alwatr/signal": "workspace:^",
-    "@alwatr/type": "^1.2.3",
-    "@alwatr/util": "^1.3.5",
+    "@alwatr/type": "^1.2.4",
+    "@alwatr/util": "^1.4.0",
     "tslib": "^2.6.2"
   },
   "devDependencies": {

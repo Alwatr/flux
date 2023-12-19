@@ -7,11 +7,11 @@
   "private": true,
   "dependencies": {
     "@alwatr/fsm": "workspace:^",
-    "@alwatr/logger": "^2.4.0",
+    "@alwatr/logger": "^2.4.1",
     "@alwatr/server-context": "workspace:^",
     "@alwatr/signal": "workspace:^",
     "@alwatr/type": "^1.2.4",
-    "@alwatr/util": "^1.4.0"
+    "@alwatr/util": "^1.4.1"
   },
   "devDependencies": {
     "@types/node": "^20.10.5"

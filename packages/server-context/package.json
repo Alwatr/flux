@@ -33,7 +33,7 @@
   "dependencies": {
     "@alwatr/fetch": "^2.2.1",
     "@alwatr/fsm": "workspace:^",
-    "@alwatr/logger": "^2.4.1",
+    "@alwatr/logger": "^3.2.1",
     "@alwatr/signal": "workspace:^",
     "@alwatr/type": "^1.2.4",
     "@alwatr/util": "^1.4.1",

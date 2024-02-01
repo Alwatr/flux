@@ -22,12 +22,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/dedupe@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@alwatr/dedupe@npm:1.0.5"
+  checksum: f202fd343edaa2e58b92acbaead5ff72e51bb7f18b0be7f0f82c1d0afbffd138e53e35e1f9179048b540edf803a1178c57d4418c49bacc1cddc0f4f9e883f88d
+  languageName: node
+  linkType: hard
+
 "@alwatr/demo@workspace:demo":
   version: 0.0.0-use.local
   resolution: "@alwatr/demo@workspace:demo"
   dependencies:
     "@alwatr/fsm": "workspace:^"
-    "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/logger": "npm:^3.2.5"
     "@alwatr/server-context": "workspace:^"
     "@alwatr/signal": "workspace:^"
     "@alwatr/type": "npm:^1.2.4"
@@ -36,13 +43,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@alwatr/fetch@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "@alwatr/fetch@npm:2.2.1"
+"@alwatr/fetch@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "@alwatr/fetch@npm:3.1.1"
   dependencies:
-    "@alwatr/logger": "npm:^2.4.1"
-    "@alwatr/util": "npm:^1.4.1"
-  checksum: 9dd03ac5ea8d00317b38666fd72220575e7943f6d5c14e59d626af6f6f8807f457c1da684f563570ec250e9e0665b5ddd1d6f5e9dba4103c93e4c8f96d7062ab
+    "@alwatr/global-scope": "npm:^1.1.13"
+    "@alwatr/logger": "npm:^3.2.5"
+    "@alwatr/wait": "npm:^1.1.8"
+  checksum: 8cd8c4f5b8808917f3fe796b1cc0987b740f218eac441f25d392b75dd9525943bad674353a4fdf2697fab832c8be6743b91115c604f0d223b4592eadeba83166
   languageName: node
   linkType: hard
 
@@ -50,7 +58,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/fsm@workspace:packages/fsm"
   dependencies:
-    "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/logger": "npm:^3.2.5"
     "@alwatr/signal": "workspace:^"
     "@alwatr/type": "npm:^1.2.4"
     "@types/node": "npm:^20.10.5"
@@ -58,10 +66,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@alwatr/global-scope@npm:^1.1.13":
+  version: 1.1.13
+  resolution: "@alwatr/global-scope@npm:1.1.13"
+  checksum: 647c77e5a892789b7dc4d3260ced38d39a1b05fbf97c9869add24590a8f2c0b063865af2510e09165aebeee655c885036ad1914b7b663ca0d885bfbe355c9cff
+  languageName: node
+  linkType: hard
+
 "@alwatr/logger@npm:^2.4.1":
   version: 2.4.1
   resolution: "@alwatr/logger@npm:2.4.1"
   checksum: 6fef967cab9a2e734d2c1f7bdc66fb3fd1b515830a9734ca5e035973011b7708863005b49181e5fa19313ea71bfd02974c602511eba00bd632ef6cdfcfd5460a
+  languageName: node
+  linkType: hard
+
+"@alwatr/logger@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "@alwatr/logger@npm:3.2.5"
+  dependencies:
+    "@alwatr/dedupe": "npm:^1.0.5"
+    "@alwatr/platform-info": "npm:^1.1.5"
+  checksum: a4e28d62d21b7d8ec0f1c55a40b507020edeeec1ed66f481e658767f9f13f946f18c562a2fccc50116f8685a113bfd3144c1e47b798ef415699c2ac816cfb840
   languageName: node
   linkType: hard
 
@@ -74,13 +99,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/platform-info@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "@alwatr/platform-info@npm:1.1.5"
+  checksum: 9da80158f7e5caaa3a57821ea09d798bde834a10b0ae75856bb30af5eb0bea9cb71249960bc3ad020f865cc1601225eeaba3a6165e705269d317893c7758835e
+  languageName: node
+  linkType: hard
+
 "@alwatr/server-context@workspace:^, @alwatr/server-context@workspace:packages/server-context":
   version: 0.0.0-use.local
   resolution: "@alwatr/server-context@workspace:packages/server-context"
   dependencies:
-    "@alwatr/fetch": "npm:^2.2.1"
+    "@alwatr/fetch": "npm:^3.1.1"
     "@alwatr/fsm": "workspace:^"
-    "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/logger": "npm:^3.2.5"
     "@alwatr/signal": "workspace:^"
     "@alwatr/type": "npm:^1.2.4"
     "@alwatr/util": "npm:^1.4.1"
@@ -93,7 +125,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/signal@workspace:packages/signal"
   dependencies:
-    "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/logger": "npm:^3.2.5"
     "@alwatr/type": "npm:^1.2.4"
     "@alwatr/util": "npm:^1.4.1"
     "@types/node": "npm:^20.10.5"
@@ -116,6 +148,15 @@ __metadata:
     "@alwatr/math": "npm:^1.3.1"
     "@alwatr/type": "npm:^1.2.4"
   checksum: 666bfc0880f08527f9cb37a5fb750137f4679cc995ff77bec3ea662f4aca2314a20b67f1deed12d9c5cfb62201fe09405ab351d701160cc55cc7359b549cf657
+  languageName: node
+  linkType: hard
+
+"@alwatr/wait@npm:^1.1.8":
+  version: 1.1.8
+  resolution: "@alwatr/wait@npm:1.1.8"
+  dependencies:
+    "@alwatr/global-scope": "npm:^1.1.13"
+  checksum: dd61cc87c23435a486608c8988f86f1197acd382fe2d4881eaa21097a509fbbce1ec44c9bfb6361bfa9212008d808d67442bc6535e751ea825108a6d49fc9464
   languageName: node
   linkType: hard
 

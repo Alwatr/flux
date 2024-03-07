@@ -43,24 +43,24 @@
     "publish": "lerna publish from-package"
   },
   "devDependencies": {
-    "@lerna-lite/changed": "^3.1.0",
-    "@lerna-lite/cli": "^3.1.0",
-    "@lerna-lite/diff": "^3.1.0",
-    "@lerna-lite/exec": "^3.1.0",
-    "@lerna-lite/publish": "^3.1.0",
-    "@lerna-lite/run": "^3.1.0",
-    "@lerna-lite/version": "^3.1.0",
-    "@types/node": "^20.10.5",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
-    "@web/dev-server": "^0.4.1",
-    "eslint": "^8.56.0",
+    "@lerna-lite/changed": "^3.3.1",
+    "@lerna-lite/cli": "^3.3.1",
+    "@lerna-lite/diff": "^3.3.1",
+    "@lerna-lite/exec": "^3.3.1",
+    "@lerna-lite/publish": "^3.3.1",
+    "@lerna-lite/run": "^3.3.1",
+    "@lerna-lite/version": "^3.3.1",
+    "@types/node": "^20.11.25",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "@web/dev-server": "^0.4.3",
+    "eslint": "^8.57.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.5",
     "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "packageManager": "yarn@4.0.2"
 }

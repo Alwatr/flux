@@ -7,7 +7,7 @@
   "private": true,
   "dependencies": {
     "@alwatr/fsm": "workspace:^",
-    "@alwatr/logger": "^2.4.1",
+    "@alwatr/logger": "^3.2.6",
     "@alwatr/server-context": "workspace:^",
     "@alwatr/signal": "workspace:^",
     "@alwatr/type": "^1.2.4",

@@ -37,7 +37,7 @@
     "@alwatr/logger": "^2.4.1",
     "@alwatr/signal": "workspace:^",
     "@alwatr/type": "^1.2.4",
-    "tslib": "^2.6.2"
+    "tslib": "^2.6.3"
   },
   "devDependencies": {
     "@types/node": "^20.10.5"

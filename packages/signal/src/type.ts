@@ -1,4 +1,4 @@
-import type {MaybePromise} from '@alwatr/type';
+import type {MaybePromise} from '@alwatr/type-helper';
 
 /**
  * Subscribe options type.

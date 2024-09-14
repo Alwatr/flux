@@ -1,13 +1,11 @@
 {
-  "extends": "../../tsconfig.base",
+  "extends": "@alwatr/tsconfig-base/tsconfig.json",
   "compilerOptions": {
-    "composite": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
     "rootDir": "src",
-    "outDir": "."
+    "outDir": "dist",
+    "emitDeclarationOnly": true,
+    "composite": true,
   },
-
   "include": ["src/**/*.ts"],
-  "exclude": [],
-  "references": []
+  "references": [{"path": "../api-server"}],
 }

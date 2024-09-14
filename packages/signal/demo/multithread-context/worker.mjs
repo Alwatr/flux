@@ -3,7 +3,7 @@ import {AlwatrMultithreadContextSignal} from '@alwatr/signal';
 
 AlwatrMultithreadContextSignal.setupChannel();
 
-import {messageContext} from './share-context.js';
+import {messageContext} from './share-context.mjs';
 
 const logger = createLogger('demo/signal', true);
 

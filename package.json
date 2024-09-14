@@ -1,7 +1,7 @@
 {
-  "name": "alwatr-signal",
-  "description": "Elegant powerful event system for handle global signals and states base on observable design pattern, written in tiny TypeScript module.",
-  "repository": "https://github.com/Alwatr/signal",
+  "name": "alwatr-flux",
+  "description": "Alwatr Flux empowers your applications with elegant and powerful state management and event handling capabilities. Built on the observable design pattern, Flux provides a lightweight yet robust foundation for managing global signals and states.",
+  "repository": "https://github.com/Alwatr/flux",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "license": "MIT",
   "type": "module",

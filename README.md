@@ -1,29 +1,26 @@
-# Alwatr Signal
+# Alwatr Flux - Elegant State Management and Event System
 
 ## Introduction
 
-Elegant powerful event system for handle global signals and states base on observable design pattern, written in tiny TypeScript module.
+Alwatr Flux empowers your applications with elegant and powerful state management and event handling capabilities. Built on the observable design pattern, Flux provides a lightweight yet robust foundation for managing global signals and states.
 
-Every signal has own value and can be used as a advance **state management** like redux and recoil without the complexities and unnecessary facilities of those libraries.
+**Key Features:**
 
-Contains the following packages:
-
-1. [Finite-state machines (FSM)](./packages/logger): Managing invocations finite-state machines base on observable signal pattern.
-2. [Server Context](./packages/server-context): Elegant powerful server-context manager base on alwatr signal.
-3. [Signal](./packages/signal): Elegant powerful event system for handle global signals and states.
-
-<!-- @TODO: update this list-->
-
-## Installation
-
-```bash
-npm install @alwatr/module-name
-```
+- **Intuitive State Management:** Embrace Flux as an advanced alternative to Redux or Recoil, minus the complexities and unnecessary overhead. Each signal maintains its own value, offering seamless state control.
+- **Finite-State Machines (FSM):** Leverage observables to gracefully manage invocations and state transitions within your finite-state machines.
+- **Server Context Management:** Effortlessly handle server-side context with Flux's elegant context manager, ensuring optimal organization and control.
+- ...
 
 ## Usage
 
-Follow each package's README for usage instructions.
+Refer to the individual package READMEs for comprehensive usage instructions and examples.
+
+## Contributing
+
+Contributions are welcome! Please consult the CONTRIBUTING guidelines for detailed information on how to get involved.
 
 ## License
 
 [MIT](./LICENSE)
+
+```

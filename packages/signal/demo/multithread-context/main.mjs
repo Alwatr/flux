@@ -1,6 +1,6 @@
 import {createLogger} from '@alwatr/logger';
 
-import {messageContext} from './share-context.js';
+import {messageContext} from './share-context.mjs';
 
 const logger = createLogger('demo/signal', true);
 

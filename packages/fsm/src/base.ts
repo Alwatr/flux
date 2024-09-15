@@ -11,7 +11,7 @@ definePackage('@alwatr/signal', __package_version__);
 /**
  * Finite State Machine Base Class
  */
-export abstract class FiniteStateMachineBase<S extends string, E extends string> extends AlwatrObservable<S> {
+export abstract class FiniteStateMachineBase<S extends string, E extends string> extends AlwatrObservable<{state: S}> {
   /**
    * States and transitions config.
    */
@@ -24,20 +24,20 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
 
   protected initialState_: S;
 
-  protected override data_: S;
+  protected override message_: {state: S};
 
   constructor(config: {name: string; loggerPrefix?: string; initialState: S}) {
     config.loggerPrefix ??= 'fsm';
     super(config);
-    this.data_ = this.initialState_ = config.initialState;
+    this.message_ = {state: this.initialState_ = config.initialState};
   }
 
   /**
-   * Reset machine to initial state.
+   * Reset machine to initial state without notify.
    */
   protected resetToInitialState_(): void {
     this.logger_.logMethod?.('resetToInitialState_');
-    this.data_ = this.initialState_;
+    this.message_ = {state: this.initialState_};
   }
 
   /**
@@ -52,7 +52,7 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
    * Transition finite state machine instance to new state.
    */
   protected async transition_(event: E): Promise<void> {
-    const fromState = this.data_;
+    const fromState = this.message_.state;
     const toState = this.stateRecord_[fromState]?.[event] ?? this.stateRecord_._all?.[event];
 
     this.logger_.logMethodArgs?.('transition_', {fromState, event, toState});
@@ -69,7 +69,7 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
 
     if ((await this.shouldTransition_(eventDetail)) !== true) return;
 
-    this.notify_(toState);
+    this.notify_({state: toState});
 
     this.postTransition__(eventDetail);
   }

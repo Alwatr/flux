@@ -7,8 +7,8 @@ export abstract class FiniteStateMachine<S extends string, E extends string> ext
   /**
    * Current state.
    */
-  getState(): S {
-    return this.data_;
+  get state(): S {
+    return this.message_.state;
   }
 
   /**

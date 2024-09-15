@@ -1,6 +1,6 @@
-import {AlwatrObservable} from './observable.js';
+import {AlwatrObservable} from '@alwatr/observable';
 
-import type { Dictionary } from '@alwatr/type-helper';
+import type {Dictionary} from '@alwatr/type-helper';
 
 /**
  * Alwatr Context.

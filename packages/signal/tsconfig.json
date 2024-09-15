@@ -7,5 +7,5 @@
     "composite": true,
   },
   "include": ["src/**/*.ts"],
-  "references": [{"path": "../api-server"}],
+  "references": [],
 }

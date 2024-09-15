@@ -1,9 +1,13 @@
-import {AlwatrObservable} from './observable.js';
+import {AlwatrObservable} from '@alwatr/observable';
+
+import {logger} from './logger.js';
+
+logger.logModule?.('trigger');
 
 /**
  * Alwatr event signal without any message (no event detail).
  */
-export class AlwatrSimpleSignal extends AlwatrObservable {
+export class AlwatrTrigger extends AlwatrObservable {
   constructor(config: {name: string; loggerPrefix?: string}) {
     config.loggerPrefix ??= 'signal';
     super(config);
@@ -19,7 +23,7 @@ export class AlwatrSimpleSignal extends AlwatrObservable {
   /**
    * Wait until next event signal.
    */
-  async untilNewNotify(): Promise<void> {
+  async untilTriggered(): Promise<void> {
     await super.untilNewNotify_();
   }
 }

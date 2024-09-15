@@ -1,9 +1,9 @@
-import { AlwatrFetchStateMachineBase, type FetchOptions } from './base.js';
+import {AlwatrFetchStateMachineBase, type FetchOptions} from './base.js';
 
-import type { JsonObject } from "@alwatr/type-helper";
+import type {Json} from '@alwatr/type-helper';
 
 export abstract class AlwatrJsonFetchStateMachineBase<
-  T extends JsonObject = JsonObject,
+  T extends Json = Json,
   ExtraState extends string = never,
   ExtraEvent extends string = never,
 > extends AlwatrFetchStateMachineBase<ExtraState, ExtraEvent> {

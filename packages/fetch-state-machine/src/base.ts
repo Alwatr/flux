@@ -1,5 +1,5 @@
 import {fetch, type FetchOptions} from '@alwatr/fetch';
-import {AlwatrFluxStateMachineBase, type StateRecord, type ActionRecord} from '@alwatr/fsm';
+import {AlwatrFluxStateMachineBase, type StateRecord, type ActionRecord, type AlwatrFluxStateMachineConfig} from '@alwatr/fsm';
 import {definePackage} from '@alwatr/logger';
 
 import type {} from '@alwatr/nano-build';
@@ -11,12 +11,16 @@ export type ServerRequestEvent = 'request' | 'requestFailed' | 'requestSuccess';
 
 export type {FetchOptions};
 
+export interface AlwatrFetchStateMachineConfig<S extends string> extends AlwatrFluxStateMachineConfig<S> {
+  fetch: Partial<FetchOptions>;
+}
+
 export abstract class AlwatrFetchStateMachineBase<
   ExtraState extends string = never,
   ExtraEvent extends string = never,
 > extends AlwatrFluxStateMachineBase<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent> {
-  protected config_: Partial<FetchOptions>;
-  protected fetchOptions_?: FetchOptions;
+  protected baseFetchOptions_: Partial<FetchOptions>;
+  protected currentFetchOptions_?: FetchOptions;
   protected rawResponse_?: Response;
 
   protected override stateRecord_ = {
@@ -39,20 +43,21 @@ export abstract class AlwatrFetchStateMachineBase<
     _on_loading_enter: this.requestAction_,
   } as ActionRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
-  constructor(config: Partial<FetchOptions> & {name: string}) {
-    super({name: config.name, initialState: 'initial'});
-    this.config_ = config;
+  constructor(config: AlwatrFetchStateMachineConfig<ServerRequestState | ExtraState>) {
+    config.loggerPrefix ??= 'fetch-state-machine';
+    super(config);
+    this.baseFetchOptions_ = config.fetch;
   }
 
-  protected request_(options?: Partial<FetchOptions>): void {
-    this.logger_.logMethodArgs?.('request_', options);
-    this.setOptions_(options);
+  protected request_(fetchOptions?: Partial<FetchOptions>): void {
+    this.logger_.logMethodArgs?.('request_', fetchOptions);
+    this.setFetchOptions_(fetchOptions);
     this.transition_('request');
   }
 
-  protected async fetch_(options: FetchOptions): Promise<void> {
-    this.logger_.logMethodArgs?.('fetch_', options);
-    this.rawResponse_ = await fetch(options);
+  protected async fetch_(fetchOptions: FetchOptions): Promise<void> {
+    this.logger_.logMethodArgs?.('fetch_', fetchOptions);
+    this.rawResponse_ = await fetch(fetchOptions);
 
     if (!this.rawResponse_.ok) {
       throw new Error('fetch_nok');
@@ -63,37 +68,39 @@ export abstract class AlwatrFetchStateMachineBase<
     this.logger_.logMethod?.('requestAction__');
 
     try {
-      if (this.fetchOptions_ === undefined) {
+      if (this.currentFetchOptions_ === undefined) {
         throw new Error('invalid_fetch_options');
       }
 
-      await this.fetch_(this.fetchOptions_);
+      await this.fetch_(this.currentFetchOptions_);
 
       this.transition_('requestSuccess');
     }
-    catch (err) {
-      this.logger_.error('requestAction__', 'fetch_failed', err);
-      this.transition_('requestFailed');
+    catch (error) {
+      this.requestFailed_(error as Error);
     }
   }
 
-  protected setOptions_(options?: Partial<FetchOptions>): void {
+  protected requestFailed_(error: Error): void {
+    this.logger_.error('requestFailed_', 'fetch_failed', error);
+    this.transition_('requestFailed');
+  }
+
+  protected setFetchOptions_(options?: Partial<FetchOptions>): void {
     this.logger_.logMethodArgs?.('setOptions_', {options});
 
-    const fetchOptions = {
-      ...this.config_,
+    this.currentFetchOptions_ = {
+      ...this.baseFetchOptions_,
       ...options,
       queryParams: {
-        ...this.config_.queryParams,
+        ...this.baseFetchOptions_.queryParams,
         ...options?.queryParams,
       },
-    };
+    } as FetchOptions;
 
-    if (fetchOptions.url === undefined) {
+    if (this.currentFetchOptions_.url === undefined) {
       throw new Error('invalid_fetch_options');
     }
-
-    this.fetchOptions_ = fetchOptions as FetchOptions;
   }
 
   protected override resetToInitialState_(): void {

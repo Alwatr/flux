@@ -1,9 +1,11 @@
 import {AlwatrObservable} from './observable.js';
 
+import type { Dictionary } from '@alwatr/type-helper';
+
 /**
- * Alwatr event signal.
+ * Alwatr event signal with special message (event detail).
  */
-export class AlwatrSignal<T> extends AlwatrObservable<T> {
+export class AlwatrSignal<T extends Dictionary = Dictionary> extends AlwatrObservable<T> {
   constructor(config: {name: string; loggerPrefix?: string}) {
     config.loggerPrefix ??= 'signal';
     super(config);
@@ -12,8 +14,8 @@ export class AlwatrSignal<T> extends AlwatrObservable<T> {
   /**
    * Dispatch an event to all listeners.
    */
-  notify(detail: T): void {
-    this.notify_(detail);
+  notify(message: T): void {
+    this.notify_(message);
   }
 
   /**

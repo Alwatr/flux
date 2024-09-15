@@ -1,9 +1,9 @@
-import {FluxStateMachineBase} from './base.js';
+import {AlwatrFluxStateMachineBase} from './base.js';
 
 /**
  * Flux (Finite) State Machine Base Class
  */
-export abstract class FluxStateMachine<S extends string, E extends string> extends FluxStateMachineBase<S, E> {
+export abstract class AlwatrFluxStateMachine<S extends string, E extends string> extends AlwatrFluxStateMachineBase<S, E> {
   /**
    * Current state.
    */

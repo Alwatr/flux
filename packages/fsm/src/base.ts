@@ -1,17 +1,17 @@
 import {definePackage} from '@alwatr/logger';
-import '@alwatr/polyfill-has-own';
 import {AlwatrObservable} from '@alwatr/observable';
+import '@alwatr/polyfill-has-own';
 
 import type {ActionName, ActionRecord, StateEventDetail, StateRecord} from './type.js';
 import type {} from '@alwatr/nano-build';
 import type {MaybePromise} from '@alwatr/type-helper';
 
-definePackage('@alwatr/signal', __package_version__);
+definePackage('@alwatr/fsm', __package_version__);
 
 /**
  * Flux (Finite) State Machine Base Class
  */
-export abstract class FluxStateMachineBase<S extends string, E extends string> extends AlwatrObservable<{state: S}> {
+export abstract class AlwatrFluxStateMachineBase<S extends string, E extends string> extends AlwatrObservable<{state: S}> {
   /**
    * States and transitions config.
    */
@@ -77,7 +77,7 @@ export abstract class FluxStateMachineBase<S extends string, E extends string> e
   /**
    * Execute all actions for current state.
    */
-  protected async postTransition__(eventDetail: StateEventDetail<S, E>): Promise<void> {
+  private async postTransition__(eventDetail: StateEventDetail<S, E>): Promise<void> {
     this.logger_.logMethodArgs?.('_transitioned', eventDetail);
 
     await this.execAction__(`_on_${eventDetail.event}`, eventDetail);
@@ -101,7 +101,7 @@ export abstract class FluxStateMachineBase<S extends string, E extends string> e
   /**
    * Execute action name if defined in _actionRecord.
    */
-  protected execAction__(name: ActionName<S, E>, eventDetail: StateEventDetail<S, E>): MaybePromise<void> {
+  private execAction__(name: ActionName<S, E>, eventDetail: StateEventDetail<S, E>): MaybePromise<void> {
     const actionFn = this.actionRecord_[name];
     if (typeof actionFn === 'function') {
       this.logger_.logMethodArgs?.('_$execAction', name);

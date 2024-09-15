@@ -1,11 +1,12 @@
 {
-  "name": "@alwatr/observable",
-  "version": "2.0.5",
-  "description": "A lightweight and flexible TypeScript library for implementing the observer pattern (similar to signals) with events, subscriptions, and convenient features.",
-  "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
+  "name": "@alwatr/fetch-state-machine",
+  "version": "1.2.6",
+  "description": "Elegant powerful context manager base on alwatr signal, written in tiny TypeScript, ES module.",
+  "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "keywords": [
+    "context",
+    "fetch-state-machine",
     "signal",
-    "observable",
     "typescript",
     "esm",
     "alwatr"
@@ -32,9 +33,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Alwatr/flux",
-    "directory": "packages/signal"
+    "directory": "packages/fetch-state-machine"
   },
-  "homepage": "https://github.com/Alwatr/flux/tree/next/packages/observable#readme",
+  "homepage": "https://github.com/Alwatr/flux/tree/next/packages/fetch-state-machine#readme",
   "bugs": {
     "url": "https://github.com/Alwatr/flux/issues"
   },
@@ -56,6 +57,8 @@
     "clean": "rm -rfv dist *.tsbuildinfo"
   },
   "dependencies": {
+    "@alwatr/fetch": "^4.0.0",
+    "@alwatr/fsm": "workspace:^",
     "@alwatr/logger": "^3.2.13"
   },
   "devDependencies": {

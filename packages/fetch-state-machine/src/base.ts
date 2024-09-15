@@ -1,24 +1,23 @@
 import {fetch, type FetchOptions} from '@alwatr/fetch';
-import {FiniteStateMachineBase, type StateRecord, type ActionRecord} from '@alwatr/fsm';
+import {AlwatrFluxStateMachineBase, type StateRecord, type ActionRecord} from '@alwatr/fsm';
 import {definePackage} from '@alwatr/logger';
 
 import type {} from '@alwatr/nano-build';
 
-definePackage('@alwatr/signal', __package_version__);
-
-export interface ServerRequestConfig extends Partial<FetchOptions> {
-  name: string;
-}
+definePackage('@alwatr/fetch-state-machine', __package_version__);
 
 export type ServerRequestState = 'initial' | 'loading' | 'failed' | 'complete';
 export type ServerRequestEvent = 'request' | 'requestFailed' | 'requestSuccess';
 
-export abstract class AlwatrServerRequestBase<
+export type {FetchOptions};
+
+export abstract class AlwatrFetchStateMachineBase<
   ExtraState extends string = never,
   ExtraEvent extends string = never,
-> extends FiniteStateMachineBase<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent> {
-  protected fetchOptions__?: FetchOptions;
-  protected response_?: Response;
+> extends AlwatrFluxStateMachineBase<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent> {
+  protected config_: Partial<FetchOptions>;
+  protected fetchOptions_?: FetchOptions;
+  protected rawResponse_?: Response;
 
   protected override stateRecord_ = {
     initial: {
@@ -37,11 +36,12 @@ export abstract class AlwatrServerRequestBase<
   } as StateRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
   protected override actionRecord_ = {
-    _on_loading_enter: this.requestAction__,
+    _on_loading_enter: this.requestAction_,
   } as ActionRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
-  constructor(protected config_: ServerRequestConfig) {
-    super({name: config_.name, initialState: 'initial'});
+  constructor(config: Partial<FetchOptions> & {name: string}) {
+    super({name: config.name, initialState: 'initial'});
+    this.config_ = config;
   }
 
   protected request_(options?: Partial<FetchOptions>): void {
@@ -50,24 +50,24 @@ export abstract class AlwatrServerRequestBase<
     this.transition_('request');
   }
 
-  protected async fetch__(options: FetchOptions): Promise<void> {
-    this.logger_.logMethodArgs?.('fetch__', options);
-    this.response_ = await fetch(options);
+  protected async fetch_(options: FetchOptions): Promise<void> {
+    this.logger_.logMethodArgs?.('fetch_', options);
+    this.rawResponse_ = await fetch(options);
 
-    if (!this.response_.ok) {
+    if (!this.rawResponse_.ok) {
       throw new Error('fetch_nok');
     }
   }
 
-  protected async requestAction__(): Promise<void> {
+  protected async requestAction_(): Promise<void> {
     this.logger_.logMethod?.('requestAction__');
 
     try {
-      if (this.fetchOptions__ === undefined) {
+      if (this.fetchOptions_ === undefined) {
         throw new Error('invalid_fetch_options');
       }
 
-      await this.fetch__(this.fetchOptions__);
+      await this.fetch_(this.fetchOptions_);
 
       this.transition_('requestSuccess');
     }
@@ -89,39 +89,15 @@ export abstract class AlwatrServerRequestBase<
       },
     };
 
-    if (fetchOptions.url == null) {
+    if (fetchOptions.url === undefined) {
       throw new Error('invalid_fetch_options');
     }
 
-    this.fetchOptions__ = fetchOptions as FetchOptions;
+    this.fetchOptions_ = fetchOptions as FetchOptions;
   }
 
   protected override resetToInitialState_(): void {
     super.resetToInitialState_();
-    delete this.response_;
-  }
-}
-
-export class AlwatrServerRequest extends AlwatrServerRequestBase {
-  /**
-   * Current state.
-   */
-  get state(): ServerRequestState {
-    return this.message_.state;
-  }
-
-  get response(): Response | undefined {
-    return this.response_;
-  }
-
-  request(options?: Partial<FetchOptions>): void {
-    return this.request_(options);
-  }
-
-  /**
-   * Reset the machine to its initial state without notifying, and clean up existing response and state.
-   */
-  reset(): void {
-    this.resetToInitialState_();
+    delete this.rawResponse_;
   }
 }

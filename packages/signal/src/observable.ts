@@ -2,16 +2,17 @@ import {createLogger, definePackage} from '@alwatr/logger';
 
 import type {SubscribeOptions, ListenerCallback, Observer, SubscribeResult, AlwatrObservableInterface} from './type.js';
 import type {} from '@alwatr/nano-build';
+import type {Dictionary} from '@alwatr/type-helper';
 
 definePackage('@alwatr/signal', __package_version__);
 
 /**
  * Alwatr base signal.
  */
-export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T> {
+export abstract class AlwatrObservable<T extends Dictionary = Dictionary> implements AlwatrObservableInterface<T> {
   protected name_;
   protected logger_;
-  protected data_?: T;
+  protected message_?: T;
   protected observers__: Observer<this, T>[] = [];
 
   constructor(config: {name: string; loggerPrefix?: string}) {
@@ -24,16 +25,16 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
   /**
    * Execute all observers and remember data.
    */
-  protected notify_(data: T): void {
-    this.logger_.logMethodArgs?.('notify_', data);
-    this.data_ = data;
-    setTimeout(() => this.dispatch__(data), 0);
+  protected notify_(message: T): void {
+    this.logger_.logMethodArgs?.('notify_', message);
+    this.message_ = message;
+    setTimeout(() => this.dispatch__(message), 0);
   }
 
   /**
    * Execute all observers callback.
    */
-  protected dispatch__(data: T): void {
+  protected dispatch__(message: T): void {
     const removeList: Observer<this, T>[] = [];
 
     for (const listener of this.observers__) {
@@ -41,7 +42,7 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
       if (listener.options.once) removeList.push(listener);
 
       try {
-        const ret = listener.callback.call(this, data);
+        const ret = listener.callback.call(this, message);
         if (ret instanceof Promise) {
           ret.catch((err) => this.logger_.error('dispatch__', 'call_listener_failed', err));
         }
@@ -68,13 +69,13 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
     };
 
     let callbackExecuted = false;
-    const data = this.data_;
-    if (data !== undefined && options.receivePrevious === true && options.disabled !== true) {
+    const message = this.message_;
+    if (message !== undefined && options.receivePrevious === true && options.disabled !== true) {
       // Run callback for old dispatch signal
       callbackExecuted = true;
       setTimeout(() => {
         try {
-          const ret = listenerCallback.call(this, data);
+          const ret = listenerCallback.call(this, message);
           if (ret instanceof Promise) {
             ret.catch((err) => this.logger_.error('subscribe.receivePrevious', 'call_signal_callback_failed', err));
           }
@@ -116,13 +117,13 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
    *
    * `receivePrevious` in new subscribers not work until new a notify changes the data.
    */
-  protected clearData_(): void {
+  protected clearMessage_(): void {
     this.logger_.logMethod?.('clear_');
-    this.data_ = undefined;
+    this.message_ = undefined;
   }
 
   /**
-   * Get the data of next notify.
+   * Get the message of next notify.
    */
   protected untilNewNotify_(): Promise<T> {
     this.logger_.logMethod?.('untilNewNotify_');

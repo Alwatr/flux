@@ -14,10 +14,10 @@ export abstract class AlwatrServerContextBase<
   T extends AlwatrServiceResponse = AlwatrServiceResponse,
 > extends AlwatrApiRequestBase<T, ExtraState, ExtraEvent> {
   protected _context?: T;
-  constructor(protected override _config: ServerRequestConfig) {
-    super(_config);
+  constructor(protected override config_: ServerRequestConfig) {
+    super(config_);
 
-    this._stateRecord = {
+    this.stateRecord_ = {
       initial: {
         request: 'offlineCheck',
       },
@@ -57,7 +57,7 @@ export abstract class AlwatrServerContextBase<
       },
     };
 
-    this._actionRecord = {
+    this.actionRecord_ = {
       _on_offlineCheck_enter: this._$offlineRequestAction,
       _on_loading_enter: this._$onlineRequestAction,
       _on_reloading_enter: this._$onlineRequestAction,
@@ -66,24 +66,24 @@ export abstract class AlwatrServerContextBase<
   }
 
   protected _$offlineRequestAction(): void {
-    this._logger.logMethod?.('_$offlineRequestAction');
-    this._$fetchOptions!.cacheStrategy === 'cache_only';
-    this._$requestAction();
+    this.logger_.logMethod?.('_$offlineRequestAction');
+    this.fetchOptions__!.cacheStrategy === 'cache_only';
+    this.requestAction__();
   }
 
   protected _$onlineRequestAction(): void {
-    this._logger.logMethod?.('_$onlineRequestAction');
-    this._$fetchOptions!.cacheStrategy === 'update_cache';
-    this._$requestAction();
+    this.logger_.logMethod?.('_$onlineRequestAction');
+    this.fetchOptions__!.cacheStrategy === 'update_cache';
+    this.requestAction__();
   }
 
   protected _$updateContextAction(): void {
     if (this._responseJson === undefined) {
-      this._logger.accident('_$updateContextAction', 'no_response_json');
+      this.logger_.accident('_$updateContextAction', 'no_response_json');
       return;
     }
 
-    this._logger.logMethod?.('_$updateContextAction');
+    this.logger_.logMethod?.('_$updateContextAction');
 
     if (
       this._context === undefined ||
@@ -96,15 +96,15 @@ export abstract class AlwatrServerContextBase<
     this._cleanup();
   }
 
-  protected override async _$requestAction(): Promise<void> {
-    this._logger.logMethod?.('_$requestAction');
+  protected override async requestAction__(): Promise<void> {
+    this.logger_.logMethod?.('_$requestAction');
 
     try {
-      if (this._$fetchOptions === undefined) {
+      if (this.fetchOptions__ === undefined) {
         throw new Error('invalid_fetch_options');
       }
 
-      await this._$fetch(this._$fetchOptions);
+      await this.fetch__(this.fetchOptions__);
 
       this._transition('requestSuccess');
     }
@@ -113,14 +113,14 @@ export abstract class AlwatrServerContextBase<
         this._transition('cacheNotFound');
       }
       else {
-        this._logger.error('_$requestAction', 'fetch_failed', err);
+        this.logger_.error('_$requestAction', 'fetch_failed', err);
         this._transition('requestFailed');
       }
     }
   }
 
   protected _cleanup(): void {
-    delete this._response;
+    delete this.response_;
     delete this._responseJson;
   }
 }
@@ -140,6 +140,6 @@ export class AlwatrServerContext<
   }
 
   request(options?: Partial<FetchOptions>): void {
-    return this._request(options);
+    return this.request_(options);
   }
 }

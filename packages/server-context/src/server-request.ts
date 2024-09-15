@@ -1,8 +1,7 @@
-import {fetch} from '@alwatr/fetch';
-import {ActionRecord, FiniteStateMachineBase, StateRecord} from '@alwatr/fsm';
+import {fetch, type FetchOptions} from '@alwatr/fetch';
+import {FiniteStateMachineBase, type StateRecord, type ActionRecord} from '@alwatr/fsm';
 import {definePackage} from '@alwatr/logger';
 
-import type {FetchOptions} from '@alwatr/fetch';
 import type {} from '@alwatr/nano-build';
 
 definePackage('@alwatr/signal', __package_version__);
@@ -18,10 +17,10 @@ export abstract class AlwatrServerRequestBase<
   ExtraState extends string = never,
   ExtraEvent extends string = never,
 > extends FiniteStateMachineBase<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent> {
-  protected _$fetchOptions?: FetchOptions;
-  protected _response?: Response;
+  protected fetchOptions__?: FetchOptions;
+  protected response_?: Response;
 
-  protected override _stateRecord = {
+  protected override stateRecord_ = {
     initial: {
       request: 'loading',
     },
@@ -37,56 +36,56 @@ export abstract class AlwatrServerRequestBase<
     },
   } as StateRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
-  protected override _actionRecord = {
-    _on_loading_enter: this._$requestAction,
+  protected override actionRecord_ = {
+    _on_loading_enter: this.requestAction__,
   } as ActionRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
-  constructor(protected _config: ServerRequestConfig) {
-    super({name: _config.name, initialState: 'initial'});
+  constructor(protected config_: ServerRequestConfig) {
+    super({name: config_.name, initialState: 'initial'});
   }
 
-  protected _request(options?: Partial<FetchOptions>): void {
-    this._logger.logMethodArgs?.('_request', options);
-    this._setOptions(options);
-    this._transition('request');
+  protected request_(options?: Partial<FetchOptions>): void {
+    this.logger_.logMethodArgs?.('request_', options);
+    this.setOptions_(options);
+    this.transition_('request');
   }
 
-  protected async _$fetch(options: FetchOptions): Promise<void> {
-    this._logger.logMethodArgs?.('_$fetch', options);
-    this._response = await fetch(options);
+  protected async fetch__(options: FetchOptions): Promise<void> {
+    this.logger_.logMethodArgs?.('fetch__', options);
+    this.response_ = await fetch(options);
 
-    if (!this._response.ok) {
+    if (!this.response_.ok) {
       throw new Error('fetch_nok');
     }
   }
 
-  protected async _$requestAction(): Promise<void> {
-    this._logger.logMethod?.('_$requestAction');
+  protected async requestAction__(): Promise<void> {
+    this.logger_.logMethod?.('requestAction__');
 
     try {
-      if (this._$fetchOptions === undefined) {
+      if (this.fetchOptions__ === undefined) {
         throw new Error('invalid_fetch_options');
       }
 
-      await this._$fetch(this._$fetchOptions);
+      await this.fetch__(this.fetchOptions__);
 
-      this._transition('requestSuccess');
+      this.transition_('requestSuccess');
     }
     catch (err) {
-      this._logger.error('_$requestAction', 'fetch_failed', err);
-      this._transition('requestFailed');
+      this.logger_.error('requestAction__', 'fetch_failed', err);
+      this.transition_('requestFailed');
     }
   }
 
-  protected _setOptions(options?: Partial<FetchOptions>): void {
-    this._logger.logMethodArgs?.('_setOptions', {options});
+  protected setOptions_(options?: Partial<FetchOptions>): void {
+    this.logger_.logMethodArgs?.('setOptions_', {options});
 
     const fetchOptions = {
-      ...this._config,
+      ...this.config_,
       ...options,
-      queryParameters: {
-        ...this._config.queryParameters,
-        ...options?.queryParameters,
+      queryParams: {
+        ...this.config_.queryParams,
+        ...options?.queryParams,
       },
     };
 
@@ -94,12 +93,12 @@ export abstract class AlwatrServerRequestBase<
       throw new Error('invalid_fetch_options');
     }
 
-    this._$fetchOptions = fetchOptions as FetchOptions;
+    this.fetchOptions__ = fetchOptions as FetchOptions;
   }
 
-  protected override _reset(): void {
-    super._reset();
-    delete this._response;
+  protected override resetToInitialState_(): void {
+    super.resetToInitialState_();
+    delete this.response_;
   }
 }
 
@@ -108,18 +107,21 @@ export class AlwatrServerRequest extends AlwatrServerRequestBase {
    * Current state.
    */
   get state(): ServerRequestState {
-    return this._state;
+    return this.message_.state;
   }
 
   get response(): Response | undefined {
-    return this._response;
+    return this.response_;
   }
 
   request(options?: Partial<FetchOptions>): void {
-    return this._request(options);
+    return this.request_(options);
   }
 
-  cleanup(): void {
-    this._reset();
+  /**
+   * Reset the machine to its initial state without notifying, and clean up existing response and state.
+   */
+  reset(): void {
+    this.resetToInitialState_();
   }
 }

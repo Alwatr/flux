@@ -17,7 +17,7 @@ export class AlwatrContext<T extends Dictionary> extends AlwatrObservable<T> {
    * Return undefined if context not set before or expired.
    */
   getValue(): T | undefined {
-    return this.data_;
+    return this.message_;
   }
 
   /**
@@ -34,7 +34,7 @@ export class AlwatrContext<T extends Dictionary> extends AlwatrObservable<T> {
    * `receivePrevious` in new subscribers not work until new context changes.
    */
   expire(): void {
-    super.clearData_();
+    super.clearMessage_();
   }
 
   /**

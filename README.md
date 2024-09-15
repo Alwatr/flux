@@ -22,5 +22,3 @@ Contributions are welcome! Please consult the CONTRIBUTING guidelines for detail
 ## License
 
 [MIT](./LICENSE)
-
-```

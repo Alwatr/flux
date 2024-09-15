@@ -4,7 +4,7 @@ import {definePackage} from '@alwatr/logger';
 
 import type {} from '@alwatr/nano-build';
 
-definePackage('@alwatr/signal', __package_version__);
+definePackage('@alwatr/fetch-state-machine', __package_version__);
 
 export interface ServerRequestConfig extends Partial<FetchOptions> {
   name: string;

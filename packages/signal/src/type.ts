@@ -1,4 +1,4 @@
-import type {MaybePromise} from '@alwatr/type-helper';
+import type {Dictionary, MaybePromise} from '@alwatr/type-helper';
 
 /**
  * Subscribe options type.
@@ -30,10 +30,10 @@ export interface SubscribeOptions {
   // debounce?: 'AnimationFrame' | number;
 }
 
-export type ListenerCallback<T, D> = (this: T, detail: D) => MaybePromise<void>;
+export type ListenerCallback<T, M extends Dictionary = Dictionary> = (this: T, message: M) => MaybePromise<void>;
 
-export interface Observer<T, D> {
-  callback: ListenerCallback<T, D>;
+export interface Observer<T, M extends Dictionary = Dictionary> {
+  callback: ListenerCallback<T, M>;
   options: SubscribeOptions;
 }
 
@@ -41,7 +41,7 @@ export interface SubscribeResult {
   unsubscribe: () => void;
 }
 
-export interface AlwatrObservableInterface<T> {
+export interface AlwatrObservableInterface<T extends Dictionary = Dictionary> {
   subscribe(listenerCallback: ListenerCallback<this, T>, options?: SubscribeOptions): SubscribeResult;
   unsubscribe(listenerCallback: ListenerCallback<this, T>): void;
 }

@@ -1,7 +1,7 @@
 {
   "name": "@alwatr/fetch-state-machine",
   "version": "1.2.6",
-  "description": "Elegant powerful context manager base on alwatr signal, written in tiny TypeScript, ES module.",
+  "description": "A powerful TypeScript library for managing asynchronous fetch requests with a built-in state machine.",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "keywords": [
     "context",

@@ -1,5 +1,5 @@
 import {definePackage} from '@alwatr/logger';
-import {AlwatrObservable} from '@alwatr/observable';
+import {AlwatrObservable, type AlwatrObservableConfig} from '@alwatr/observable';
 import '@alwatr/polyfill-has-own';
 
 import type {ActionName, ActionRecord, StateEventDetail, StateRecord} from './type.js';
@@ -7,6 +7,11 @@ import type {} from '@alwatr/nano-build';
 import type {MaybePromise} from '@alwatr/type-helper';
 
 definePackage('@alwatr/fsm', __package_version__);
+
+export interface AlwatrFluxStateMachineConfig<S extends string> extends AlwatrObservableConfig {
+  initialState: S;
+}
+
 
 /**
  * Flux (Finite) State Machine Base Class
@@ -26,8 +31,8 @@ export abstract class AlwatrFluxStateMachineBase<S extends string, E extends str
 
   protected override message_: {state: S};
 
-  constructor(config: {name: string; loggerPrefix?: string; initialState: S}) {
-    config.loggerPrefix ??= 'fsm';
+  constructor(config: AlwatrFluxStateMachineConfig<S>) {
+    config.loggerPrefix ??= 'flux-state-machine';
     super(config);
     this.message_ = {state: this.initialState_ = config.initialState};
   }

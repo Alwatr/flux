@@ -17,7 +17,7 @@ export class AlwatrContext<T extends Dictionary> extends AlwatrObservable<T> {
    * Return undefined if context not set before or expired.
    */
   getValue(): T | undefined {
-    return super.getData_();
+    return this.data_;
   }
 
   /**

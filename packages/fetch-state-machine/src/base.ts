@@ -16,8 +16,8 @@ export abstract class AlwatrFetchStateMachineBase<
   ExtraEvent extends string = never,
 > extends AlwatrFluxStateMachineBase<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent> {
   protected config_: Partial<FetchOptions>;
-  protected fetchOptions__?: FetchOptions;
-  protected response_?: Response;
+  protected fetchOptions_?: FetchOptions;
+  protected rawResponse_?: Response;
 
   protected override stateRecord_ = {
     initial: {
@@ -36,7 +36,7 @@ export abstract class AlwatrFetchStateMachineBase<
   } as StateRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
   protected override actionRecord_ = {
-    _on_loading_enter: this.requestAction__,
+    _on_loading_enter: this.requestAction_,
   } as ActionRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
   constructor(config: Partial<FetchOptions> & {name: string}) {
@@ -52,22 +52,22 @@ export abstract class AlwatrFetchStateMachineBase<
 
   protected async fetch_(options: FetchOptions): Promise<void> {
     this.logger_.logMethodArgs?.('fetch_', options);
-    this.response_ = await fetch(options);
+    this.rawResponse_ = await fetch(options);
 
-    if (!this.response_.ok) {
+    if (!this.rawResponse_.ok) {
       throw new Error('fetch_nok');
     }
   }
 
-  private async requestAction__(): Promise<void> {
+  protected async requestAction_(): Promise<void> {
     this.logger_.logMethod?.('requestAction__');
 
     try {
-      if (this.fetchOptions__ === undefined) {
+      if (this.fetchOptions_ === undefined) {
         throw new Error('invalid_fetch_options');
       }
 
-      await this.fetch_(this.fetchOptions__);
+      await this.fetch_(this.fetchOptions_);
 
       this.transition_('requestSuccess');
     }
@@ -89,15 +89,15 @@ export abstract class AlwatrFetchStateMachineBase<
       },
     };
 
-    if (fetchOptions.url == null) {
+    if (fetchOptions.url === undefined) {
       throw new Error('invalid_fetch_options');
     }
 
-    this.fetchOptions__ = fetchOptions as FetchOptions;
+    this.fetchOptions_ = fetchOptions as FetchOptions;
   }
 
   protected override resetToInitialState_(): void {
     super.resetToInitialState_();
-    delete this.response_;
+    delete this.rawResponse_;
   }
 }

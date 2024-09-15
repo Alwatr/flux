@@ -1,4 +1,4 @@
-import { AlwatrFetchStateMachineBase, type FetchOptions, type ServerRequestState } from "./base.js";
+import {AlwatrFetchStateMachineBase, type FetchOptions, type ServerRequestState} from './base.js';
 
 export class AlwatrFetchStateMachine extends AlwatrFetchStateMachineBase {
   /**
@@ -8,8 +8,8 @@ export class AlwatrFetchStateMachine extends AlwatrFetchStateMachineBase {
     return this.message_.state;
   }
 
-  get response(): Response | undefined {
-    return this.response_;
+  get rawResponse(): Response | undefined {
+    return this.rawResponse_;
   }
 
   request(options?: Partial<FetchOptions>): void {

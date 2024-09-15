@@ -2,9 +2,10 @@ import {fetch} from '@alwatr/fetch';
 import {ActionRecord, FiniteStateMachineBase, StateRecord} from '@alwatr/fsm';
 import {definePackage} from '@alwatr/logger';
 
-import type {FetchOptions} from '@alwatr/fetch/type.js';
+import type {FetchOptions} from '@alwatr/fetch';
+import type {} from '@alwatr/nano-build';
 
-definePackage('server-context', '2.x');
+definePackage('@alwatr/signal', __package_version__);
 
 export interface ServerRequestConfig extends Partial<FetchOptions> {
   name: string;

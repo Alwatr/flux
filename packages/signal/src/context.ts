@@ -1,9 +1,11 @@
 import {AlwatrObservable} from './observable.js';
 
+import type { Dictionary } from '@alwatr/type-helper';
+
 /**
- * Alwatr context signal.
+ * Alwatr Context.
  */
-export class AlwatrContextSignal<T> extends AlwatrObservable<T> {
+export class AlwatrContext<T extends Dictionary> extends AlwatrObservable<T> {
   constructor(config: {name: string; loggerPrefix?: string}) {
     config.loggerPrefix ??= 'context-signal';
     super(config);
@@ -15,15 +17,15 @@ export class AlwatrContextSignal<T> extends AlwatrObservable<T> {
    * Return undefined if context not set before or expired.
    */
   getValue(): T | undefined {
-    return super._getData();
+    return this.data_;
   }
 
   /**
    * Set context value and notify all subscribers.
    */
   setValue(value: T): void {
-    this._logger.logMethodArgs?.('setValue', {value});
-    super._notify(value);
+    this.logger_.logMethodArgs?.('setValue', {value});
+    super.notify_(value);
   }
 
   /**
@@ -32,13 +34,13 @@ export class AlwatrContextSignal<T> extends AlwatrObservable<T> {
    * `receivePrevious` in new subscribers not work until new context changes.
    */
   expire(): void {
-    super._clear();
+    super.clearData_();
   }
 
   /**
    * Get the value of the next context changes.
    */
   untilChange(): Promise<T> {
-    return super._untilNewNotify();
+    return super.untilNewNotify_();
   }
 }

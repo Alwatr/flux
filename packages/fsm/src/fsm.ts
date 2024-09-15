@@ -7,14 +7,14 @@ export abstract class FiniteStateMachine<S extends string, E extends string> ext
   /**
    * Current state.
    */
-  get state(): S {
-    return super._state;
+  getState(): S {
+    return this.data_;
   }
 
   /**
    * Transition finite state machine instance to new state.
    */
   transition(event: E): void {
-    super._transition(event);
+    this.transition_(event);
   }
 }

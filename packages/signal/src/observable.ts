@@ -1,62 +1,53 @@
 import {createLogger, definePackage} from '@alwatr/logger';
 
 import type {SubscribeOptions, ListenerCallback, Observer, SubscribeResult, AlwatrObservableInterface} from './type.js';
+import type {} from '@alwatr/nano-build';
 
-definePackage('signal', '2.x');
+definePackage('@alwatr/signal', __package_version__);
 
 /**
  * Alwatr base signal.
  */
 export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T> {
-  protected _name;
-  protected _logger;
-  protected _$data?: T;
-  protected _$observers: Observer<this, T>[] = [];
+  protected name_;
+  protected logger_;
+  protected data_?: T;
+  protected observers__: Observer<this, T>[] = [];
 
   constructor(config: {name: string; loggerPrefix?: string}) {
     config.loggerPrefix ??= 'signal';
-    this._name = config.name;
-    this._logger = createLogger(`{${config.loggerPrefix}: ${this._name}}`);
-    this._logger.logMethod?.('constructor');
-  }
-
-  /**
-   * Get data.
-   *
-   * Return undefined if signal not notify before or expired.
-   */
-  protected _getData(): T | undefined {
-    this._logger.logMethodFull?.('_getData', {}, this._$data);
-    return this._$data;
+    this.name_ = config.name;
+    this.logger_ = createLogger(`{${config.loggerPrefix}: ${this.name_}}`);
+    this.logger_.logMethodArgs?.('new', config);
   }
 
   /**
    * Execute all observers and remember data.
    */
-  protected _notify(data: T): void {
-    this._logger.logMethodArgs?.('_notify', data);
-    this._$data = data;
-    setTimeout(() => this._$dispatch(data), 0);
+  protected notify_(data: T): void {
+    this.logger_.logMethodArgs?.('notify_', data);
+    this.data_ = data;
+    setTimeout(() => this.dispatch__(data), 0);
   }
 
   /**
    * Execute all observers callback.
    */
-  protected _$dispatch(data: T): void {
+  protected dispatch__(data: T): void {
     const removeList: Observer<this, T>[] = [];
 
-    for (const listener of this._$observers) {
+    for (const listener of this.observers__) {
       if (listener.options.disabled) continue;
       if (listener.options.once) removeList.push(listener);
 
       try {
         const ret = listener.callback.call(this, data);
         if (ret instanceof Promise) {
-          ret.catch((err) => this._logger.error('_$dispatch', 'call_listener_failed', err));
+          ret.catch((err) => this.logger_.error('dispatch__', 'call_listener_failed', err));
         }
       }
       catch (err) {
-        this._logger.error('_$dispatch', 'call_listener_failed', err);
+        this.logger_.error('dispatch__', 'call_listener_failed', err);
       }
     }
 
@@ -69,15 +60,15 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
    * Subscribe to context changes.
    */
   subscribe(listenerCallback: ListenerCallback<this, T>, options: SubscribeOptions = {}): SubscribeResult {
-    this._logger.logMethodArgs?.('subscribe', {options});
+    this.logger_.logMethodArgs?.('subscribe', {options});
 
-    const _listenerObject: Observer<this, T> = {
+    const listenerObject_: Observer<this, T> = {
       callback: listenerCallback,
       options,
     };
 
     let callbackExecuted = false;
-    const data = this._$data;
+    const data = this.data_;
     if (data !== undefined && options.receivePrevious === true && options.disabled !== true) {
       // Run callback for old dispatch signal
       callbackExecuted = true;
@@ -85,11 +76,11 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
         try {
           const ret = listenerCallback.call(this, data);
           if (ret instanceof Promise) {
-            ret.catch((err) => this._logger.error('subscribe.receivePrevious', 'call_signal_callback_failed', err));
+            ret.catch((err) => this.logger_.error('subscribe.receivePrevious', 'call_signal_callback_failed', err));
           }
         }
         catch (err) {
-          this._logger.error('subscribe.receivePrevious', 'call_signal_callback_failed', err);
+          this.logger_.error('subscribe.receivePrevious', 'call_signal_callback_failed', err);
         }
       }, 0);
     }
@@ -97,10 +88,10 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
     // If once then must remove listener after first callback called! then why push it to listenerList?!
     if (options.once !== true || callbackExecuted === true) {
       if (options.priority === true) {
-        this._$observers.unshift(_listenerObject);
+        this.observers__.unshift(listenerObject_);
       }
       else {
-        this._$observers.push(_listenerObject);
+        this.observers__.push(listenerObject_);
       }
     }
 
@@ -113,10 +104,10 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
    * Unsubscribe from context.
    */
   unsubscribe(listenerCallback: ListenerCallback<this, T>): void {
-    this._logger.logMethod?.('unsubscribe');
-    const listenerIndex = this._$observers.findIndex((listener) => listener.callback === listenerCallback);
+    this.logger_.logMethod?.('unsubscribe');
+    const listenerIndex = this.observers__.findIndex((listener) => listener.callback === listenerCallback);
     if (listenerIndex !== -1) {
-      void this._$observers.splice(listenerIndex, 1);
+      void this.observers__.splice(listenerIndex, 1);
     }
   }
 
@@ -125,16 +116,16 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
    *
    * `receivePrevious` in new subscribers not work until new a notify changes the data.
    */
-  protected _clear(): void {
-    this._logger.logMethod?.('_clear');
-    this._$data = undefined;
+  protected clearData_(): void {
+    this.logger_.logMethod?.('clear_');
+    this.data_ = undefined;
   }
 
   /**
    * Get the data of next notify.
    */
-  protected _untilNewNotify(): Promise<T> {
-    this._logger.logMethod?.('_untilNewNotify');
+  protected untilNewNotify_(): Promise<T> {
+    this.logger_.logMethod?.('untilNewNotify_');
     return new Promise((resolve) => {
       this.subscribe(resolve, {
         once: true,

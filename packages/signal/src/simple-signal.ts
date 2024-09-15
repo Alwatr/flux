@@ -13,13 +13,13 @@ export class AlwatrSimpleSignal extends AlwatrObservable<undefined> {
    * Dispatch an event to all listeners.
    */
   notify(): void {
-    this._notify(undefined);
+    this.notify_(undefined);
   }
 
   /**
    * Wait until next event signal.
    */
   untilNewNotify(): Promise<void> {
-    return super._untilNewNotify();
+    return super.untilNewNotify_();
   }
 }

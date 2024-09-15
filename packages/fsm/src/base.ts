@@ -1,61 +1,64 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import {definePackage} from '@alwatr/logger';
+import '@alwatr/polyfill-has-own';
 import {AlwatrObservable} from '@alwatr/signal';
 
 import type {ActionName, ActionRecord, StateEventDetail, StateRecord} from './type.js';
-import type {MaybePromise} from '@alwatr/type';
+import type {} from '@alwatr/nano-build';
+import type {MaybePromise} from '@alwatr/type-helper';
 
-definePackage('fsm', '2.x');
+definePackage('@alwatr/signal', __package_version__);
 
 /**
  * Finite State Machine Base Class
  */
 export abstract class FiniteStateMachineBase<S extends string, E extends string> extends AlwatrObservable<S> {
   /**
-   * Current state
-   */
-  protected get _state(): S {
-    return this._getData()!;
-  }
-
-  /**
    * States and transitions config.
    */
-  protected _stateRecord: StateRecord<S, E> = {};
+  protected stateRecord_: StateRecord<S, E> = {};
 
   /**
    * Bind actions name to class methods
    */
-  protected _actionRecord: ActionRecord<S, E> = {};
+  protected actionRecord_: ActionRecord<S, E> = {};
 
-  protected _initialState: S;
+  protected initialState_: S;
+
+  protected override data_: S;
 
   constructor(config: {name: string; loggerPrefix?: string; initialState: S}) {
     config.loggerPrefix ??= 'fsm';
     super(config);
-    this._initialState = config.initialState;
-    this._reset();
+    this.data_ = this.initialState_ = config.initialState;
+  }
+
+  /**
+   * Reset machine to initial state.
+   */
+  protected resetToInitialState_(): void {
+    this.logger_.logMethod?.('resetToInitialState_');
+    this.data_ = this.initialState_;
   }
 
   /**
    * Transition condition.
    */
-  protected _shouldTransition(_eventDetail: StateEventDetail<S, E>): MaybePromise<boolean> {
-    this._logger.logMethodFull?.('_shouldTransition', _eventDetail, true);
+  protected shouldTransition_(_eventDetail: StateEventDetail<S, E>): MaybePromise<boolean> {
+    this.logger_.logMethodFull?.('shouldTransition_', _eventDetail, true);
     return true;
   }
 
   /**
    * Transition finite state machine instance to new state.
    */
-  protected async _transition(event: E): Promise<void> {
-    const fromState = this._state;
-    const toState = this._stateRecord[fromState]?.[event] ?? this._stateRecord._all?.[event];
+  protected async transition_(event: E): Promise<void> {
+    const fromState = this.data_;
+    const toState = this.stateRecord_[fromState]?.[event] ?? this.stateRecord_._all?.[event];
 
-    this._logger.logMethodArgs?.('_transition', {fromState, event, toState});
+    this.logger_.logMethodArgs?.('transition_', {fromState, event, toState});
 
     if (toState == null) {
-      this._logger.incident?.('transition', 'invalid_target_state', {
+      this.logger_.incident?.('transition', 'invalid_target_state', {
         fromState,
         event,
       });
@@ -64,51 +67,45 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
 
     const eventDetail: StateEventDetail<S, E> = {from: fromState, event, to: toState};
 
-    if ((await this._shouldTransition(eventDetail)) !== true) return;
+    if ((await this.shouldTransition_(eventDetail)) !== true) return;
 
-    this._notify(toState);
+    this.notify_(toState);
 
-    this._transitioned(eventDetail);
+    this.postTransition__(eventDetail);
   }
 
   /**
    * Execute all actions for current state.
    */
-  protected async _transitioned(eventDetail: StateEventDetail<S, E>): Promise<void> {
-    this._logger.logMethodArgs?.('_transitioned', eventDetail);
+  protected async postTransition__(eventDetail: StateEventDetail<S, E>): Promise<void> {
+    this.logger_.logMethodArgs?.('_transitioned', eventDetail);
 
-    await this._$execAction(`_on_${eventDetail.event}`, eventDetail);
+    await this.execAction__(`_on_${eventDetail.event}`, eventDetail);
 
     if (eventDetail.from !== eventDetail.to) {
-      await this._$execAction(`_on_state_exit`, eventDetail);
-      await this._$execAction(`_on_${eventDetail.from}_exit`, eventDetail);
-      await this._$execAction(`_on_state_enter`, eventDetail);
-      await this._$execAction(`_on_${eventDetail.to}_enter`, eventDetail);
+      await this.execAction__(`_on_state_exit`, eventDetail);
+      await this.execAction__(`_on_${eventDetail.from}_exit`, eventDetail);
+      await this.execAction__(`_on_state_enter`, eventDetail);
+      await this.execAction__(`_on_${eventDetail.to}_enter`, eventDetail);
     }
 
-    if (`_on_${eventDetail.from}_${eventDetail.event}` in this) {
-      this._$execAction(`_on_${eventDetail.from}_${eventDetail.event}`, eventDetail);
+    if (Object.hasOwn(this, `_on_${eventDetail.from}_${eventDetail.event}`)) {
+      this.execAction__(`_on_${eventDetail.from}_${eventDetail.event}`, eventDetail);
     }
     else {
-      this._$execAction(`_on_all_${eventDetail.event}`, eventDetail);
+      // The action `all_eventName` is executed only if the action `fromState_eventName` is not defined.
+      this.execAction__(`_on_all_${eventDetail.event}`, eventDetail);
     }
   }
 
   /**
    * Execute action name if defined in _actionRecord.
    */
-  protected _$execAction(name: ActionName<S, E>, eventDetail: StateEventDetail<S, E>): MaybePromise<void> {
-    const actionFn = this._actionRecord[name];
+  protected execAction__(name: ActionName<S, E>, eventDetail: StateEventDetail<S, E>): MaybePromise<void> {
+    const actionFn = this.actionRecord_[name];
     if (typeof actionFn === 'function') {
-      this._logger.logMethodArgs?.('_$execAction', name);
-      return this._actionRecord[name]?.call(this, eventDetail);
+      this.logger_.logMethodArgs?.('_$execAction', name);
+      return actionFn.call(this, eventDetail);
     }
-  }
-
-  /**
-   * Reset machine to initial state.
-   */
-  protected _reset(): void {
-    this._$data = this._initialState;
   }
 }

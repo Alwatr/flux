@@ -1,6 +1,6 @@
 import {createLogger} from '@alwatr/logger';
 
-import {AlwatrContextSignal} from './context.js';
+import {AlwatrContext} from './context.js';
 
 interface AlwatrContextChangedMessage {
   type: 'alwatr_context_changed';
@@ -11,7 +11,7 @@ interface AlwatrContextChangedMessage {
 /**
  * Alwatr multithread context signal.
  */
-export class AlwatrMultithreadContextSignal<TValue> extends AlwatrContextSignal<TValue> {
+export class AlwatrMultithreadContextSignal<TValue> extends AlwatrContext<TValue> {
   protected static _logger = createLogger(`alwatr/mt-context`);
   protected static _worker?: Worker;
   protected static _registry: Record<string, AlwatrMultithreadContextSignal<unknown> | undefined> = {};
@@ -29,7 +29,7 @@ export class AlwatrMultithreadContextSignal<TValue> extends AlwatrContextSignal<
     if (context === undefined) {
       throw new Error('context_not_define', {cause: 'context not define in this thread yet!'});
     }
-    context._notify(message.payload);
+    context.notify_(message.payload);
   }
 
   static _postMessage(name: string, payload: unknown): void {
@@ -47,11 +47,11 @@ export class AlwatrMultithreadContextSignal<TValue> extends AlwatrContextSignal<
   constructor(config: {name: string; loggerPrefix?: string}) {
     super(config);
 
-    if (AlwatrMultithreadContextSignal._registry[this._name] !== undefined) {
+    if (AlwatrMultithreadContextSignal._registry[this.name_] !== undefined) {
       throw new Error('context_name_exist');
     }
 
-    AlwatrMultithreadContextSignal._registry[this._name] = this as AlwatrMultithreadContextSignal<unknown>;
+    AlwatrMultithreadContextSignal._registry[this.name_] = this as AlwatrMultithreadContextSignal<unknown>;
   }
 
   /**
@@ -59,6 +59,6 @@ export class AlwatrMultithreadContextSignal<TValue> extends AlwatrContextSignal<
    */
   override setValue(value: TValue): void {
     super.setValue(value);
-    AlwatrMultithreadContextSignal._postMessage(this._name, value);
+    AlwatrMultithreadContextSignal._postMessage(this.name_, value);
   }
 }

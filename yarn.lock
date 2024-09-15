@@ -45,9 +45,11 @@ __metadata:
   dependencies:
     "@alwatr/logger": "npm:^3.2.12"
     "@alwatr/nano-build": "npm:^1.3.8"
+    "@alwatr/polyfill-has-own": "npm:1.0.8"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/signal": "workspace:^"
     "@alwatr/tsconfig-base": "npm:^1.2.0"
+    "@alwatr/type-helper": "npm:^1.2.5"
     "@types/node": "npm:^22.5.5"
     jest: "npm:^29.7.0"
     typescript: "npm:^5.6.2"
@@ -86,6 +88,13 @@ __metadata:
   version: 1.1.11
   resolution: "@alwatr/platform-info@npm:1.1.11"
   checksum: 10c0/9c04a76459f31b1bbac37f2ae802554a9af593f9037e3b1fa6254d2ff5de3bf0e2cb81545fb57e7550173433f2cacaddb1f391fb6452c1df6d0f9c3ca1440228
+  languageName: node
+  linkType: hard
+
+"@alwatr/polyfill-has-own@npm:1.0.8":
+  version: 1.0.8
+  resolution: "@alwatr/polyfill-has-own@npm:1.0.8"
+  checksum: 10c0/7599bb5a098ff084f47ae384465303b8be9be19e74db624c34a5cda9484c46de91928b4fdae3b208a12f68c299c8e1a050e8e2ba08f1fa2e68866673342dfc3a
   languageName: node
   linkType: hard
 
@@ -2312,9 +2321,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"alwatr-signal@workspace:.":
+"alwatr-flux@workspace:.":
   version: 0.0.0-use.local
-  resolution: "alwatr-signal@workspace:."
+  resolution: "alwatr-flux@workspace:."
   dependencies:
     "@alwatr/eslint-config": "npm:^1.2.5"
     "@alwatr/prettier-config": "npm:^1.0.4"

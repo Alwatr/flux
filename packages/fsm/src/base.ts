@@ -1,6 +1,6 @@
 import {definePackage} from '@alwatr/logger';
 import '@alwatr/polyfill-has-own';
-import {AlwatrObservable} from '@alwatr/signal';
+import {AlwatrObservable} from '@alwatr/observable';
 
 import type {ActionName, ActionRecord, StateEventDetail, StateRecord} from './type.js';
 import type {} from '@alwatr/nano-build';
@@ -9,9 +9,9 @@ import type {MaybePromise} from '@alwatr/type-helper';
 definePackage('@alwatr/signal', __package_version__);
 
 /**
- * Finite State Machine Base Class
+ * Flux (Finite) State Machine Base Class
  */
-export abstract class FiniteStateMachineBase<S extends string, E extends string> extends AlwatrObservable<{state: S}> {
+export abstract class FluxStateMachineBase<S extends string, E extends string> extends AlwatrObservable<{state: S}> {
   /**
    * States and transitions config.
    */
@@ -49,7 +49,7 @@ export abstract class FiniteStateMachineBase<S extends string, E extends string>
   }
 
   /**
-   * Transition finite state machine instance to new state.
+   * Transition flux state machine instance to new state.
    */
   protected async transition_(event: E): Promise<void> {
     const fromState = this.message_.state;

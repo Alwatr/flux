@@ -1,9 +1,9 @@
-import {FiniteStateMachineBase} from './base.js';
+import {FluxStateMachineBase} from './base.js';
 
 /**
- * Finite State Machine Base Class
+ * Flux (Finite) State Machine Base Class
  */
-export abstract class FiniteStateMachine<S extends string, E extends string> extends FiniteStateMachineBase<S, E> {
+export abstract class FluxStateMachine<S extends string, E extends string> extends FluxStateMachineBase<S, E> {
   /**
    * Current state.
    */
@@ -12,7 +12,7 @@ export abstract class FiniteStateMachine<S extends string, E extends string> ext
   }
 
   /**
-   * Transition finite state machine instance to new state.
+   * Transition flux state machine instance to new state.
    */
   transition(event: E): void {
     this.transition_(event);

@@ -45,6 +45,9 @@
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "cSpell.words": [
     "Alwatr",
-    "jfsm"
+    "conventionalcommits",
+    "jfsm",
+    "Mihandoost",
+    "tsbuildinfo"
   ]
 }

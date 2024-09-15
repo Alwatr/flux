@@ -14,7 +14,7 @@ export abstract class AlwatrApiRequestBase<
 > extends AlwatrServerRequestBase<ExtraState, ExtraEvent> {
   protected _responseJson?: T;
 
-  protected override async _$fetch(options: FetchOptions): Promise<void> {
+  protected override async fetch__(options: FetchOptions): Promise<void> {
     if (!NODE_MODE) {
       options.headers ??= {};
       if (!options.headers['client-id']) {
@@ -22,11 +22,11 @@ export abstract class AlwatrApiRequestBase<
       }
     }
 
-    await super._$fetch(options);
+    await super.fetch__(options);
 
     let responseText: string;
     try {
-      responseText = await this._response!.text();
+      responseText = await this.response_!.text();
     }
     catch (err) {
       this._logger.error('_$fetch', 'invalid_response_text', err);
@@ -54,8 +54,8 @@ export abstract class AlwatrApiRequestBase<
     }
   }
 
-  protected override _reset(): void {
-    super._reset();
+  protected override resetToInitialState_(): void {
+    super.resetToInitialState_();
     delete this._responseJson;
   }
 }
@@ -73,14 +73,14 @@ export class AlwatrApiRequest<T extends AlwatrServiceResponse = AlwatrServiceRes
   }
 
   get _fetchResponse(): Response | undefined {
-    return this._response;
+    return this.response_;
   }
 
   request(options?: Partial<FetchOptions>): void {
-    return this._request(options);
+    return this.request_(options);
   }
 
   cleanup(): void {
-    this._reset();
+    this.resetToInitialState_();
   }
 }

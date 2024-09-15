@@ -1,9 +1,9 @@
-import { AlwatrJsonFetchStateMachineBase } from './jfsm-base.js';
+import {AlwatrJsonFetchStateMachineBase} from './jfsm-base.js';
 
-import type { FetchOptions, ServerRequestState } from './base.js';
-import type { JsonObject } from '@alwatr/type-helper';
+import type {FetchOptions, ServerRequestState} from './base.js';
+import type {Json} from '@alwatr/type-helper';
 
-export class AlwatrJsonFetchStateMachine<T extends JsonObject = JsonObject> extends AlwatrJsonFetchStateMachineBase<T> {
+export class AlwatrJsonFetchStateMachine<T extends Json = Json> extends AlwatrJsonFetchStateMachineBase<T> {
   /**
    * Current state.
    */

@@ -1,11 +1,13 @@
 {
-  "name": "@alwatr/server-context",
+  "name": "@alwatr/remote-context",
   "version": "1.2.6",
   "description": "Elegant powerful context manager base on alwatr signal, written in tiny TypeScript, ES module.",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "keywords": [
     "context",
+    "remote-context",
     "server-context",
+    "flux",
     "signal",
     "typescript",
     "esm",
@@ -33,9 +35,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Alwatr/flux",
-    "directory": "packages/server-context"
+    "directory": "packages/remote-context"
   },
-  "homepage": "https://github.com/Alwatr/flux/tree/next/packages/server-context#readme",
+  "homepage": "https://github.com/Alwatr/flux/tree/next/packages/remote-context#readme",
   "bugs": {
     "url": "https://github.com/Alwatr/flux/issues"
   },
@@ -57,10 +59,8 @@
     "clean": "rm -rfv dist *.tsbuildinfo"
   },
   "dependencies": {
-    "@alwatr/fetch": "^4.0.0",
-    "@alwatr/fsm": "workspace:^",
-    "@alwatr/logger": "^3.2.13",
-    "@alwatr/signal": "workspace:^"
+    "@alwatr/fetch-state-machine": "workspace:^",
+    "@alwatr/logger": "^3.2.13"
   },
   "devDependencies": {
     "@alwatr/nano-build": "^1.3.9",

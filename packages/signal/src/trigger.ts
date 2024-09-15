@@ -1,4 +1,4 @@
-import {AlwatrObservable} from '@alwatr/observable';
+import {AlwatrObservable, type AlwatrObservableConfig} from '@alwatr/observable';
 
 import {logger} from './logger.js';
 
@@ -8,7 +8,7 @@ logger.logModule?.('trigger');
  * Alwatr event signal without any message (no event detail).
  */
 export class AlwatrTrigger extends AlwatrObservable {
-  constructor(config: {name: string; loggerPrefix?: string}) {
+  constructor(config: AlwatrObservableConfig) {
     config.loggerPrefix ??= 'signal';
     super(config);
   }

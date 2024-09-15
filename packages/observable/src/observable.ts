@@ -6,13 +6,18 @@ import type {Dictionary} from '@alwatr/type-helper';
 
 definePackage('@alwatr/observable', __package_version__);
 
+export interface AlwatrObservableConfig {
+  name: string;
+  loggerPrefix?: string;
+}
+
 export abstract class AlwatrObservable<T extends Dictionary = Dictionary> implements AlwatrObservableInterface<T> {
   protected name_;
   protected logger_;
   protected message_?: T;
   protected observers__: Observer<this, T>[] = [];
 
-  constructor(config: {name: string; loggerPrefix?: string}) {
+  constructor(config: AlwatrObservableConfig) {
     config.loggerPrefix ??= 'signal';
     this.name_ = config.name;
     this.logger_ = createLogger(`{${config.loggerPrefix}: ${this.name_}}`);

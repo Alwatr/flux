@@ -1,6 +1,6 @@
 import {AlwatrObservable, type AlwatrObservableConfig} from '@alwatr/observable';
 
-import {logger} from './logger.ts';
+import {logger} from './logger.js';
 
 import type {Dictionary} from '@alwatr/type-helper';
 

@@ -1,7 +1,7 @@
 {
-  "name": "@alwatr/signal",
+  "name": "@alwatr/observable",
   "version": "2.0.5",
-  "description": "A simple and efficient TypeScript library for event-driven communication using signals.",
+  "description": "A lightweight and flexible TypeScript library for implementing the observer pattern (similar to signals) with events, subscriptions, and convenient features.",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "keywords": [
     "signal",
@@ -34,7 +34,7 @@
     "url": "https://github.com/Alwatr/signal",
     "directory": "packages/signal"
   },
-  "homepage": "https://github.com/Alwatr/signal/tree/next/packages/signal#readme",
+  "homepage": "https://github.com/Alwatr/signal/tree/next/packages/observable#readme",
   "bugs": {
     "url": "https://github.com/Alwatr/signal/issues"
   },

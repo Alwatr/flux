@@ -1,7 +1,7 @@
 {
-  "name": "@alwatr/signal",
+  "name": "@alwatr/context",
   "version": "2.0.5",
-  "description": "A simple and efficient TypeScript library for event-driven communication using signals.",
+  "description": "A simple yet powerful TypeScript library for managing application context and facilitating efficient communication between components.",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "keywords": [
     "signal",

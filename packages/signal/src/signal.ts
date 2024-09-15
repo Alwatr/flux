@@ -1,6 +1,10 @@
-import {AlwatrObservable} from './observable.js';
+import {AlwatrObservable} from '@alwatr/observable';
 
-import type { Dictionary } from '@alwatr/type-helper';
+import {logger} from './logger.ts';
+
+import type {Dictionary} from '@alwatr/type-helper';
+
+logger.logModule?.('signal');
 
 /**
  * Alwatr event signal with special message (event detail).

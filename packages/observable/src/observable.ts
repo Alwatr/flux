@@ -4,11 +4,8 @@ import type {SubscribeOptions, ListenerCallback, Observer, SubscribeResult, Alwa
 import type {} from '@alwatr/nano-build';
 import type {Dictionary} from '@alwatr/type-helper';
 
-definePackage('@alwatr/signal', __package_version__);
+definePackage('@alwatr/observable', __package_version__);
 
-/**
- * Alwatr base signal.
- */
 export abstract class AlwatrObservable<T extends Dictionary = Dictionary> implements AlwatrObservableInterface<T> {
   protected name_;
   protected logger_;

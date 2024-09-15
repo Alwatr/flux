@@ -5,6 +5,21 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@alwatr/context@workspace:packages/context":
+  version: 0.0.0-use.local
+  resolution: "@alwatr/context@workspace:packages/context"
+  dependencies:
+    "@alwatr/logger": "npm:^3.2.13"
+    "@alwatr/nano-build": "npm:^1.3.9"
+    "@alwatr/prettier-config": "npm:^1.0.4"
+    "@alwatr/tsconfig-base": "npm:^1.2.0"
+    "@alwatr/type-helper": "npm:^1.2.6"
+    "@types/node": "npm:^22.5.5"
+    jest: "npm:^29.7.0"
+    typescript: "npm:^5.6.2"
+  languageName: unknown
+  linkType: soft
+
 "@alwatr/dedupe@npm:^1.0.13":
   version: 1.0.13
   resolution: "@alwatr/dedupe@npm:1.0.13"
@@ -83,6 +98,21 @@ __metadata:
   checksum: 10c0/e111fe2f0692bb84ca67037d11e93683347794561e9725a90eadbff2598a8953a5d8660af6bf022b84e966c2f564bab3d697f47b34e522f62d867a42715d1a33
   languageName: node
   linkType: hard
+
+"@alwatr/observable@workspace:packages/observable":
+  version: 0.0.0-use.local
+  resolution: "@alwatr/observable@workspace:packages/observable"
+  dependencies:
+    "@alwatr/logger": "npm:^3.2.13"
+    "@alwatr/nano-build": "npm:^1.3.9"
+    "@alwatr/prettier-config": "npm:^1.0.4"
+    "@alwatr/tsconfig-base": "npm:^1.2.0"
+    "@alwatr/type-helper": "npm:^1.2.6"
+    "@types/node": "npm:^22.5.5"
+    jest: "npm:^29.7.0"
+    typescript: "npm:^5.6.2"
+  languageName: unknown
+  linkType: soft
 
 "@alwatr/platform-info@npm:^1.1.12":
   version: 1.1.12

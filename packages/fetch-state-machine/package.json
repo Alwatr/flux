@@ -59,8 +59,7 @@
   "dependencies": {
     "@alwatr/fetch": "^4.0.0",
     "@alwatr/fsm": "workspace:^",
-    "@alwatr/logger": "^3.2.13",
-    "@alwatr/signal": "workspace:^"
+    "@alwatr/logger": "^3.2.13"
   },
   "devDependencies": {
     "@alwatr/nano-build": "^1.3.9",

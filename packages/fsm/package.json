@@ -59,8 +59,8 @@
   },
   "dependencies": {
     "@alwatr/logger": "^3.2.13",
-    "@alwatr/polyfill-has-own": "1.0.9",
-    "@alwatr/signal": "workspace:^"
+    "@alwatr/observable": "workspace:^",
+    "@alwatr/polyfill-has-own": "1.0.9"
   },
   "devDependencies": {
     "@alwatr/nano-build": "^1.3.9",

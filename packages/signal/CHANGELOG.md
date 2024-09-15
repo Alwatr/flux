@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.0 (2024-09-15)
+
+### Features
+
+* Add @alwatr/observable package ([e554c91](https://github.com/Alwatr/flux/commit/e554c91e8d3bf59a853e1a08692f3fa730194616)) by @AliMD
+* bew package @alwatr/context ([9ee2204](https://github.com/Alwatr/flux/commit/9ee220484fd99654d1303851c2e03f2bd0b308a3)) by @AliMD
+* update all repo files from alwatr ([b85a3a6](https://github.com/Alwatr/flux/commit/b85a3a62a8c19f395cf33d72329b9c0f301cddfc)) by @AliMD
+
+### Bug Fixes
+
+* all new repo path and packages dependencies ([21a6afa](https://github.com/Alwatr/flux/commit/21a6afa0badafe4051617d9a9e3bbfbaabd0c4ad)) by @
+* cleanup old signal and fsm v1 ([bde0bea](https://github.com/Alwatr/flux/commit/bde0bea06a6750bebad49a127b75b57fd5e55ddd)) by @
+* **signal:** compatible with new logger api ([0a3b1c0](https://github.com/Alwatr/flux/commit/0a3b1c02b285daa66491104a14596e6a19895e11)) by @
+* **signal:** package name ([4791b54](https://github.com/Alwatr/flux/commit/4791b54c8da75cf43eb9c86180f1ed94b0e28c4e)) by @
+* **signal:** signal2 name ([70b71e3](https://github.com/Alwatr/flux/commit/70b71e312cb5e5d4c54c37c5c327712200f90be5)) by @
+* **signal:** types ([2460dc9](https://github.com/Alwatr/flux/commit/2460dc9f68c003dfbd428be23117bcacc72a5084)) by @AliMD
+* ts refrence path ([c2baa44](https://github.com/Alwatr/flux/commit/c2baa44999c72a0015481fc8fea25439329c3f37)) by @
+
+### Code Refactoring
+
+* AlwatrObservable to use 'message' instead of 'data' ([67aa6e0](https://github.com/Alwatr/flux/commit/67aa6e01aebec8fae0accfb174bcf66fe72ddad7)) by @AliMD
+* **signal:** AlwatrContext to use class property instead of calling super.getData_() ([bbe18bb](https://github.com/Alwatr/flux/commit/bbe18bbb3ca105ee34d802345105a71c874b60e5)) by @AliMD
+* **signal:** Remove reference to api-server in tsconfig.json ([3c6b2e6](https://github.com/Alwatr/flux/commit/3c6b2e6c8e874240ba785cfafe14922637070120)) by @AliMD
+* **signal:** Update AlwatrContext to use class property instead of calling super.getData_() ([437dbf4](https://github.com/Alwatr/flux/commit/437dbf48af845c7e8c7441566d78ff6884d1c4cc)) by @AliMD
+* Update @alwatr/signal package ([9ec8478](https://github.com/Alwatr/flux/commit/9ec8478b956dd2dd83ea42d6ba9ed94582a318a7)) by @AliMD
+* Update all package URLs to point to the flux repository ([e7e56d2](https://github.com/Alwatr/flux/commit/e7e56d252d4a0e1b4b1fa20c06e8b61b1b7242ae)) by @AliMD
+* Update AlwatrContext to use 'message' instead of 'data' ([512789b](https://github.com/Alwatr/flux/commit/512789b7c0b90e71e8e1eda5fbd923e18c45731e)) by @AliMD
+* Update AlwatrContextSignal to AlwatrContext ([44dd077](https://github.com/Alwatr/flux/commit/44dd077584669f668ab633c0e10a1d6dd6986e21)) by @AliMD
+* Update AlwatrSignal and AlwatrSimpleSignal to use 'message' instead of 'data' ([cef6ba6](https://github.com/Alwatr/flux/commit/cef6ba64164f6569a895ef1efa8a33900c1c9cba)) by @AliMD
+* Update AlwatrSignal and AlwatrTrigger constructors ([05da419](https://github.com/Alwatr/flux/commit/05da4191ac23ab589cc4982b383c24d9b7a8ae74)) by @AliMD
+* Update package dependencies and references ([888f698](https://github.com/Alwatr/flux/commit/888f6987553a410e561da9fe21c0655f8f935db0)) by @AliMD
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump the development-dependencies group with 11 updates ([60f3075](https://github.com/Alwatr/flux/commit/60f3075872d3a4a9da979c589b5aa6b84065d48b)) by @
+* **deps-dev:** bump the development-dependencies group with 14 updates ([c6ae70e](https://github.com/Alwatr/flux/commit/c6ae70e1534469fd36386f0828a52985001e2ef6)) by @
+* **deps-dev:** bump the development-dependencies group with 8 updates ([c853aa2](https://github.com/Alwatr/flux/commit/c853aa2730b5c256049414e302a3d2d0c58ef61e)) by @
+* **deps:** bump the alwatr-dependencies group with 3 updates ([f2a109d](https://github.com/Alwatr/flux/commit/f2a109d9b1775b67303d9407e20a5591cc69e4a7)) by @
+* **deps:** bump the alwatr-dependencies group with 3 updates ([e5105eb](https://github.com/Alwatr/flux/commit/e5105eb0bbc450566b1ae6aee9241d541377bf94)) by @
+* **deps:** bump the alwatr-dependencies group with 4 updates ([0019b83](https://github.com/Alwatr/flux/commit/0019b83ed56643b634972d8a15651ef2eaa2d735)) by @
+* **deps:** bump the alwatr-dependencies group with 4 updates ([eb7fdfa](https://github.com/Alwatr/flux/commit/eb7fdfa545b5c1e040839a427326937acdcd8cb3)) by @
+* **deps:** bump the alwatr-dependencies group with 4 updates ([4069863](https://github.com/Alwatr/flux/commit/40698638f3825b118d8c24fa115403f3f3b564a7)) by @
+* **deps:** fix and update ([ab83ec7](https://github.com/Alwatr/flux/commit/ab83ec789d43245a8ff109e151b054a1fecb8e2a)) by @
+* **deps:** update ([d7e2ef1](https://github.com/Alwatr/flux/commit/d7e2ef1a9de62fff6bfb2fd32af7dcfb4fcb048d)) by @njfamirm
+* **deps:** upgrade ([7e60a62](https://github.com/Alwatr/flux/commit/7e60a6237f8b07b72dd9afd6bbaa140b187fe882)) by @
+* **deps:** workspace dependencies ([627938e](https://github.com/Alwatr/flux/commit/627938e38e75a5e425388c3d56837feffd6716a2)) by @
+* rename core to packages ([9158c8e](https://github.com/Alwatr/flux/commit/9158c8e4c679d96c9b54e91ea6faa49364d47494)) by @
+* **signal:** rename signal2 ([33adbea](https://github.com/Alwatr/flux/commit/33adbeabe9384d5de30742e4c4b00db410596e52)) by @
+* update changelogs ([a965ecd](https://github.com/Alwatr/flux/commit/a965ecd095cb621b4a7748d2e048f4a82b0aa872)) by @
+* **yarn:** pnp mode ([02bd406](https://github.com/Alwatr/flux/commit/02bd4064e381c483e31a8acbe7c72e7aed3e62b3)) by @
+
+### Dependencies update
+
+* bump the alwatr-dependencies group with 6 updates ([4470fd8](https://github.com/Alwatr/flux/commit/4470fd8be49e1a73c17bdd5a09127b9f3a67b3bb)) by @dependabot[bot]
+* update ([e8f8281](https://github.com/Alwatr/flux/commit/e8f8281beb24988466c6e29f724a963118870933)) by @AliMD
+
 ## [2.0.5](https://github.com/Alwatr/flux/compare/@alwatr/signal@2.0.4...@alwatr/signal@2.0.5) (2023-12-19)
 
 **Note:** Version bump only for package @alwatr/signal

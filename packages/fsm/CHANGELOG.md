@@ -3,6 +3,64 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.0 (2024-09-15)
+
+### ⚠ BREAKING CHANGES
+
+* **fsm:** FiniteStateMachineBase state property renamed to message data structure
+
+### Features
+
+* update all repo files from alwatr ([b85a3a6](https://github.com/Alwatr/flux/commit/b85a3a62a8c19f395cf33d72329b9c0f301cddfc)) by @AliMD
+
+### Bug Fixes
+
+* all new repo path and packages dependencies ([21a6afa](https://github.com/Alwatr/flux/commit/21a6afa0badafe4051617d9a9e3bbfbaabd0c4ad)) by @
+* cleanup old signal and fsm v1 ([bde0bea](https://github.com/Alwatr/flux/commit/bde0bea06a6750bebad49a127b75b57fd5e55ddd)) by @
+* **fsm:** compatible with new logger api ([77db656](https://github.com/Alwatr/flux/commit/77db656d8b261da29376cf6dba7b9d4c35deeae8)) by @
+* **fsm:** import issue ([9674f34](https://github.com/Alwatr/flux/commit/9674f34a7c63137fb9597d2b465b4fb123c963c1)) by @
+* ts refrence path ([c2baa44](https://github.com/Alwatr/flux/commit/c2baa44999c72a0015481fc8fea25439329c3f37)) by @
+
+### Code Refactoring
+
+* **fsm:** rename main ([60a52bd](https://github.com/Alwatr/flux/commit/60a52bdc1e5ae3126226a9518d81f3c8dbf238dc)) by @AliMD
+* **fsm:** Update FiniteStateMachineBase class ([27a29ca](https://github.com/Alwatr/flux/commit/27a29ca45fb2c7998760ce2177a386c7085011f9)) by @AliMD
+* **fsm:** Update FiniteStateMachineBase class to use class property for state and transition methods ([647a921](https://github.com/Alwatr/flux/commit/647a921dab405b5545aecdb66f5d1d44490795d4)) by @AliMD
+* **fsm:** Update FiniteStateMachineBase state property to message ([be1ca78](https://github.com/Alwatr/flux/commit/be1ca7897b8ada4b44576c2eaf9f38f3c2903668)) by @AliMD
+* **fsm:** Update import statement for type.ts ([6091385](https://github.com/Alwatr/flux/commit/6091385ae7a4c4d92aa74effe6446c8e3a7606e9)) by @AliMD
+* Remove unused dependencies from @alwatr/fsm package ([da58900](https://github.com/Alwatr/flux/commit/da5890009c9ddea4f45949eef5a372dd3784ea7a)) by @AliMD
+* Rename fetch-state-machine.ts base class name ([ab88730](https://github.com/Alwatr/flux/commit/ab88730b46b2db0baeaca09e3de8e51c55b1e361)) by @AliMD
+* Update @alwatr/fsm package and add @alwatr/observable package ([d78b177](https://github.com/Alwatr/flux/commit/d78b1774978632d66c6831c8a46626f524746e81)) by @AliMD
+* Update @alwatr/polyfill-has-own dependency to version ^1.0.9 in fsm package.json ([f1c82a6](https://github.com/Alwatr/flux/commit/f1c82a6d330c3f1bfbf435a00a52e92f0541b024)) by @AliMD
+* Update all package URLs to point to the flux repository ([e7e56d2](https://github.com/Alwatr/flux/commit/e7e56d252d4a0e1b4b1fa20c06e8b61b1b7242ae)) by @AliMD
+* Update AlwatrContext constructor to use AlwatrObservableConfig ([a8c75c6](https://github.com/Alwatr/flux/commit/a8c75c6f937419e628a0b11b053e0028c731bcaf)) by @AliMD
+* Update package dependencies and references ([888f698](https://github.com/Alwatr/flux/commit/888f6987553a410e561da9fe21c0655f8f935db0)) by @AliMD
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump the development-dependencies group with 11 updates ([60f3075](https://github.com/Alwatr/flux/commit/60f3075872d3a4a9da979c589b5aa6b84065d48b)) by @
+* **deps-dev:** bump the development-dependencies group with 14 updates ([c6ae70e](https://github.com/Alwatr/flux/commit/c6ae70e1534469fd36386f0828a52985001e2ef6)) by @
+* **deps-dev:** bump the development-dependencies group with 8 updates ([c853aa2](https://github.com/Alwatr/flux/commit/c853aa2730b5c256049414e302a3d2d0c58ef61e)) by @
+* **deps:** bump the alwatr-dependencies group with 3 updates ([f2a109d](https://github.com/Alwatr/flux/commit/f2a109d9b1775b67303d9407e20a5591cc69e4a7)) by @
+* **deps:** bump the alwatr-dependencies group with 3 updates ([e5105eb](https://github.com/Alwatr/flux/commit/e5105eb0bbc450566b1ae6aee9241d541377bf94)) by @
+* **deps:** bump the alwatr-dependencies group with 4 updates ([0019b83](https://github.com/Alwatr/flux/commit/0019b83ed56643b634972d8a15651ef2eaa2d735)) by @
+* **deps:** bump the alwatr-dependencies group with 4 updates ([eb7fdfa](https://github.com/Alwatr/flux/commit/eb7fdfa545b5c1e040839a427326937acdcd8cb3)) by @
+* **deps:** bump the alwatr-dependencies group with 4 updates ([4069863](https://github.com/Alwatr/flux/commit/40698638f3825b118d8c24fa115403f3f3b564a7)) by @
+* **deps:** fix and update ([ab83ec7](https://github.com/Alwatr/flux/commit/ab83ec789d43245a8ff109e151b054a1fecb8e2a)) by @
+* **deps:** update ([d7e2ef1](https://github.com/Alwatr/flux/commit/d7e2ef1a9de62fff6bfb2fd32af7dcfb4fcb048d)) by @njfamirm
+* **deps:** upgrade ([7e60a62](https://github.com/Alwatr/flux/commit/7e60a6237f8b07b72dd9afd6bbaa140b187fe882)) by @
+* **deps:** workspace dependencies ([627938e](https://github.com/Alwatr/flux/commit/627938e38e75a5e425388c3d56837feffd6716a2)) by @
+* **fsm:** rename fsm2 ([f10fea0](https://github.com/Alwatr/flux/commit/f10fea017f75c3a26a26319b14284e8ee4bc605d)) by @
+* rename core to packages ([9158c8e](https://github.com/Alwatr/flux/commit/9158c8e4c679d96c9b54e91ea6faa49364d47494)) by @
+* update changelogs ([a965ecd](https://github.com/Alwatr/flux/commit/a965ecd095cb621b4a7748d2e048f4a82b0aa872)) by @
+* **yarn:** pnp mode ([02bd406](https://github.com/Alwatr/flux/commit/02bd4064e381c483e31a8acbe7c72e7aed3e62b3)) by @
+
+### Dependencies update
+
+* bump the alwatr-dependencies group with 6 updates ([4470fd8](https://github.com/Alwatr/flux/commit/4470fd8be49e1a73c17bdd5a09127b9f3a67b3bb)) by @dependabot[bot]
+* update ([0128365](https://github.com/Alwatr/flux/commit/01283652b0798243aaac9643c5024e7856af169c)) by @AliMD
+* update ([e8f8281](https://github.com/Alwatr/flux/commit/e8f8281beb24988466c6e29f724a963118870933)) by @AliMD
+
 ## [2.0.5](https://github.com/Alwatr/flux/compare/@alwatr/fsm@2.0.4...@alwatr/fsm@2.0.5) (2023-12-19)
 
 **Note:** Version bump only for package @alwatr/fsm

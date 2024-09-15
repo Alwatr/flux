@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.0 (2024-09-15)
+
+### Features
+
+* Add @alwatr/observable package ([e554c91](https://github.com/Alwatr/flux/commit/e554c91e8d3bf59a853e1a08692f3fa730194616)) by @AliMD
+
+### Code Refactoring
+
+* Make dispatch__ method private in AlwatrObservable class ([f2fc342](https://github.com/Alwatr/flux/commit/f2fc342181831fe9b2c22e4f99f1fd7e9f66c599)) by @AliMD
+* Update all package URLs to point to the flux repository ([e7e56d2](https://github.com/Alwatr/flux/commit/e7e56d252d4a0e1b4b1fa20c06e8b61b1b7242ae)) by @AliMD
+* Update AlwatrContext constructor to use AlwatrObservableConfig ([f38d27c](https://github.com/Alwatr/flux/commit/f38d27cc9510d1ef14f6fbcfb05b0dfebd03a08a)) by @AliMD
+
 ## [2.0.5](https://github.com/Alwatr/flux/compare/@alwatr/signal@2.0.4...@alwatr/signal@2.0.5) (2023-12-19)
 
 **Note:** Version bump only for package @alwatr/signal

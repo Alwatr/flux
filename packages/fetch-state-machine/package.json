@@ -32,12 +32,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alwatr/signal",
+    "url": "https://github.com/Alwatr/flux",
     "directory": "packages/fetch-state-machine"
   },
-  "homepage": "https://github.com/Alwatr/signal/tree/next/packages/fetch-state-machine#readme",
+  "homepage": "https://github.com/Alwatr/flux/tree/next/packages/fetch-state-machine#readme",
   "bugs": {
-    "url": "https://github.com/Alwatr/signal/issues"
+    "url": "https://github.com/Alwatr/flux/issues"
   },
   "prettier": "@alwatr/prettier-config",
   "scripts": {

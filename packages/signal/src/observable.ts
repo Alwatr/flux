@@ -11,24 +11,14 @@ definePackage('@alwatr/signal', __package_version__);
 export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T> {
   protected name_;
   protected logger_;
-  protected data__?: T;
+  protected data_?: T;
   protected observers__: Observer<this, T>[] = [];
 
   constructor(config: {name: string; loggerPrefix?: string}) {
     config.loggerPrefix ??= 'signal';
     this.name_ = config.name;
     this.logger_ = createLogger(`{${config.loggerPrefix}: ${this.name_}}`);
-    this.logger_.logMethod?.('constructor');
-  }
-
-  /**
-   * Get data.
-   *
-   * Return undefined if signal not notify before or expired.
-   */
-  protected getData_(): T | undefined {
-    this.logger_.logMethodFull?.('getData_', {}, this.data__);
-    return this.data__;
+    this.logger_.logMethodArgs?.('new', config);
   }
 
   /**
@@ -36,7 +26,7 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
    */
   protected notify_(data: T): void {
     this.logger_.logMethodArgs?.('notify_', data);
-    this.data__ = data;
+    this.data_ = data;
     setTimeout(() => this.dispatch__(data), 0);
   }
 
@@ -78,7 +68,7 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
     };
 
     let callbackExecuted = false;
-    const data = this.data__;
+    const data = this.data_;
     if (data !== undefined && options.receivePrevious === true && options.disabled !== true) {
       // Run callback for old dispatch signal
       callbackExecuted = true;
@@ -128,7 +118,7 @@ export abstract class AlwatrObservable<T> implements AlwatrObservableInterface<T
    */
   protected clearData_(): void {
     this.logger_.logMethod?.('clear_');
-    this.data__ = undefined;
+    this.data_ = undefined;
   }
 
   /**

@@ -1,6 +1,11 @@
 import {AlwatrObservable} from '@alwatr/observable';
 
+import type {} from '@alwatr/nano-build';
 import type {Dictionary} from '@alwatr/type-helper';
+
+import {definePackage} from '@alwatr/logger';
+
+definePackage('@alwatr/context', __package_version__);
 
 /**
  * Alwatr Context.

@@ -16,7 +16,7 @@ Alwatr Flux empowers your applications with elegant and powerful state managemen
 
 ### Core Packages
 
-- **@alwatr/observable:** Provides the core observable pattern implementation used throughout the Alwatr Flux ecosystem.
+- **@alwatr/observable:** Provides the core observable pattern implementation used throughout the Alwatr Flux ecosystem. See [packages/observable](packages/observable) for more details.
 - **@alwatr/context:** A simple yet powerful TypeScript library for managing application context and facilitating efficient communication between components. See [packages/context](packages/context) for more details.
 - **@alwatr/signal:** A lightweight library for managing global signals and state changes. See [packages/signal](packages/signal) for more details.
 

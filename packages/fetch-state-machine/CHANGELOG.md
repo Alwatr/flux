@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.0 (2024-09-17)
+
+### Features
+
+* Add @alwatr/fetch-state-machine package ([03e3a62](https://github.com/Alwatr/flux/commit/03e3a62a1f60a4e6fdc9e4979f015d3cc3f474ea)) by @AliMD
+* **fetch-state-machine:** Add AlwatrJsonFetchStateMachine class ([6cd7fd4](https://github.com/Alwatr/flux/commit/6cd7fd4ce82d1683631a0f447785600782f0f60d)) by @AliMD
+* **fetch-state-machine:** Add AlwatrJsonFetchStateMachineBase class ([9560379](https://github.com/Alwatr/flux/commit/95603798e2fbd85bea9fb33d26f5009b7be1dc9a)) by @AliMD
+
+### Code Refactoring
+
+* **fetch-state-machine:** Add JFSM classes ([de792aa](https://github.com/Alwatr/flux/commit/de792aadf6c11fbf3e68931805ca0dcd483409c8)) by @AliMD
+* **fetch-state-machine:** base class and imports ([92a17f7](https://github.com/Alwatr/flux/commit/92a17f73243b4bd33fee42c946cfe9afa0bdc12c)) by @AliMD
+* Rename fetch-state-machine.ts to base.ts and update imports ([5281302](https://github.com/Alwatr/flux/commit/5281302c413e390b73be3a19797f65c332d1ae0e)) by @AliMD
+* Update all package URLs to point to the flux repository ([e7e56d2](https://github.com/Alwatr/flux/commit/e7e56d252d4a0e1b4b1fa20c06e8b61b1b7242ae)) by @AliMD
+* Update AlwatrContext constructor to use AlwatrObservableConfig ([98a6de7](https://github.com/Alwatr/flux/commit/98a6de7f6113cd6fb4f5888613be5b17a320db15)) by @AliMD
+* Update package dependencies and references ([888f698](https://github.com/Alwatr/flux/commit/888f6987553a410e561da9fe21c0655f8f935db0)) by @AliMD
+
 ## [1.2.6](https://github.com/Alwatr/flux/compare/@alwatr/server-context@1.2.5...@alwatr/server-context@1.2.6) (2023-12-19)
 
 **Note:** Version bump only for package @alwatr/server-context

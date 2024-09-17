@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.0 (2024-09-17)
+
+### Features
+
+* new package for AlwatrRemoteContextStateMachine ([bffd7d8](https://github.com/Alwatr/flux/commit/bffd7d81c104c0ed56e4b12ce9d1d0dcfe2f38ec)) by @AliMD
+
 ## [1.2.6](https://github.com/Alwatr/flux/compare/@alwatr/server-context@1.2.5...@alwatr/server-context@1.2.6) (2023-12-19)
 
 **Note:** Version bump only for package @alwatr/server-context

@@ -12,7 +12,6 @@ export interface AlwatrFluxStateMachineConfig<S extends string> extends AlwatrOb
   initialState: S;
 }
 
-
 /**
  * Flux (Finite) State Machine Base Class
  */

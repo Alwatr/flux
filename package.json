@@ -23,7 +23,7 @@
     "l": "yarn run lint",
     "f": "yarn run format",
     "rl": "yarn run pull && yarn run clean && yarn run build && yarn run lint && yarn run release",
-    "upd": "yarn set version latest; yarn up '*'; yarn up '*' -R; yarn dlx @yarnpkg/sdks vscode; yarn dedupe",
+    "upd": "corepack up && yarn set version latest; yarn up '*'; yarn up '*' -R; yarn dlx @yarnpkg/sdks vscode; yarn dedupe",
     "lint": "yarn run lint:ts && yarn run lint:es",
     "lint:es": "eslint . --config .eslintrc.json --ext .ts",
     "lint:ts": "lerna run build:ts",

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/Alwatr/flux/compare/v3.0.0...v3.0.1) (2024-09-17)
+
+### Code Refactoring
+
+* Add logging for dispatch__ method in AlwatrObservable ([7ab84b6](https://github.com/Alwatr/flux/commit/7ab84b69ecd8c37bcea308fccd9a2e13ef64c842)) by @
+
+### Miscellaneous Chores
+
+* simple demo test ([43f9bee](https://github.com/Alwatr/flux/commit/43f9bee831d5ba4534fa80c7ff4c28f6ca65cd91)) by @
+
 ## 3.0.0 (2024-09-17)
 
 ### ⚠ BREAKING CHANGES

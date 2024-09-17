@@ -37,6 +37,7 @@ export abstract class AlwatrObservable<T extends Dictionary = Dictionary> implem
    * Execute all observers callback.
    */
   private dispatch__(message: T): void {
+    this.logger_.logMethodArgs?.('dispatch__', message);
     const removeList: Observer<this, T>[] = [];
 
     for (const listener of this.observers__) {

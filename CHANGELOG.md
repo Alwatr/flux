@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/Alwatr/flux/compare/v3.0.1...v3.0.2) (2024-09-21)
+
+### Miscellaneous Chores
+
+* update readme ([85fd5d9](https://github.com/Alwatr/flux/commit/85fd5d9acceaa84c6f38765d3f5e45d7b0733698)) by @AliMD
+
+### Dependencies update
+
+* update ([1048410](https://github.com/Alwatr/flux/commit/1048410efb300bb0a0ab7eae9734ca8f7f9d83a8)) by @
+
 ## [3.0.1](https://github.com/Alwatr/flux/compare/v3.0.0...v3.0.1) (2024-09-17)
 
 ### Code Refactoring

@@ -57,10 +57,16 @@ myContext.subscribe(({state, context}) => {
   * Provides access to `state` and `context`.
   * Handles offline checks, automatic revalidation, and state transitions.
 
-## Contributing
+## Sponsors
 
-Contributions are welcome! Please read the contributing guidelines before submitting a pull request.
+The following companies, organizations, and individuals support Nitrobase ongoing maintenance and development. Become a Sponsor to get your logo on our README and website.
+
+[![Exir Studio](https://avatars.githubusercontent.com/u/181194967?s=200&v=4)](https://exirstudio.com)
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the AGPL-3.0 License.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.

@@ -15,10 +15,16 @@ Alwatr Flux empowers your applications with elegant and powerful state managemen
 
 Refer to the individual package READMEs for comprehensive usage instructions and examples.
 
-## Contributing
+## Sponsors
 
-Contributions are welcome! Please consult the CONTRIBUTING guidelines for detailed information on how to get involved.
+The following companies, organizations, and individuals support Nitrobase ongoing maintenance and development. Become a Sponsor to get your logo on our README and website.
+
+[![Exir Studio](https://avatars.githubusercontent.com/u/181194967?s=200&v=4)](https://exirstudio.com)
 
 ## License
 
-[MIT](./LICENSE)
+This project is licensed under the AGPL-3.0 License.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.

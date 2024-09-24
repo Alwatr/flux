@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.3](https://github.com/Alwatr/flux/compare/v3.0.2...v3.0.3) (2024-09-24)
+
+### Miscellaneous Chores
+
+* change the license to AGPL-3.0 ([8a10663](https://github.com/Alwatr/flux/commit/8a10663ae01f7f215288c6bebd8332329fe7ab12)) by @
+
 ## [3.0.2](https://github.com/Alwatr/flux/compare/v3.0.1...v3.0.2) (2024-09-21)
 
 ### Miscellaneous Chores

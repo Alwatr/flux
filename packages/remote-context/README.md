@@ -1,4 +1,4 @@
-# @alwatr/remote-context
+# Flux: Remote Context
 
 A powerful TypeScript library for managing remote context data with offline-first support and automatic revalidation.
 

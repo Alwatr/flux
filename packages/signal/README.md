@@ -1,4 +1,4 @@
-# @alwatr/signal
+# Flux: Signal
 
 A simple and efficient TypeScript library for event-driven communication using signals.
 

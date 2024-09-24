@@ -1,8 +1,8 @@
-# Alwatr Flux - Elegant State Management and Event System
+# Flux - Elegant State Management and Event System
 
 ## Introduction
 
-Alwatr Flux empowers your applications with elegant and powerful state management and event handling capabilities. Built on the observable design pattern, Flux provides a lightweight yet robust foundation for managing global signals and states.
+Flux empowers your applications with elegant and powerful state management and event handling capabilities. Built on the observable design pattern, Flux provides a lightweight yet robust foundation for managing global signals and states.
 
 **Key Features:**
 
@@ -16,15 +16,15 @@ Alwatr Flux empowers your applications with elegant and powerful state managemen
 
 ### Core Packages
 
-- **@alwatr/observable:** Provides the core observable pattern implementation used throughout the Alwatr Flux ecosystem. See [packages/observable](packages/observable) for more details.
-- **@alwatr/context:** A simple yet powerful TypeScript library for managing application context and facilitating efficient communication between components. See [packages/context](packages/context) for more details.
-- **@alwatr/signal:** A lightweight library for managing global signals and state changes. See [packages/signal](packages/signal) for more details.
+- **Observable:** Provides the core observable pattern implementation used throughout the Flux ecosystem. See [packages/observable](packages/observable) for more details.
+- **Context:** A simple yet powerful TypeScript library for managing application context and facilitating efficient communication between components. See [packages/context](packages/context) for more details.
+- **Signal:** A lightweight library for managing global signals and state changes. See [packages/signal](packages/signal) for more details.
 
 ### State Machines
 
-- **@alwatr/fsm:** Core finite-state machine implementation. See [packages/fsm](packages/fsm) for more details.
-- **@alwatr/fetch-state-machine:** Simplifies state management for server requests with built-in support for fetch operations. See [packages/fetch-state-machine](packages/fetch-state-machine) for more details.
-- **@alwatr/remote-context:** Manages remote context data with offline-first support and automatic revalidation. See [packages/remote-context](packages/remote-context) for more details.
+- **FSM:** Core finite-state machine implementation. See [packages/fsm](packages/fsm) for more details.
+- **FetchStateMachine:** Simplifies state management for server requests with built-in support for fetch operations. See [packages/fetch-state-machine](packages/fetch-state-machine) for more details.
+- **RemoteContext:** Manages remote context data with offline-first support and automatic revalidation. See [packages/remote-context](packages/remote-context) for more details.
 
 ## Usage
 

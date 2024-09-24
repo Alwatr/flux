@@ -1,4 +1,4 @@
-# @alwatr/fsm
+# Flux: Finite State Machine
 
 A robust TypeScript library for implementing Flux (Finite) State Machines, enabling clear and organized management of application state and transitions.
 

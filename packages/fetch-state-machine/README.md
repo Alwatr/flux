@@ -1,4 +1,4 @@
-# @alwatr/fetch-state-machine
+# Flux: Fetch State Machine
 
 A powerful TypeScript library for managing asynchronous fetch requests with a built-in state machine.
 

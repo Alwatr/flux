@@ -1,4 +1,4 @@
-# @alwatr/observable
+# Flux: Observable
 
 A lightweight and flexible TypeScript library for implementing the observer pattern (similar to signals) with events, subscriptions, and convenient features.
 

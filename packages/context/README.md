@@ -1,4 +1,4 @@
-# @alwatr/context
+# Flux: Context
 
 A simple yet powerful TypeScript library for managing application context and facilitating efficient communication between components.
 

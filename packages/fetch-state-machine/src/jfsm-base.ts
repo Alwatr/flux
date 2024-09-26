@@ -22,6 +22,7 @@ export abstract class AlwatrJsonFetchStateMachineBase<
     }
 
     try {
+      // TODO: check 304 Not Modified
       this.jsonResponse_ = JSON.parse(responseText);
     }
     catch (err) {

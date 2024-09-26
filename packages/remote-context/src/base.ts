@@ -94,7 +94,6 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
     }
 
     this.context_ = this.jsonResponse_;
-    this.cleanup_();
   }
 
   protected override requestFailed_(error: Error): void {
@@ -108,8 +107,8 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
     }
   }
 
-  protected cleanup_(): void {
-    delete this.rawResponse_;
-    delete this.jsonResponse_;
+  protected override clean_(): void {
+    super.clean_();
+    delete this.context_;
   }
 }

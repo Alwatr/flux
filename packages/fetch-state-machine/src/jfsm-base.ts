@@ -22,6 +22,7 @@ export abstract class AlwatrJsonFetchStateMachineBase<
     }
 
     try {
+      // TODO: check 304 Not Modified
       this.jsonResponse_ = JSON.parse(responseText);
     }
     catch (err) {
@@ -30,8 +31,8 @@ export abstract class AlwatrJsonFetchStateMachineBase<
     }
   }
 
-  protected override resetToInitialState_(): void {
-    super.resetToInitialState_();
+  protected override clean_(): void {
+    super.clean_();
     delete this.jsonResponse_;
   }
 }

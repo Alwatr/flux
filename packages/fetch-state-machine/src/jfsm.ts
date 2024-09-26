@@ -26,7 +26,7 @@ export class AlwatrJsonFetchStateMachine<T extends Json = Json> extends AlwatrJs
   /**
    * Reset the machine to its initial state without notifying, and clean up existing json response and state.
    */
-  reset(): void {
-    this.resetToInitialState_();
+  clean(): void {
+    this.clean_();
   }
 }

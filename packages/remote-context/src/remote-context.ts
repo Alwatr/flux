@@ -18,4 +18,11 @@ export class AlwatrRemoteContextStateMachine<T extends Json = Json> extends Alwa
   request(fetchOptions?: Partial<FetchOptions>): void {
     return this.request_(fetchOptions);
   }
+
+  /**
+   * Reset the machine to its initial state without notifying, and clean up existing context (include raw response) and state.
+   */
+  clean(): void {
+    this.clean_();
+  }
 }

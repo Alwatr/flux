@@ -7,7 +7,7 @@ import type {} from '@alwatr/nano-build';
 definePackage('@alwatr/fetch-state-machine', __package_version__);
 
 export type ServerRequestState = 'initial' | 'loading' | 'failed' | 'complete';
-export type ServerRequestEvent = 'request' | 'requestFailed' | 'requestSuccess';
+export type ServerRequestEvent = 'request' | 'requestFailed' | 'requestSucceeded';
 
 export type {FetchOptions};
 
@@ -29,7 +29,7 @@ export abstract class AlwatrFetchStateMachineBase<
     },
     loading: {
       requestFailed: 'failed',
-      requestSuccess: 'complete',
+      requestSucceeded: 'complete',
     },
     failed: {
       request: 'loading',
@@ -40,7 +40,7 @@ export abstract class AlwatrFetchStateMachineBase<
   } as StateRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
   protected override actionRecord_ = {
-    _on_loading_enter: this.requestAction_,
+    on_loading_enter: this.requestAction_,
   } as ActionRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
   constructor(config: AlwatrFetchStateMachineConfig<ServerRequestState | ExtraState>) {
@@ -74,11 +74,16 @@ export abstract class AlwatrFetchStateMachineBase<
 
       await this.fetch_(this.currentFetchOptions_);
 
-      this.transition_('requestSuccess');
+      this.requestSucceeded_();
     }
     catch (error) {
       this.requestFailed_(error as Error);
     }
+  }
+
+  protected requestSucceeded_(): void {
+    this.logger_.logMethod?.('requestSucceeded_');
+    this.transition_('requestSucceeded');
   }
 
   protected requestFailed_(error: Error): void {
@@ -103,8 +108,12 @@ export abstract class AlwatrFetchStateMachineBase<
     }
   }
 
-  protected override resetToInitialState_(): void {
+  /**
+   * Reset the machine to its initial state without notifying, and clean up existing response and state.
+   */
+  protected clean_(): void {
     super.resetToInitialState_();
     delete this.rawResponse_;
+    // FIXME: cancel pending fetch
   }
 }

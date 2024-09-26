@@ -47,9 +47,9 @@ class MyStateMachine extends FluxStateMachineBase<MyState, MyEvent> {
 
     // Define actions (optional)
     this.actionRecord_ = {
-      '_on_fetch': this.handleFetch,
-      '_on_success': this.handleSuccess,
-      '_on_error': this.handleError,
+      'on_fetch': this.handleFetch,
+      'on_success': this.handleSuccess,
+      'on_error': this.handleError,
     };
   }
 

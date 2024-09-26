@@ -35,14 +35,14 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
       offlineCheck: {
         requestFailed: 'failed',
         cacheNotFound: 'loading',
-        requestSuccess: 'reloading',
+        requestSucceeded: 'reloading',
       },
       /**
        * First loading without any cached context.
        */
       loading: {
         requestFailed: 'failed',
-        requestSuccess: 'complete',
+        requestSucceeded: 'complete',
       },
       /**
        * First loading failed without any cached context.
@@ -52,7 +52,7 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
       },
       reloading: {
         requestFailed: 'reloadingFailed',
-        requestSuccess: 'complete',
+        requestSucceeded: 'complete',
       },
       /**
        * Reloading failed with previously cached context exist.
@@ -66,10 +66,10 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
     };
 
     this.actionRecord_ = {
-      _on_offlineCheck_enter: this.offlineRequestAction_,
-      _on_loading_enter: this.onlineRequestAction_,
-      _on_reloading_enter: this.onlineRequestAction_,
-      _on_requestSuccess: this.updateContextAction_,
+      on_offlineCheck_enter: this.offlineRequestAction_,
+      on_loading_enter: this.onlineRequestAction_,
+      on_reloading_enter: this.onlineRequestAction_,
+      on_requestSucceeded: this.updateContextAction_,
     };
   }
 
@@ -93,12 +93,7 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
       return;
     }
 
-    if (this.context_ !== undefined && JSON.stringify(this.context_) !== JSON.stringify(this.jsonResponse_)) {
-      // TODO: improve performance. compare hash value or updatedAt or catch response text.
-      this.context_ = this.jsonResponse_;
-    }
-
-    this.cleanup_();
+    this.context_ = this.jsonResponse_;
   }
 
   protected override requestFailed_(error: Error): void {
@@ -112,8 +107,8 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
     }
   }
 
-  protected cleanup_(): void {
-    delete this.rawResponse_;
-    delete this.jsonResponse_;
+  protected override clean_(): void {
+    super.clean_();
+    delete this.context_;
   }
 }

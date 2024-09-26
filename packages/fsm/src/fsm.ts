@@ -17,4 +17,11 @@ export abstract class AlwatrFluxStateMachine<S extends string, E extends string>
   transition(event: E): void {
     this.transition_(event);
   }
+
+  /**
+   * Reset machine to initial state without notify.
+   */
+  resetToInitialState(): void {
+    this.resetToInitialState_();
+  }
 }

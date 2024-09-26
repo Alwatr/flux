@@ -84,21 +84,21 @@ export abstract class AlwatrFluxStateMachineBase<S extends string, E extends str
   private async postTransition__(eventDetail: StateEventDetail<S, E>): Promise<void> {
     this.logger_.logMethodArgs?.('_transitioned', eventDetail);
 
-    await this.execAction__(`_on_${eventDetail.event}`, eventDetail);
+    await this.execAction__(`on_${eventDetail.event}`, eventDetail);
 
     if (eventDetail.from !== eventDetail.to) {
-      await this.execAction__(`_on_state_exit`, eventDetail);
-      await this.execAction__(`_on_${eventDetail.from}_exit`, eventDetail);
-      await this.execAction__(`_on_state_enter`, eventDetail);
-      await this.execAction__(`_on_${eventDetail.to}_enter`, eventDetail);
+      await this.execAction__(`on_state_exit`, eventDetail);
+      await this.execAction__(`on_${eventDetail.from}_exit`, eventDetail);
+      await this.execAction__(`on_state_enter`, eventDetail);
+      await this.execAction__(`on_${eventDetail.to}_enter`, eventDetail);
     }
 
-    if (Object.hasOwn(this, `_on_${eventDetail.from}_${eventDetail.event}`)) {
-      this.execAction__(`_on_${eventDetail.from}_${eventDetail.event}`, eventDetail);
+    if (Object.hasOwn(this, `on_${eventDetail.from}_${eventDetail.event}`)) {
+      this.execAction__(`on_${eventDetail.from}_${eventDetail.event}`, eventDetail);
     }
     else {
       // The action `all_eventName` is executed only if the action `fromState_eventName` is not defined.
-      this.execAction__(`_on_all_${eventDetail.event}`, eventDetail);
+      this.execAction__(`on_all_${eventDetail.event}`, eventDetail);
     }
   }
 

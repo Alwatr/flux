@@ -66,10 +66,10 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
     };
 
     this.actionRecord_ = {
-      _on_offlineCheck_enter: this.offlineRequestAction_,
-      _on_loading_enter: this.onlineRequestAction_,
-      _on_reloading_enter: this.onlineRequestAction_,
-      _on_requestSuccess: this.updateContextAction_,
+      on_offlineCheck_enter: this.offlineRequestAction_,
+      on_loading_enter: this.onlineRequestAction_,
+      on_reloading_enter: this.onlineRequestAction_,
+      on_requestSuccess: this.updateContextAction_,
     };
   }
 

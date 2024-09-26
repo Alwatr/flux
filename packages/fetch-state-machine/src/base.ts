@@ -40,7 +40,7 @@ export abstract class AlwatrFetchStateMachineBase<
   } as StateRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
   protected override actionRecord_ = {
-    _on_loading_enter: this.requestAction_,
+    on_loading_enter: this.requestAction_,
   } as ActionRecord<ServerRequestState | ExtraState, ServerRequestEvent | ExtraEvent>;
 
   constructor(config: AlwatrFetchStateMachineConfig<ServerRequestState | ExtraState>) {

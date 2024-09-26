@@ -11,12 +11,12 @@ export type StateRecord<S extends string, E extends string> = Partial<Record<S |
 export type Action<S extends string, E extends string> = (eventDetail?: StateEventDetail<S, E>) => MaybePromise<void>;
 
 export type ActionName<S extends string, E extends string> =
-  | `_on_${E}`
-  | `_on_state_exit`
-  | `_on_state_enter`
-  | `_on_${S}_exit`
-  | `_on_${S}_enter`
-  | `_on_${S}_${E}`
-  | `_on_all_${E}`;
+  | `on_${E}`
+  | `on_state_exit`
+  | `on_state_enter`
+  | `on_${S}_exit`
+  | `on_${S}_enter`
+  | `on_${S}_${E}`
+  | `on_all_${E}`;
 
 export type ActionRecord<S extends string, E extends string> = Partial<Record<ActionName<S, E>, Action<S, E>>>;

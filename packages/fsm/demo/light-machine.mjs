@@ -27,7 +27,7 @@ class LightMachine extends FiniteStateMachine<State, Event> {
     };
 
     this._actionRecord = {
-      _on_powerLost: this._onPowerLost,
+      on_powerLost: this._onPowerLost,
     };
   }
 

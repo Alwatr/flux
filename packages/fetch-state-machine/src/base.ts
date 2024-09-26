@@ -108,7 +108,10 @@ export abstract class AlwatrFetchStateMachineBase<
     }
   }
 
-  protected override resetToInitialState_(): void {
+  /**
+   * Reset the machine to its initial state without notifying, and clean up existing response and state.
+   */
+  protected clean_(): void {
     super.resetToInitialState_();
     delete this.rawResponse_;
     // FIXME: cancel pending fetch

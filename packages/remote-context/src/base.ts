@@ -93,11 +93,7 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
       return;
     }
 
-    if (this.context_ !== undefined && JSON.stringify(this.context_) !== JSON.stringify(this.jsonResponse_)) {
-      // TODO: improve performance. compare hash value or updatedAt or catch response text.
-      this.context_ = this.jsonResponse_;
-    }
-
+    this.context_ = this.jsonResponse_;
     this.cleanup_();
   }
 

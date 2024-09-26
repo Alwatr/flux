@@ -31,8 +31,8 @@ export abstract class AlwatrJsonFetchStateMachineBase<
     }
   }
 
-  protected override resetToInitialState_(): void {
-    super.resetToInitialState_();
+  protected override clean_(): void {
+    super.clean_();
     delete this.jsonResponse_;
   }
 }

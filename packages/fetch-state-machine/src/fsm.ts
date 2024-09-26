@@ -19,7 +19,7 @@ export class AlwatrFetchStateMachine extends AlwatrFetchStateMachineBase {
   /**
    * Reset the machine to its initial state without notifying, and clean up existing response and state.
    */
-  reset(): void {
+  clean(): void {
     this.resetToInitialState_();
   }
 }

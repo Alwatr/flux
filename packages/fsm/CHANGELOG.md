@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.0](https://github.com/Alwatr/flux/compare/v3.0.3...v3.1.0) (2024-09-26)
+
+### Features
+
+* **fsm:** Add resetToInitialState() method ([86b2479](https://github.com/Alwatr/flux/commit/86b2479c0319b33c8108dfd0319b2c444dc5f6de)) by @AliMD
+
+### Code Refactoring
+
+* update action names in fetch-state-machine and fsm packages and remove `_` prefix ([a90d959](https://github.com/Alwatr/flux/commit/a90d95921b322a288c4a60671ce90ff9fe709c00)) by @AliMD
+
+### Dependencies update
+
+* bump @types/node in the development-dependencies group ([979223c](https://github.com/Alwatr/flux/commit/979223c3cdbb002a926e72e1a7f79c82ff7395d4)) by @dependabot[bot]
+
 ## [3.0.3](https://github.com/Alwatr/flux/compare/v3.0.2...v3.0.3) (2024-09-24)
 
 **Note:** Version bump only for package @alwatr/fsm

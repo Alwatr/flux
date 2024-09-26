@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.0](https://github.com/Alwatr/flux/compare/v3.0.3...v3.1.0) (2024-09-26)
+
+### Features
+
+* **fetch-state-machine:** add separate requestSuccess_ for overriding ([027226c](https://github.com/Alwatr/flux/commit/027226c376e1fb318dfd9d8133cac1da4d6f6fea)) by @AliMD
+
+### Code Refactoring
+
+* **fetch-state-machine:** Rename requestSuccess_ method to requestSucceeded_ ([885a8bc](https://github.com/Alwatr/flux/commit/885a8bc61a3ac3402456f93163abcd1b9bc0a17c)) by @AliMD
+* **fetch-state-machine:** Rename reset method to clean in fetch-state-machine and jfsm packages ([ab20b4f](https://github.com/Alwatr/flux/commit/ab20b4feff002c2b7a88e0897058aad0a8a52115)) by @AliMD
+* **fetch-state-machine:** Rename resetToInitialState_ method to clean_ ([7ffc764](https://github.com/Alwatr/flux/commit/7ffc76487444e1b4b6d746d467118e383942852e)) by @AliMD
+* **fetch-state-machine:** Rename resetToInitialState_ method to clean_ ([8e31471](https://github.com/Alwatr/flux/commit/8e31471423dc92dc920ac21bed72f834d3b36810)) by @AliMD
+* **fetch-state-machine:** Rename resetToInitialState_ method to clean_ ([05bb40d](https://github.com/Alwatr/flux/commit/05bb40d6005664f02bae738edf3f140fb32aeacd)) by @AliMD
+* update action names in fetch-state-machine and fsm packages and remove `_` prefix ([a90d959](https://github.com/Alwatr/flux/commit/a90d95921b322a288c4a60671ce90ff9fe709c00)) by @AliMD
+
+### Miscellaneous Chores
+
+* **fetch-state-machine:** review ([207153a](https://github.com/Alwatr/flux/commit/207153af59e93e34464137e31d798d21d467aa2a)) by @AliMD
+
+### Dependencies update
+
+* bump @types/node in the development-dependencies group ([979223c](https://github.com/Alwatr/flux/commit/979223c3cdbb002a926e72e1a7f79c82ff7395d4)) by @dependabot[bot]
+
 ## [3.0.3](https://github.com/Alwatr/flux/compare/v3.0.2...v3.0.3) (2024-09-24)
 
 **Note:** Version bump only for package @alwatr/fetch-state-machine

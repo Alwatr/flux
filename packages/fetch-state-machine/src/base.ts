@@ -7,7 +7,7 @@ import type {} from '@alwatr/nano-build';
 definePackage('@alwatr/fetch-state-machine', __package_version__);
 
 export type ServerRequestState = 'initial' | 'loading' | 'failed' | 'complete';
-export type ServerRequestEvent = 'request' | 'requestFailed' | 'requestSuccess';
+export type ServerRequestEvent = 'request' | 'requestFailed' | 'requestSucceeded';
 
 export type {FetchOptions};
 
@@ -29,7 +29,7 @@ export abstract class AlwatrFetchStateMachineBase<
     },
     loading: {
       requestFailed: 'failed',
-      requestSuccess: 'complete',
+      requestSucceeded: 'complete',
     },
     failed: {
       request: 'loading',
@@ -74,16 +74,16 @@ export abstract class AlwatrFetchStateMachineBase<
 
       await this.fetch_(this.currentFetchOptions_);
 
-      this.requestSuccess_();
+      this.requestSucceeded_();
     }
     catch (error) {
       this.requestFailed_(error as Error);
     }
   }
 
-  protected requestSuccess_(): void {
-    this.logger_.logMethod?.('requestSuccess_');
-    this.transition_('requestSuccess');
+  protected requestSucceeded_(): void {
+    this.logger_.logMethod?.('requestSucceeded_');
+    this.transition_('requestSucceeded');
   }
 
   protected requestFailed_(error: Error): void {

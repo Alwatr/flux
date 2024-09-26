@@ -74,11 +74,16 @@ export abstract class AlwatrFetchStateMachineBase<
 
       await this.fetch_(this.currentFetchOptions_);
 
-      this.transition_('requestSuccess');
+      this.requestSuccess_();
     }
     catch (error) {
       this.requestFailed_(error as Error);
     }
+  }
+
+  protected requestSuccess_(): void {
+    this.logger_.logMethod?.('requestSuccess_');
+    this.transition_('requestSuccess');
   }
 
   protected requestFailed_(error: Error): void {
@@ -106,5 +111,6 @@ export abstract class AlwatrFetchStateMachineBase<
   protected override resetToInitialState_(): void {
     super.resetToInitialState_();
     delete this.rawResponse_;
+    // FIXME: cancel pending fetch
   }
 }

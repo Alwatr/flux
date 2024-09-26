@@ -35,14 +35,14 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
       offlineCheck: {
         requestFailed: 'failed',
         cacheNotFound: 'loading',
-        requestSuccess: 'reloading',
+        requestSucceeded: 'reloading',
       },
       /**
        * First loading without any cached context.
        */
       loading: {
         requestFailed: 'failed',
-        requestSuccess: 'complete',
+        requestSucceeded: 'complete',
       },
       /**
        * First loading failed without any cached context.
@@ -52,7 +52,7 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
       },
       reloading: {
         requestFailed: 'reloadingFailed',
-        requestSuccess: 'complete',
+        requestSucceeded: 'complete',
       },
       /**
        * Reloading failed with previously cached context exist.
@@ -69,7 +69,7 @@ export abstract class AlwatrRemoteContextStateMachineBase<T extends Json = Json>
       on_offlineCheck_enter: this.offlineRequestAction_,
       on_loading_enter: this.onlineRequestAction_,
       on_reloading_enter: this.onlineRequestAction_,
-      on_requestSuccess: this.updateContextAction_,
+      on_requestSucceeded: this.updateContextAction_,
     };
   }
 

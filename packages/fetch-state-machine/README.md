@@ -88,21 +88,9 @@ jsonFetcher.subscribe(({state}) => {
 ## Sponsors
 
 The following companies, organizations, and individuals support Nitrobase ongoing maintenance and development. Become a Sponsor to get your logo on our README and website.
-<<<<<<< HEAD
-
-[![Exir Studio](https://avatars.githubusercontent.com/u/181194967?s=200&v=4)](https://exirstudio.com)
-=======
->>>>>>> a4d652e (chore(fetch-state-machine): change the license to AGPL-3.0)
 
 [![Exir Studio](https://avatars.githubusercontent.com/u/181194967?s=200&v=4)](https://exirstudio.com)
 
-<<<<<<< HEAD
-This project is licensed under the AGPL-3.0 License.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues and pull requests.
-=======
 ### Contributing
 
 Contributions are welcome! Please read our [contribution guidelines](https://github.com/Alwatr/.github/blob/next/CONTRIBUTING.md) before submitting a pull request.
@@ -110,4 +98,3 @@ Contributions are welcome! Please read our [contribution guidelines](https://git
 ### License
 
 This project is licensed under the [AGPL-3.0 License](LICENSE).
->>>>>>> a4d652e (chore(fetch-state-machine): change the license to AGPL-3.0)

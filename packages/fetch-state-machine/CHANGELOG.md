@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/Alwatr/flux/compare/v3.1.0...v3.1.1) (2024-09-29)
+
+### Miscellaneous Chores
+
+* edited README ([fff9b3f](https://github.com/Alwatr/flux/commit/fff9b3f6ccc52e2257bdfe306e032ded07497b4a)) by @ArmanAsadian
+* **fetch-state-machine:** change the license to AGPL-3.0 ([918ffae](https://github.com/Alwatr/flux/commit/918ffae1315c9432e930785cb27f3b48902655a1)) by @ArmanAsadian
+* **fetch-state-machine:** change the license to AGPL-3.0 ([3ccfad4](https://github.com/Alwatr/flux/commit/3ccfad4642ed83d41dfa538f8e12b51b32104181)) by @ArmanAsadian
+
+### Dependencies update
+
+* update ([fb148fd](https://github.com/Alwatr/flux/commit/fb148fdbe7f84acc3eda625e5e8c5773747d32e9)) by @
+
 ## [3.1.0](https://github.com/Alwatr/flux/compare/v3.0.3...v3.1.0) (2024-09-26)
 
 ### Features

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/Alwatr/flux/compare/v3.1.0...v3.1.1) (2024-09-29)
+
+### Miscellaneous Chores
+
+* change the license to AGPL-3.0 ([4bc3149](https://github.com/Alwatr/flux/commit/4bc3149cdafb9621ccceeb9e1a98f8c476ffba65)) by @ArmanAsadian
+* **context:** change the license to AGPL-3.0 ([79e3212](https://github.com/Alwatr/flux/commit/79e32129b6477b3ad79157ed9002e725096b9bc2)) by @ArmanAsadian
+* edited README ([fff9b3f](https://github.com/Alwatr/flux/commit/fff9b3f6ccc52e2257bdfe306e032ded07497b4a)) by @ArmanAsadian
+* **fetch-state-machine:** change the license to AGPL-3.0 ([918ffae](https://github.com/Alwatr/flux/commit/918ffae1315c9432e930785cb27f3b48902655a1)) by @ArmanAsadian
+* **fetch-state-machine:** change the license to AGPL-3.0 ([3ccfad4](https://github.com/Alwatr/flux/commit/3ccfad4642ed83d41dfa538f8e12b51b32104181)) by @ArmanAsadian
+* **flux:** change the license to AGPL-3.0 ([220ef0c](https://github.com/Alwatr/flux/commit/220ef0ccb69310c28caafbc9f33d5b474bd12e3b)) by @ArmanAsadian
+* **fsm:** change the license to AGPL-3.0 ([babc4a8](https://github.com/Alwatr/flux/commit/babc4a82bd0421981ec40c150f0de262f0f81f42)) by @ArmanAsadian
+* **observable:** change the license to AGPL-3.0 ([1fefabc](https://github.com/Alwatr/flux/commit/1fefabc4136d5adae4731eec16f1515b6e9a568b)) by @ArmanAsadian
+* **remote-context:** change the license to AGPL-3.0 ([23a238d](https://github.com/Alwatr/flux/commit/23a238d90164f76570f39abcd956731bae756697)) by @ArmanAsadian
+* **signal:** change the license to AGPL-3.0 ([e077ff1](https://github.com/Alwatr/flux/commit/e077ff125521abcfb8795563a3f2a17e509e9ab6)) by @ArmanAsadian
+
+### Dependencies update
+
+* update ([fb148fd](https://github.com/Alwatr/flux/commit/fb148fdbe7f84acc3eda625e5e8c5773747d32e9)) by @
+
 ## [3.1.0](https://github.com/Alwatr/flux/compare/v3.0.3...v3.1.0) (2024-09-26)
 
 ### Features

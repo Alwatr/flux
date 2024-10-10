@@ -1,5 +1,3 @@
-import type {MaybePromise} from '@alwatr/type-helper';
-
 export interface StateEventDetail<S, E> {
   from: S;
   event: E;

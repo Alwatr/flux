@@ -1,7 +1,6 @@
 import {AlwatrJsonFetchStateMachineBase} from './jfsm-base.js';
 
 import type {FetchOptions, ServerRequestState} from './base.js';
-import type {Json} from '@alwatr/type-helper';
 
 export class AlwatrJsonFetchStateMachine<T extends Json = Json> extends AlwatrJsonFetchStateMachineBase<T> {
   /**

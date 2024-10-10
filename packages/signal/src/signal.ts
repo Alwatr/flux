@@ -2,14 +2,12 @@ import {AlwatrObservable, type AlwatrObservableConfig} from '@alwatr/observable'
 
 import {logger} from './logger.js';
 
-import type {Dictionary} from '@alwatr/type-helper';
-
-logger.logModule?.('signal');
+logger.logFileModule?.('signal');
 
 /**
  * Alwatr event signal with special message (event detail).
  */
-export class AlwatrSignal<T extends Dictionary = Dictionary> extends AlwatrObservable<T> {
+export class AlwatrSignal<T extends DictionaryOpt = DictionaryOpt> extends AlwatrObservable<T> {
   constructor(config: AlwatrObservableConfig) {
     config.loggerPrefix ??= 'signal';
     super(config);

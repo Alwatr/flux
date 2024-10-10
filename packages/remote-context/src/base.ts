@@ -5,8 +5,6 @@ import {
   type ServerRequestState,
 } from '@alwatr/fetch-state-machine';
 
-import type {Json} from '@alwatr/type-helper';
-
 type ExtraState = 'offlineCheck' | 'reloading' | 'reloadingFailed';
 export type ServerContextState = ServerRequestState | ExtraState;
 

@@ -1,7 +1,6 @@
 import {AlwatrRemoteContextStateMachineBase, type ServerContextState} from './base.js';
 
-import type {FetchOptions} from '@alwatr/fetch-state-machine';
-import type {Json} from '@alwatr/type-helper';
+import type {FetchOptions} from '@alwatr/nanolib';
 
 export class AlwatrRemoteContextStateMachine<T extends Json = Json> extends AlwatrRemoteContextStateMachineBase<T> {
   /**

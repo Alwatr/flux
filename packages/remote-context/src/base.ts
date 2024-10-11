@@ -4,8 +4,9 @@ import {
   type ServerRequestEvent,
   type ServerRequestState,
 } from '@alwatr/fetch-state-machine';
+import {packageTracer} from '@alwatr/nanolib';
 
-import type {Json} from '@alwatr/type-helper';
+__dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 type ExtraState = 'offlineCheck' | 'reloading' | 'reloadingFailed';
 export type ServerContextState = ServerRequestState | ExtraState;

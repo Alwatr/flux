@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@alwatr/eslint-config": "^1.2.9",
-    "@alwatr/prettier-config": "^1.0.5",
+    "@alwatr/prettier-config": "^1.0.6",
     "@lerna-lite/changed": "^3.9.3",
     "@lerna-lite/cli": "^3.9.3",
     "@lerna-lite/diff": "^3.9.3",

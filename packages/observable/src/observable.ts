@@ -1,17 +1,15 @@
-import {createLogger, definePackage} from '@alwatr/logger';
+import {createLogger, packageTracer} from '@alwatr/nanolib';
 
 import type {SubscribeOptions, ListenerCallback, Observer, SubscribeResult, AlwatrObservableInterface} from './type.js';
-import type {} from '@alwatr/nano-build';
-import type {Dictionary} from '@alwatr/type-helper';
 
-definePackage('@alwatr/observable', __package_version__);
+__dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 export interface AlwatrObservableConfig {
   name: string;
   loggerPrefix?: string;
 }
 
-export abstract class AlwatrObservable<T extends Dictionary = Dictionary> implements AlwatrObservableInterface<T> {
+export abstract class AlwatrObservable<T extends DictionaryOpt = DictionaryOpt> implements AlwatrObservableInterface<T> {
   protected name_;
   protected logger_;
   protected message_?: T;

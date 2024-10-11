@@ -1,10 +1,12 @@
-import {fetch, type FetchOptions} from '@alwatr/fetch';
-import {AlwatrFluxStateMachineBase, type StateRecord, type ActionRecord, type AlwatrFluxStateMachineConfig} from '@alwatr/fsm';
-import {definePackage} from '@alwatr/logger';
+import {
+  AlwatrFluxStateMachineBase,
+  type StateRecord,
+  type ActionRecord,
+  type AlwatrFluxStateMachineConfig
+} from '@alwatr/fsm';
+import {packageTracer, fetch, type FetchOptions} from '@alwatr/nanolib';
 
-import type {} from '@alwatr/nano-build';
-
-definePackage('@alwatr/fetch-state-machine', __package_version__);
+__dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 export type ServerRequestState = 'initial' | 'loading' | 'failed' | 'complete';
 export type ServerRequestEvent = 'request' | 'requestFailed' | 'requestSucceeded';

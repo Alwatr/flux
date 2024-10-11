@@ -2,7 +2,7 @@ import {AlwatrObservable, type AlwatrObservableConfig} from '@alwatr/observable'
 
 import {logger} from './logger.js';
 
-logger.logModule?.('trigger');
+__dev_mode__: logger.logFileModule?.('trigger');
 
 /**
  * Alwatr event signal without any message (no event detail).

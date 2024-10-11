@@ -1,16 +1,12 @@
-import {definePackage} from '@alwatr/logger';
+import {packageTracer} from '@alwatr/nanolib';
 import {AlwatrObservable, type AlwatrObservableConfig} from '@alwatr/observable';
 
-import type {} from '@alwatr/nano-build';
-import type {Dictionary} from '@alwatr/type-helper';
-
-
-definePackage('@alwatr/context', __package_version__);
+__dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 /**
  * Alwatr Context.
  */
-export class AlwatrContext<T extends Dictionary> extends AlwatrObservable<T> {
+export class AlwatrContext<T extends DictionaryOpt> extends AlwatrObservable<T> {
   constructor(config: AlwatrObservableConfig) {
     config.loggerPrefix ??= 'context-signal';
     super(config);

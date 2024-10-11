@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.0](https://github.com/Alwatr/flux/compare/v3.1.1...v3.2.0) (2024-10-11)
+
+### Bug Fixes
+
+* prevent `sideeffects` from `build` result ([fbc7a9f](https://github.com/Alwatr/flux/commit/fbc7a9f21898e3a96f28ce4a105460af0cf513eb)) by @mohammadhonarvar
+
+### Code Refactoring
+
+* update `import`s & packages based on the latest changes of `nanolib` ([b905288](https://github.com/Alwatr/flux/commit/b9052881b7549207c01b0eef92dc459d44b56ac0)) by @mohammadhonarvar
+
+### Dependencies update
+
+* **.yarn/sdk:** update ([13343dc](https://github.com/Alwatr/flux/commit/13343dc857953173eb2d773f37f6c87ff5d777a3)) by @mohammadhonarvar
+* bump github/codeql-action in the github-actions group ([f150962](https://github.com/Alwatr/flux/commit/f150962053558cf431e8e037f3ee1d51fe004c14)) by @dependabot[bot]
+* bump the alwatr-dependencies group across 1 directory with 7 updates ([daf1c3f](https://github.com/Alwatr/flux/commit/daf1c3f7ef8d17cf7388df2676b5fe808616ba57)) by @dependabot[bot]
+* bump the alwatr-dependencies group with 4 updates ([7ce1b54](https://github.com/Alwatr/flux/commit/7ce1b54235cc2fd4f386052e7a4c4d324cc74888)) by @dependabot[bot]
+* bump the alwatr-dependencies group with 8 updates ([bc520ba](https://github.com/Alwatr/flux/commit/bc520ba6ac7ed6bcff2c4a3eea81d1a2e502b0cf)) by @dependabot[bot]
+* bump the development-dependencies group with 10 updates ([01de77c](https://github.com/Alwatr/flux/commit/01de77cd1d9fdfb6db06ebd5035c43e46cc8aa17)) by @dependabot[bot]
+* bump the github-actions group with 3 updates ([eb91117](https://github.com/Alwatr/flux/commit/eb91117579c18580bdc721b57bf8d24d04dc1980)) by @dependabot[bot]
+* update ([254de29](https://github.com/Alwatr/flux/commit/254de29b8d7f367c761f0358600ae0c85d14780e)) by @
+* update ([4dc21b2](https://github.com/Alwatr/flux/commit/4dc21b2bf01d7176aea6e0d81cdc3e1f77b97e0f)) by @mohammadhonarvar
+* update ([f8891e2](https://github.com/Alwatr/flux/commit/f8891e22d58335ba3acc7e75ddd4b6810c7c4e09)) by @mohammadhonarvar
+* update ([be2b945](https://github.com/Alwatr/flux/commit/be2b9459d1b51621b5cf314c18cc512018c90ced)) by @mohammadhonarvar
+
 ## [3.1.1](https://github.com/Alwatr/flux/compare/v3.1.0...v3.1.1) (2024-09-29)
 
 ### Miscellaneous Chores

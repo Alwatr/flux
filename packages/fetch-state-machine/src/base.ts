@@ -6,7 +6,7 @@ import {
 } from '@alwatr/fsm';
 import {packageTracer, fetch, type FetchOptions} from '@alwatr/nanolib';
 
-packageTracer.add(__package_name__, __package_version__);
+__dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 export type ServerRequestState = 'initial' | 'loading' | 'failed' | 'complete';
 export type ServerRequestEvent = 'request' | 'requestFailed' | 'requestSucceeded';

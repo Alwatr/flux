@@ -1,7 +1,7 @@
 import {packageTracer} from '@alwatr/nanolib';
 import {AlwatrObservable, type AlwatrObservableConfig} from '@alwatr/observable';
 
-packageTracer.add(__package_name__, __package_version__);
+__dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 /**
  * Alwatr Context.

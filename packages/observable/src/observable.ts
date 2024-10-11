@@ -2,7 +2,7 @@ import {createLogger, packageTracer} from '@alwatr/nanolib';
 
 import type {SubscribeOptions, ListenerCallback, Observer, SubscribeResult, AlwatrObservableInterface} from './type.js';
 
-packageTracer.add(__package_name__, __package_version__);
+__dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 export interface AlwatrObservableConfig {
   name: string;

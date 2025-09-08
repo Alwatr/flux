@@ -57,7 +57,7 @@
     "clean": "rm -rfv dist *.tsbuildinfo"
   },
   "dependencies": {
-    "@alwatr/fetch": "^5.6.7",
+    "@alwatr/fetch": "^6.0.1",
     "@alwatr/fsm": "workspace:^",
     "@alwatr/nanolib": "^6.0.1"
   },

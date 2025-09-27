@@ -4,9 +4,6 @@
   "version": "4.1.1",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "bugs": "https://github.com/Alwatr/flux/issues",
-  "dependencies": {
-    "@alwatr/nanolib": "^6.0.2"
-  },
   "devDependencies": {
     "@alwatr/nano-build": "^6.1.0",
     "@alwatr/prettier-config": "^5.0.2",
@@ -64,5 +61,8 @@
     "watch:ts": "yarn run build:ts --watch --preserveWatchOutput"
   },
   "type": "module",
-  "types": "./dist/main.d.ts"
+  "types": "./dist/main.d.ts",
+  "dependencies": {
+    "@alwatr/logger": "^6.0.8"
+  }
 }

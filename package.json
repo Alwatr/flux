@@ -62,5 +62,8 @@
   "type": "module",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@alwatr/logger": "^6.0.8"
+  }
 }

@@ -21,7 +21,7 @@
       "signGitCommit": true,
       "push": true,
       "createRelease": "github",
-      "allowBranch": "next",
+      "allowBranch": ["next", "v4"],
       "exact": true,
       "syncWorkspaceLock": true,
       "changelog": true,

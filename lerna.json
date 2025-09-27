@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/lerna-lite/lerna-lite/main/packages/cli/schemas/lerna-schema.json",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "packages": [
@@ -21,7 +21,10 @@
       "signGitCommit": true,
       "push": true,
       "createRelease": "github",
-      "allowBranch": ["next", "v4"],
+      "allowBranch": [
+        "next",
+        "v4"
+      ],
       "exact": true,
       "syncWorkspaceLock": true,
       "changelog": true,

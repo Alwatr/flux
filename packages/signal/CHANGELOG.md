@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.2](https://github.com/Alwatr/flux/compare/v4.1.1...v4.1.2) (2025-09-27)
+
+### 🔗 Dependencies update
+
+* replace @alwatr/nanolib with @alwatr/logger and update imports across multiple packages ([8a94658](https://github.com/Alwatr/flux/commit/8a94658e529311513604c2f73c8f2c686f2cea08))
+* replace @alwatr/nanolib with @alwatr/logger in multiple packages ([56e5d01](https://github.com/Alwatr/flux/commit/56e5d0110aec54739372564c6797af310f50d0ff))
+
 ## [4.1.1](https://github.com/Alwatr/flux/compare/v4.1.0...v4.1.1) (2025-09-08)
 
 ### 🔗 Dependencies update

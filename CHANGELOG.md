@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.2](https://github.com/Alwatr/flux/compare/v4.1.1...v4.1.2) (2025-09-27)
+
+### 🐛 Bug Fixes
+
+* correct release message format in lerna.json ([ae2d28e](https://github.com/Alwatr/flux/commit/ae2d28e2c6d2706710e4e3071584ee7078a78c33))
+
+### 🧹 Miscellaneous Chores
+
+* update allowed branches for release process in lerna.json ([f9e822e](https://github.com/Alwatr/flux/commit/f9e822e46ddac1a2a49c767a7055bafea09bdd70))
+
+### 🔗 Dependencies update
+
+* replace @alwatr/nanolib with @alwatr/logger and update imports across multiple packages ([8a94658](https://github.com/Alwatr/flux/commit/8a94658e529311513604c2f73c8f2c686f2cea08))
+* replace @alwatr/nanolib with @alwatr/logger in multiple packages ([56e5d01](https://github.com/Alwatr/flux/commit/56e5d0110aec54739372564c6797af310f50d0ff))
+
 ## [4.1.1](https://github.com/Alwatr/flux/compare/v4.1.0...v4.1.1) (2025-09-08)
 
 ### 🔗 Dependencies update

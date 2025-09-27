@@ -1,8 +1,5 @@
 import {fetch, type FetchOptions} from '@alwatr/fetch';
 import {AlwatrFluxStateMachineBase, type StateRecord, type ActionRecord, type AlwatrFluxStateMachineConfig} from '@alwatr/fsm';
-import {packageTracer} from '@alwatr/nanolib';
-
-__dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 export type ServerRequestState = 'initial' | 'loading' | 'failed' | 'complete';
 export type ServerRequestEvent = 'request' | 'request_failed' | 'request_succeeded';

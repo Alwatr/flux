@@ -1,3 +1,5 @@
+import type {} from '@alwatr/type-helper';
+
 export interface StateEventDetail<S extends string, E extends string> {
   from: S;
   event: E | 'reset';

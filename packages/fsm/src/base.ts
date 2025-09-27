@@ -1,9 +1,6 @@
-import {packageTracer} from '@alwatr/nanolib';
 import {AlwatrObservable, type AlwatrObservableConfig} from '@alwatr/observable';
 
 import type {ActionName, ActionRecord, StateEventDetail, StateRecord} from './type.js';
-
-__dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 export interface AlwatrFluxStateMachineConfig<S extends string> extends AlwatrObservableConfig {
   initialState: S;

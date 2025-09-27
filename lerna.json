@@ -15,7 +15,7 @@
         "**/*.test.js"
       ],
       "skipBumpOnlyReleases": true,
-      "message": "release:",
+      "message": "release: %s",
       "forceGitTag": true,
       "signGitTag": true,
       "signGitCommit": true,
@@ -97,6 +97,9 @@
     },
     "run": {
       "stream": true
+    },
+    "publish": {
+      "distTag": "v4-lts"
     }
   }
 }

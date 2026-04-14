@@ -1,5 +1,26 @@
 # Flux: The Reactive Brain for Your TypeScript Application
 
+> [!IMPORTANT]
+> **Repository Migration & Refactoring Notice**
+>
+> The flux package has been deprecated and split into two specialized packages within the Alwatr monorepo for better modularity and performance:
+>
+> 1. **[@alwatr/signal](https://github.com/Alwatr/alwatr/tree/next/pkg/signal)**: For reactive state management and event signaling.
+> 2. **[@alwatr/fsm](https://github.com/Alwatr/alwatr/tree/next/pkg/fsm)**: A dedicated, lightweight Finite State Machine implementation.
+>
+> Please migrate your dependencies to these new packages. This repository is now archived.
+>
+> ---
+>
+> **اطلاعیه مهاجرت و بازنویسی مخزن**
+>
+> بسته flux منسوخ شده و برای ماژولاریتی و عملکرد بهتر، به دو بسته تخصصی در مونو-ریپوی Alwatr تقسیم شده است:
+>
+> ۱. **[@alwatr/signal](https://github.com/Alwatr/alwatr/tree/next/pkg/signal)**: برای مدیریت وضعیت واکنش‌گرا و سیگنالینگ رویدادها.
+> ۲. **[@alwatr/fsm](https://github.com/Alwatr/alwatr/tree/next/pkg/fsm)**: یک پیاده‌سازی اختصاصی و سبک از ماشین حالت متناهی (FSM).
+>
+> لطفاً وابستگی‌های خود را به این بسته‌های جدید منتقل کنید. این مخزن اکنون آرشیو شده است.
+
 [](https://www.google.com/search?q=alwatr+flux)
 [](https://www.google.com/search?q=alwatr+fsm)
 [](https://www.google.com/search?q=alwatr+signal)
